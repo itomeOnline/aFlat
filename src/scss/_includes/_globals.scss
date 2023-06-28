@@ -1,0 +1,25 @@
+// colors
+
+$c-primary: #006EFF;
+$c-grey: #eee;
+$c-black: #151515;
+$c-error: #F2453D;
+$c-success: #4CAF50;
+
+// fonts
+
+$title-font: 'RFDewiExtended', sans-serif;
+$text-font: 'RFDewi', sans-serif;
+$button-font: 'RFDewi', sans-serif;
+
+// utils
+
+$assetsPath: "/assets";
+// $assetsPath: '/themes/itome/assets';
+
+
+$defaultPixel: 16;
+
+@function em($pixel, $fontSize : $defaultPixel) {
+    @return calc($pixel / $fontSize) + em;
+}

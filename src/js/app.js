@@ -9,6 +9,8 @@ import "simplebar/dist/simplebar.css";
 import ModalDispatcher from "./components/modalDispatcher";
 import formSubmit from "./components/form";
 import cookieTooltip from "./components/cookieTooltip";
+import headerDropdown from "./components/headerDropdown";
+import headerLocationDropdown from "./components/headerLocationDropdown";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -34,6 +36,9 @@ document.addEventListener("DOMContentLoaded", _ => {
     formSubmit();
     cookieTooltip();
     ModalDispatcher.init();
+
+    headerDropdown();
+    headerLocationDropdown();
 
 
     let scroll = new LocomotiveScroll({ 

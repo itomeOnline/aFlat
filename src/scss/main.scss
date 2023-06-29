@@ -21,6 +21,7 @@ html {
 
 body {
 	font-size: 1em;
+	background: #F4F5F2;
 
 	opacity: 0;
 
@@ -164,3 +165,17 @@ br.mobile {
 @import "_blocks/slider";
 
 @import "_blocks/slider_gallery";
+
+@import "_blocks/footer";
+
+@import "_blocks/footer_top";
+
+@import "_blocks/footer_block";
+
+@import "_blocks/footer_bottom";
+
+@import "_blocks/header";
+
+@import "_blocks/header_location";
+
+@import "_blocks/header_dropdown";

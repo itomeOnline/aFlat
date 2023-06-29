@@ -1,12 +1,187 @@
-footer.footer
+footer.section.footer
 	.footer__container.container
 
-	
+		.footer__content 
 
-		a.itome(href="https://itome.online/", target="_blank")
-			+imgSvg(`${assetsPath}/img/itome-logo.svg`, '', 'image')
-			.itome_tooltip
-				.itome_tooltip__logo
-					+svg('logoCircle', 'svg')
-				span.itome_tooltip__title #айтуми
-				span.itome_tooltip__subtitle digital production
+			.footer_top
+				.footer_top__logo
+					a.footer_top__logo_img(href="/") 
+						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+					p.footer_top__logo_text Покупка и продажа #[br] недвижимости
+
+				.footer_top__links 
+					a.footer_top__link(href="", target="_blank")
+						+svg('icon_message', 'icon')
+						span Написать нам 
+					button.footer_top__link(data-linked-modal="modal_phone")
+						+svg('icon_phone', 'icon')
+						span Заказать звонок
+
+			.footer__main
+				.footer_block.footer_block--1
+					.footer_block__wrap
+						a.footer_block__title(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+						a.footer_block__text(href="", target="_blank") г. Владивосток, ул. Дальневосточная, 13
+						a.footer_block__text(href="mailto:info@aflat.ru") info@aflat.ru
+					
+					.footer_block__socials
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_tg', 'icon')
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_wa', 'icon')
+
+				.footer_block.footer_block--2 
+					.footer_block__column
+						p.footer_block__link.footer_block__link--nohover Каталог
+						a.footer_block__link.footer_block__link--grey(href="/catalog_new") Новостройки
+						a.footer_block__link.footer_block__link--grey(href="/catalog_second") Вторичка
+						a.footer_block__link.footer_block__link--grey(href="/catalog_rent") Аренда
+						a.footer_block__link.footer_block__link--grey(href="/catalog_other") Другая
+					
+					.footer_block__column
+						a.footer_block__link(href="/mortgage") Ипотека
+						a.footer_block__link(href="/sale") Продажа
+						a.footer_block__link(href="/rent") Аренда
+						a.footer_block__link(href="/purchase") Покупка
+					
+					.footer_block__column
+						a.footer_block__link(href="/thailand") Таиланд
+						a.footer_block__link(href="/faq") FAQ
+						a.footer_block__link(href="/about") О компании
+						a.footer_block__link(href="/contacts") Контакты
+						a.footer_block__link(href="/privacy") Политика конфиденциальности
+			
+			.footer_bottom
+				p.footer_bottom__copyright © 2023 AFLAT. Все права защищены
+
+				a.itome(href="https://itome.online/", target="_blank")
+					+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+				
+				.footer_bottom__itome
+					+imgSvg(`${assetsPath}/img/itome_icon.svg`, '', 'image')
+					p.footer_bottom__copyright.footer_bottom__copyright--itome Сделано с любовью командой #[a.link(href="https://itome.online/", target="_blank") @itome.online]
+				
+	.footer__container.container
+
+		.footer__content 
+
+			.footer_top
+				.footer_top__logo
+					a.footer_top__logo_img(href="/") 
+						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+					p.footer_top__logo_text Покупка и продажа #[br] недвижимости
+
+				.footer_top__links 
+					a.footer_top__link(href="", target="_blank")
+						+svg('icon_message', 'icon')
+						span Написать нам 
+					button.footer_top__link(data-linked-modal="modal_phone")
+						+svg('icon_phone', 'icon')
+						span Заказать звонок
+
+			.footer__main
+				.footer_block.footer_block--1
+					.footer_block__wrap
+						a.footer_block__title(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+						a.footer_block__text(href="", target="_blank") г. Владивосток, ул. Дальневосточная, 13
+						a.footer_block__text(href="mailto:info@aflat.ru") info@aflat.ru
+					
+					.footer_block__socials
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_tg', 'icon')
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_wa', 'icon')
+
+				.footer_block.footer_block--2 
+					.footer_block__column
+						p.footer_block__link.footer_block__link--nohover Каталог
+						a.footer_block__link.footer_block__link--grey(href="/catalog_new") Новостройки
+						a.footer_block__link.footer_block__link--grey(href="/catalog_second") Вторичка
+						a.footer_block__link.footer_block__link--grey(href="/catalog_rent") Аренда
+						a.footer_block__link.footer_block__link--grey(href="/catalog_other") Другая
+					
+					.footer_block__column
+						a.footer_block__link(href="/mortgage") Ипотека
+						a.footer_block__link(href="/sale") Продажа
+						a.footer_block__link(href="/rent") Аренда
+						a.footer_block__link(href="/purchase") Покупка
+					
+					.footer_block__column
+						a.footer_block__link(href="/thailand") Таиланд
+						a.footer_block__link(href="/faq") FAQ
+						a.footer_block__link(href="/about") О компании
+						a.footer_block__link(href="/contacts") Контакты
+						a.footer_block__link(href="/privacy") Политика конфиденциальности
+			
+			.footer_bottom
+				p.footer_bottom__copyright © 2023 AFLAT. Все права защищены
+
+				a.itome(href="https://itome.online/", target="_blank")
+					+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+				
+				.footer_bottom__itome
+					+imgSvg(`${assetsPath}/img/itome_icon.svg`, '', 'image')
+					p.footer_bottom__copyright.footer_bottom__copyright--itome Сделано с любовью командой #[a.link(href="https://itome.online/", target="_blank") @itome.online]
+				
+	.footer__container.container
+
+		.footer__content 
+
+			.footer_top
+				.footer_top__logo
+					a.footer_top__logo_img(href="/") 
+						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+					p.footer_top__logo_text Покупка и продажа #[br] недвижимости
+
+				.footer_top__links 
+					a.footer_top__link(href="", target="_blank")
+						+svg('icon_message', 'icon')
+						span Написать нам 
+					button.footer_top__link(data-linked-modal="modal_phone")
+						+svg('icon_phone', 'icon')
+						span Заказать звонок
+
+			.footer__main
+				.footer_block.footer_block--1
+					.footer_block__wrap
+						a.footer_block__title(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+						a.footer_block__text(href="", target="_blank") г. Владивосток, ул. Дальневосточная, 13
+						a.footer_block__text(href="mailto:info@aflat.ru") info@aflat.ru
+					
+					.footer_block__socials
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_tg', 'icon')
+						a.footer_block__socials_link(href="", target="_blank")
+							+svg('icon_wa', 'icon')
+
+				.footer_block.footer_block--2 
+					.footer_block__column
+						p.footer_block__link.footer_block__link--nohover Каталог
+						a.footer_block__link.footer_block__link--grey(href="/catalog_new") Новостройки
+						a.footer_block__link.footer_block__link--grey(href="/catalog_second") Вторичка
+						a.footer_block__link.footer_block__link--grey(href="/catalog_rent") Аренда
+						a.footer_block__link.footer_block__link--grey(href="/catalog_other") Другая
+					
+					.footer_block__column
+						a.footer_block__link(href="/mortgage") Ипотека
+						a.footer_block__link(href="/sale") Продажа
+						a.footer_block__link(href="/rent") Аренда
+						a.footer_block__link(href="/purchase") Покупка
+					
+					.footer_block__column
+						a.footer_block__link(href="/thailand") Таиланд
+						a.footer_block__link(href="/faq") FAQ
+						a.footer_block__link(href="/about") О компании
+						a.footer_block__link(href="/contacts") Контакты
+						a.footer_block__link(href="/privacy") Политика конфиденциальности
+			
+			.footer_bottom
+				p.footer_bottom__copyright © 2023 AFLAT. Все права защищены
+
+				a.itome(href="https://itome.online/", target="_blank")
+					+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+				
+				.footer_bottom__itome
+					+imgSvg(`${assetsPath}/img/itome_icon.svg`, '', 'image')
+					p.footer_bottom__copyright.footer_bottom__copyright--itome Сделано с любовью командой #[a.link(href="https://itome.online/", target="_blank") @itome.online]
+				

@@ -1,0 +1,38 @@
+.footer_bottom {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: em(28) 0;
+    width: 100%;
+
+    border-top: 1px solid #9A9A9A;
+
+    &__copyright {
+        font-size: em(14);
+        line-height: 1.25rem;
+        font-weight: 400;
+
+        .link {
+            color: #012DCB;
+
+            transition: color .2s;
+
+            &:hover {
+                color: #4E4E4E;
+            }
+        }
+    }
+
+    &__itome {
+        display: flex;
+        align-items: center;
+
+        .image {
+            width: em(28);
+            height: em(28);
+
+            margin-right: .5rem;
+        }
+    }
+}

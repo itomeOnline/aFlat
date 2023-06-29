@@ -1,0 +1,24 @@
+.footer {
+    margin-bottom: em(40);
+	
+    &__content {
+        border-radius: 16px;
+        background: #FFF;
+        box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.04);
+
+        width: 100%;
+        padding: 0 em(40);
+    }
+
+    &__main {
+        padding-bottom: em(40);
+
+        display: grid;
+        grid-template-columns: em(412) auto;
+        gap: em(28);
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+        }
+    }
+}

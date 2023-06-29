@@ -13898,6 +13898,7 @@
   if (canUseDom) {
     SimpleBar.initHtmlApi();
   }
+  //# sourceMappingURL=simplebar.esm.js.map
 
   class Modal {
   	constructor(el) {
@@ -14298,6 +14299,43 @@
       }
   }
 
+  function headerDropdown() {
+      const block = document.querySelectorAll('[data-dropdown-block]');
+      
+
+      block.forEach(el => {
+          const btn = el.querySelector('[data-dropdown-btn]');
+
+          btn.addEventListener('click', _ => {
+              el.classList.toggle('is-open');
+          });
+      });
+  }
+
+  function headerLocationDropdown() {
+      const block = document.querySelector('[data-location-dropdown-block]');
+      const btn = block.querySelector('[data-location-dropdown-main-btn]');
+      const btnClose = block.querySelector('[data-btn-close]');
+      const clickChangeBtns = block.querySelectorAll('[data-click-change]');
+      const clickChangeText = block.querySelector('[data-change-text=""]');
+
+
+      btn.addEventListener('click', _ => {
+          block.classList.toggle('is-open');
+      });
+
+      btnClose.addEventListener('click', _ => {
+          block.classList.remove('is-open');
+      });
+
+      clickChangeBtns.forEach(btn => {
+          btn.addEventListener('click', _ => {
+              clickChangeText.textContent = btn.textContent;
+              block.classList.remove('is-open');
+          });
+      });
+  }
+
   setTimeout(() => { 
       document.querySelector('body').classList.add('on-loaded');
   }, 1000);
@@ -14322,6 +14360,9 @@
       formSubmit();
       cookieTooltip();
       ModalDispatcher.init();
+
+      headerDropdown();
+      headerLocationDropdown();
 
 
       let scroll = new Smooth({ 

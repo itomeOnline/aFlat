@@ -13,10 +13,8 @@
 		margin-bottom: 1em;
 	}
 
-	&:hover .itome_tooltip {
-		transform: translateX(calc(-50%)) translateY(-1vh);
-		opacity: 1;
-	}
+	width: em(130);
+	height: em(28);
 
 	&__logo {
 		display: flex;

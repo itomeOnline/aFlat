@@ -1,4 +1,60 @@
 header.header
 	.header__container.container
-		.header__line 
-			a.header__logo
+		.header__content
+			.header__line.header__line--1 
+				.header_location(data-location-dropdown-block="")
+					button.header_location__wrap(data-location-dropdown-main-btn="")
+						+svg('geo', 'icon icon__left')
+						p.header__link(data-change-text="") Владивосток
+						+svg('arrow_down', 'icon icon__right')
+					
+					.header_location__dropdown
+						button.header_location__close(data-btn-close="") 
+							+svg('cross', 'icon')
+						p.header_location__title Выберите город
+						.header_location__list 
+							button.header_location__list_btn(data-click-change="") Москва
+							button.header_location__list_btn(data-click-change="") Санкт-Петербург
+							button.header_location__list_btn(data-click-change="") Владивосток
+							button.header_location__list_btn(data-click-change="") Комсомольск-на-Амуре
+							button.header_location__list_btn(data-click-change="") Хабаровск
+
+				.header__links
+					a.header__link(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+					a.header__link(href="", target="_blank")
+						+svg('icon_tg', 'icon')
+						span Telegram
+					a.header__link(href="", target="_blank")
+						+svg('icon_wa', 'icon')
+						span WhatsApp
+					button.header__link(data-linked-modal="modal_phone") Заказать звонок
+			
+			
+			.header__line.header__line--2
+				a.header__logo(href="/") 
+					+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+
+				.header__links
+					.header_location.header_location--catalog(data-dropdown-block="")
+						button.header_location__wrap(data-dropdown-btn="") 
+							p.header__link.header__link--400 Каталог
+							+svg('arrow_down', 'icon icon__right')
+						.header_dropdown.header_dropdown--center
+							a.header_dropdown__btn(href="/catalog_new") Новостройки
+							a.header_dropdown__btn(href="/catalog_secondary") Вторичные квартиры
+							a.header_dropdown__btn(href="/catalog_rent") Аренда жилья
+							a.header_dropdown__btn(href="/catalog_other") Другое
+
+					a.header__link.header__link--400(href="/mortgage") Ипотека
+					a.header__link.header__link--400(href="/sale") Продажа
+					a.header__link.header__link--400(href="/rent") Аренда
+					a.header__link.header__link--400(href="/purchase") Покупка
+
+					.header__menu(data-dropdown-block="")
+						button.header__menu_icon(data-dropdown-btn="") 
+							+svg('dots', 'icon')
+						.header_dropdown.header_dropdown--right
+							a.header_dropdown__btn(href="/thailand") Таиланд
+							a.header_dropdown__btn(href="/faq") FAQ
+							a.header_dropdown__btn(href="/about") О компании
+							a.header_dropdown__btn(href="/contacts") Контакты

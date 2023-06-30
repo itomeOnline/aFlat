@@ -1,0 +1,31 @@
+.services_card_form {
+	width: calc((100% - em(28)) / 2);
+
+    background: #FFF;
+    padding: em(28);
+
+    
+    &__inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    &__span2 {
+        grid-column: span 2;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: em(28);
+    }
+
+    &__privacy {
+        text-align: center;
+
+        margin-top: .75rem;
+
+        font-size: em(14);
+        line-height: 1.25rem;
+    }
+}

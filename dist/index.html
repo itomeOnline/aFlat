@@ -134,7 +134,76 @@
           </div>
         </div>
       </header>
-      <main class="view" data-app-layout="view" data-app-layout-namespace="examples"></main>
+      <main class="view" data-app-layout="view" data-app-layout-namespace="examples">
+        <section class="section services">
+          <div class="services__container container"> 
+            <div class="section_block"> 
+              <h2 class="section_block__title">Сервисы AFLAT</h2>
+            </div>
+            <div class="services__content">
+              <div class="services__table services__table--1"><a class="services_card" href="/catalog_secondary">
+                  <div class="services_card__top">
+                    <p class="services_card__text services_card__text--first">Подбор и покупка</p>
+                    <h3 class="services_card__title">Вторичных <br> квартир</h3>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a><a class="services_card services_card--span2" href="/catalog_new">
+                  <div class="services_card__top">
+                    <p class="services_card__text services_card__text--first">Подбор и покупка</p>
+                    <h3 class="services_card__title">Квартир в новостройках</h3>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a><a class="services_card services_card--span2" href="/sale">
+                  <div class="services_card__top">
+                    <h3 class="services_card__title">Продажа квартиры</h3>
+                    <p class="services_card__text">и другой недвижимости</p>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a><a class="services_card" href="/">
+                  <div class="services_card__top">
+                    <h3 class="services_card__title">Аренда жилья</h3>
+                    <p class="services_card__text">на долгосрочный и краткосрочный период</p>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a></div>
+              <div class="services__table services__table--2"><a class="services_card" href="/">
+                  <div class="services_card__top">
+                    <h3 class="services_card__title">Сдача квартир</h3>
+                    <p class="services_card__text">и поиск надежных арендосъемщиков</p>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a><a class="services_card" href="/">
+                  <div class="services_card__top">
+                    <h3 class="services_card__title">Недвижимость <br> в Тайланде</h3>
+                  </div>
+                  <button class="services_card__btn btn btn--outlined btn--small"> <span class="btn__text">Подробнее</span></button></a>
+                <div class="services_card services_card--span2 services_card--form">
+                  <div class="services_card__top">
+                    <h3 class="services_card__title">Бесплатная консультация</h3>
+                    <p class="services_card__text">Менеджер свяжется с вами и подберет подходящий <br class="desktop"> вариант и условия покупки.</p>
+                  </div>
+                  <form class="services_card_form" action="/mailer" data-mailer="" data-form-id="services_main_page">
+                    <input type="hidden" name="form" value="Бесплатная консультация (блок сервисы, главная страница)">
+                    <div class="services_card_form__inputs">
+                      <div class="services_card_form__span2 select"> </div>
+                      <div class="input_wrapper input_wrapper--filled" data-input-wrapper="">
+                        <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+                        <label class="input_wrapper__label">Имя</label>
+                        <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                      </div>
+                      <div class="input_wrapper input_wrapper--filled" data-input-wrapper="">
+                        <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+                        <label class="input_wrapper__label">Телефон</label>
+                        <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                      </div>
+                      <div class="services_card_form__span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+                        <textarea class="input_wrapper__textarea" name="message" placeholder="Сообщение"></textarea>
+                      </div>
+                    </div>
+                    <button class="services_card_form__btn btn btn--filled"><span class="btn__text">Перезвоните мне</span></button>
+                    <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="section footer">
         <div class="footer__container container">
           <div class="footer__content"> 

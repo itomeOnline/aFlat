@@ -19,12 +19,12 @@
     }
 
     &--form {
-        height: em(486);
+        height: fit-content;
 
         flex-direction: row;
 
         @media(max-width: 500px) {
-            flex-direction: columnss;
+            flex-direction: column;
         }
     }
 

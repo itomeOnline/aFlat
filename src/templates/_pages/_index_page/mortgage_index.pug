@@ -1,0 +1,36 @@
+section.section.mortgage_index
+	.mortgage_index__container.container 
+
+		.section_block 
+			h2.section_block__title Выгодные ипотеки
+			
+		.mortgage_index__content
+			.mortgage_index__table 
+				a.mortgage_index_block.mortgage_index_block--span2(href="/fareastern_mortgage")
+					p.mortgage_index_block__caption Дальневосточная 
+					h2.mortgage_index_block__title 2%
+					button.mortgage_index_block__btn 
+						+svg('arrow_small', 'icon')
+			   
+				a.mortgage_index_block.mortgage_index_block--span2(href="/family_mortgage")
+					p.mortgage_index_block__caption Семейная
+					h2.mortgage_index_block__title от 5,3%
+					button.mortgage_index_block__btn 
+						+svg('arrow_small', 'icon')
+			   
+				a.mortgage_index_block(href="/military_mortgage")
+					p.mortgage_index_block__caption Военная
+					.mortgage_index_block__wrap
+						h2.mortgage_index_block__title.mortgage_index_block__title--small от 6,7%
+						button.mortgage_index_block__btn 
+							+svg('arrow_small', 'icon')
+				
+				a.mortgage_index_block(href="/support_mortgage")
+					p.mortgage_index_block__caption Господдержка
+					.mortgage_index_block__wrap
+						h2.mortgage_index_block__title.mortgage_index_block__title--small 12%
+						button.mortgage_index_block__btn 
+							+svg('arrow_small', 'icon')
+
+			a.mortgage_index__btn.tops__btn.btn.btn--filled(href="/mortgage")
+				span.btn__text Рассчитать ипотеку

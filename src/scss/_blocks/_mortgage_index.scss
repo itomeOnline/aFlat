@@ -1,0 +1,13 @@
+.mortgage_index {
+	
+    &__content {
+        margin-top: em(40);
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, em(236));
+        gap: em(28);
+    }
+}

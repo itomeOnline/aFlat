@@ -11,6 +11,10 @@ import formSubmit from "./components/form";
 import cookieTooltip from "./components/cookieTooltip";
 import headerDropdown from "./components/headerDropdown";
 import headerLocationDropdown from "./components/headerLocationDropdown";
+import topsSlider from "./components/sliders/topsSlider";
+import topsBenefitsSlider from "./components/sliders/topsBenefitsSlider";
+import excursionsSlider from "./components/sliders/excursionsSlider";
+import banksSlider from "./components/sliders/banksSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -40,6 +44,10 @@ document.addEventListener("DOMContentLoaded", _ => {
     headerDropdown();
     headerLocationDropdown();
 
+    topsSlider();
+    topsBenefitsSlider();
+    excursionsSlider();
+    banksSlider();
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,

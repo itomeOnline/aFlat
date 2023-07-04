@@ -1,0 +1,50 @@
+mixin topsCard(place, title, price, tag1, tag2)
+	a.tops_card.swiper-slide(href="/complex_page")
+		.tops_card__tags 
+			.tops_card__tag
+				span.text= tag1
+			.tops_card__tag
+				span.text= tag2
+		.tops_card__info
+			p.tops_card__caption= place
+			h3.tops_card__title= title
+			p.tops_card__price= price
+			button.tops_card__btn.btn.btn--filled.btn--small
+				span.btn__text 1 квартира
+			
+
+section.section.tops
+	.tops__container.container 
+
+		.tops__top
+			.section_block 
+				h2.section_block__title Топ жилых комплексов
+				p.section_block__text Лучшие предложения первичных квартир #[br.desktop] по соотношению цена-качество.
+
+			.tops__nav.slider__nav 
+				.slider__scroll.tops__scroll
+				.slider__buttons.slider__buttons--margin
+					button.slider__button.slider__button--prev.tops__arrow--prev
+						+svg('arrow_small', 'icon')
+					button.slider__button.slider__button--next.tops__arrow--next
+						+svg('arrow_small', 'icon')
+			
+		.tops__content
+			
+			.tops__slider.slider.swiper 
+				.swiper-wrapper
+					.tops__first_slide.swiper-slide
+						h3.tops__first_slide_title Лучшие #[br.desktop]  предложения и ТОП жилых комплексов
+						p.tops__first_slide_text Скачивайте подборки лучших предложений недвижимости #[br.desktop] вашего города в одном файле. Обновляется ежемесячно.
+						a.tops__first_slide_btn.btn.btn--filled.btn--small(href="#")
+							span.btn__text Получить лучшие предложения
+
+					+topsCard('Пригород', 'Сады Маковского ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+					+topsCard('Верхняя улица, 16', 'Premium Park Дом №1 ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+					+topsCard('Пригород', 'Сады Маковского ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+					+topsCard('Верхняя улица, 16', 'Premium Park Дом №1 ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+					+topsCard('Пригород', 'Сады Маковского ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+					+topsCard('Верхняя улица, 16', 'Premium Park Дом №1 ', 'от 7 264 060 ₽', 'Сдача в 2023', 'Акция')
+			
+			a.tops__btn.btn.btn--filled(href="/catalog_new")
+				span.btn__text Перейти в каталог

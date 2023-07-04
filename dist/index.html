@@ -23,8 +23,8 @@
 			<path d="M11.863 6.56l-.966-.966L8 8.49 5.103 5.594l-.965.965L8 10.422l3.863-3.863z"/>
 		</symbol>
 	
-		<symbol id="arrow_short" viewBox="0 0 5 8">
-			<path d="M4.94 4l-4-4L0 .94 3.054 4 0 7.06.94 8l4-4z"/>
+		<symbol id="arrow_small" viewBox="0 0 16 16">
+			<path d="M6.56 4.137l-.966.966L8.49 8l-2.897 2.897.965.965L10.422 8 6.559 4.137z"/>
 		</symbol>
 	
 		<symbol id="cross" viewBox="0 0 16 16">
@@ -33,6 +33,10 @@
 	
 		<symbol id="dots" viewBox="0 0 22 22">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.584 12.604a1.604 1.604 0 1 0 0-3.208 1.604 1.604 0 0 0 0 3.208zm12.833 0a1.604 1.604 0 1 0 0-3.208 1.604 1.604 0 0 0 0 3.208zM12.604 11a1.604 1.604 0 1 1-3.207 0 1.604 1.604 0 0 1 3.207 0z"/>
+		</symbol>
+	
+		<symbol id="fire" viewBox="0 0 16 16">
+			<g fill-rule="evenodd" clip-rule="evenodd" clip-path="url(#a)"><path d="M13.86 10.34a5.897 5.897 0 0 1-5.891 5.648c-3.258 0-5.898-2.73-5.898-5.898 0-.424-.008-1.27.627-2.698.38-.855.618-1.392.753-1.882.074-.27.218-.699.627 0 .242.411.251 1.003.251 1.003s.9-.69 1.506-2.007c.89-1.932.18-3.087-.062-3.89-.084-.278-.137-.778.439-.565.587.216 2.138 1.302 2.949 2.447 1.157 1.633 1.568 3.2 1.568 3.2s.37-.46.502-.941c.149-.544.15-1.082.628-.502.453.551 1.127 1.587 1.506 2.572.688 1.789.495 3.514.495 3.514z"/><path d="M7.969 15.988A4.078 4.078 0 0 1 3.89 11.91c0-1.36.548-2.185 1.688-3.304.73-.716 1.413-1.596 1.703-2.195.057-.118.187-.733.689-.013.263.377.675 1.048.94 1.621.456.988.564 1.945.564 1.945s.447-.263.753-.94c.1-.22.299-1.046.856-.22.41.608.972 1.699.964 3.106a4.078 4.078 0 0 1-4.078 4.078z"/><path d="M8.031 11.533c.58 0 .58 1.075 1.318 2.51.49.956-.243 1.945-1.318 1.945-1.074 0-1.631-.87-1.631-1.945 0-1.074 1.05-2.51 1.631-2.51z"/></g><defs><linearGradient id="b" x1="7.977" y1="16" x2="7.977" y2=".012" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4C0D"/><stop offset="1" stop-color="#FC9502"/></linearGradient><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
 		</symbol>
 	
 		<symbol id="geo" viewBox="0 0 16 16">
@@ -180,7 +184,6 @@
                   <form class="services_card_form" action="/mailer" data-mailer="" data-form-id="services_main_page">
                     <input type="hidden" name="form" value="Бесплатная консультация (блок сервисы, главная страница)">
                     <div class="services_card_form__inputs">
-                      <div class="services_card_form__span2 select"> </div>
                       <div class="input_wrapper input_wrapper--filled" data-input-wrapper="">
                         <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
                         <label class="input_wrapper__label">Имя</label>
@@ -198,6 +201,500 @@
                     <button class="services_card_form__btn btn btn--filled"><span class="btn__text">Перезвоните мне</span></button>
                     <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
                   </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section tops">
+          <div class="tops__container container"> 
+            <div class="tops__top">
+              <div class="section_block"> 
+                <h2 class="section_block__title">Топ жилых комплексов</h2>
+                <p class="section_block__text">Лучшие предложения первичных квартир <br class="desktop"> по соотношению цена-качество.</p>
+              </div>
+              <div class="tops__nav slider__nav"> 
+                <div class="slider__scroll tops__scroll"></div>
+                <div class="slider__buttons slider__buttons--margin">
+                  <button class="slider__button slider__button--prev tops__arrow--prev">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next tops__arrow--next">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tops__content">
+              <div class="tops__slider slider swiper"> 
+                <div class="swiper-wrapper">
+                  <div class="tops__first_slide swiper-slide">
+                    <h3 class="tops__first_slide_title">Лучшие <br class="desktop">  предложения и ТОП жилых комплексов</h3>
+                    <p class="tops__first_slide_text">Скачивайте подборки лучших предложений недвижимости <br class="desktop"> вашего города в одном файле. Обновляется ежемесячно.</p><a class="tops__first_slide_btn btn btn--filled btn--small" href="#"><span class="btn__text">Получить лучшие предложения</span></a>
+                  </div><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Пригород</p>
+                              <h3 class="tops_card__title">Сады Маковского </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Верхняя улица, 16</p>
+                              <h3 class="tops_card__title">Premium Park Дом №1 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Пригород</p>
+                              <h3 class="tops_card__title">Сады Маковского </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Верхняя улица, 16</p>
+                              <h3 class="tops_card__title">Premium Park Дом №1 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Пригород</p>
+                              <h3 class="tops_card__title">Сады Маковского </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/complex_page">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><span class="text">Сдача в 2023</span></div>
+                              <div class="tops_card__tag"><span class="text">Акция</span></div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">Верхняя улица, 16</p>
+                              <h3 class="tops_card__title">Premium Park Дом №1 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">1 квартира</span></button>
+                            </div></a>
+                </div>
+              </div><a class="tops__btn btn btn--filled" href="/catalog_new"><span class="btn__text">Перейти в каталог</span></a>
+            </div>
+          </div>
+        </section>
+        <section class="section excursions">
+          <div class="excursions__container container"> 
+            <div class="excursions__content">
+              <div class="section_block excursions__section_block">
+                <h2 class="section_block__title section_block__title--small">Бесплатные экскурсии <br class="desktop"> по новостройкам</h2>
+                <p class="section_block__text">Организуем просмотр квартиры в любое <br class="desktop"> удобное для Вас время, даже в выходные.</p>
+                <div class="excursions__buttons section_block__buttons"><a class="excursions__btn btn btn--filled" href="/catalog_new"><span class="btn__text">Каталог новостроек</span></a>
+                  <button class="excursions__btn btn btn--filled" data-linked-modal="find_complex"><span class="btn__text">Подобрать новостройку</span></button>
+                </div>
+              </div>
+              <div class="excursions__nav slider__nav"> 
+                <div class="excursions__pagination slider__pagination"></div>
+                <div class="slider__buttons">
+                  <button class="slider__button slider__button--prev excursions__arrow--prev">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next excursions__arrow--next">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="excursions__slider slider swiper"> 
+                <div class="swiper-wrapper"> 
+                  <div class="excursions__slide swiper-slide"></div>
+                  <div class="excursions__slide swiper-slide"></div>
+                  <div class="excursions__slide swiper-slide"></div>
+                  <div class="excursions__slide swiper-slide"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section tops tops_benefits">
+          <div class="tops__container container"> 
+            <div class="tops__top">
+              <div class="section_block"> 
+                <h2 class="section_block__title">Выгодные предложения</h2>
+                <p class="section_block__text">Успейте найти квартирами по цене ниже рыночной. <br class="desktop"> Такие объявления помечены специальным значком</p>
+              </div>
+              <div class="tops__nav slider__nav"> 
+                <div class="slider__scroll tops_benefits__scroll"></div>
+                <div class="slider__buttons slider__buttons--margin">
+                  <button class="slider__button slider__button--prev tops_benefits__arrow--prev">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next tops_benefits__arrow--next">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tops__content">
+              <div class="tops_benefits__slider slider swiper"> 
+                <div class="swiper-wrapper"><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                              <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                              <h3 class="tops_card__title">Ватутина, 4д </h3>
+                              <p class="tops_card__price">8 000 000 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                              <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                              <h3 class="tops_card__title">Ватутина, 4д </h3>
+                              <p class="tops_card__price">8 000 000 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                              <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                              <p class="tops_card__price">от 7 264 060 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                            <div class="tops_card__tags"> 
+                              <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                              </div>
+                            </div>
+                            <div class="tops_card__info">
+                              <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                              <h3 class="tops_card__title">Ватутина, 4д </h3>
+                              <p class="tops_card__price">8 000 000 ₽</p>
+                              <button class="tops_card__btn btn btn--filled btn--small"><span class="btn__text">Подробнее</span></button>
+                            </div></a>
+                </div>
+              </div><a class="tops__btn btn btn--filled" href="/catalog_secondary"><span class="btn__text">Перейти в каталог</span></a>
+            </div>
+          </div>
+        </section>
+        <section class="section mortgage_index">
+          <div class="mortgage_index__container container"> 
+            <div class="section_block"> 
+              <h2 class="section_block__title">Выгодные ипотеки</h2>
+            </div>
+            <div class="mortgage_index__content">
+              <div class="mortgage_index__table"> <a class="mortgage_index_block mortgage_index_block--span2" href="/fareastern_mortgage">
+                  <p class="mortgage_index_block__caption">Дальневосточная </p>
+                  <h2 class="mortgage_index_block__title">2%</h2>
+                  <button class="mortgage_index_block__btn"> 
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button></a><a class="mortgage_index_block mortgage_index_block--span2" href="/family_mortgage">
+                  <p class="mortgage_index_block__caption">Семейная</p>
+                  <h2 class="mortgage_index_block__title">от 5,3%</h2>
+                  <button class="mortgage_index_block__btn"> 
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button></a><a class="mortgage_index_block" href="/military_mortgage">
+                  <p class="mortgage_index_block__caption">Военная</p>
+                  <div class="mortgage_index_block__wrap">
+                    <h2 class="mortgage_index_block__title mortgage_index_block__title--small">от 6,7%</h2>
+                    <button class="mortgage_index_block__btn"> 
+                      <svg class="icon">
+                        <use xlink:href="#arrow_small"></use>
+                      </svg>
+                    </button>
+                  </div></a><a class="mortgage_index_block" href="/support_mortgage">
+                  <p class="mortgage_index_block__caption">Господдержка</p>
+                  <div class="mortgage_index_block__wrap">
+                    <h2 class="mortgage_index_block__title mortgage_index_block__title--small">12%</h2>
+                    <button class="mortgage_index_block__btn"> 
+                      <svg class="icon">
+                        <use xlink:href="#arrow_small"></use>
+                      </svg>
+                    </button>
+                  </div></a></div><a class="mortgage_index__btn tops__btn btn btn--filled" href="/mortgage"><span class="btn__text">Рассчитать ипотеку</span></a>
+            </div>
+          </div>
+        </section>
+        <section class="section banks">
+          <div class="banks__container container"> 
+            <div class="tops__top banks__top">
+              <div class="section_block"> 
+                <h2 class="section_block__title">Банки-партнёры</h2>
+              </div>
+              <div class="tops__nav slider__nav"> 
+                <div class="slider__scroll banks__scroll"></div>
+                <div class="slider__buttons slider__buttons--margin">
+                  <button class="slider__button slider__button--prev banks__arrow--prev">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__button slider__button--next banks__arrow--next">
+                    <svg class="icon">
+                      <use xlink:href="#arrow_small"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="banks__content"> 
+              <div class="banks__slider slider swiper"> 
+                <div class="swiper-wrapper">
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">ВТБ</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Альфа-Банк</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Дом.рф</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Газпромбанк</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">ВТБ</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Альфа-Банк</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Дом.рф</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
+                          <div class="banks_card swiper-slide">
+                            <div class="banks_card__top">
+                              <div class="banks_card__img"> </div>
+                              <h3 class="banks_card__title">Газпромбанк</h3>
+                            </div>
+                            <div class="banks_card__info"> 
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Дальневосточная</p>
+                                <p class="banks_card__text banks_card__text--percent">2%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Семейная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 5,3%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Военная</p>
+                                <p class="banks_card__text banks_card__text--percent">от 6,7%</p>
+                              </div>
+                              <div class="banks_card__line">
+                                <p class="banks_card__text">Господдержка</p>
+                                <p class="banks_card__text banks_card__text--percent">12%</p>
+                              </div>
+                            </div>
+                            <button class="banks_card__btn btn btn--filled btn--small" data-linked-modal=""><span class="btn__text">Оставить заявку</span></button>
+                          </div>
                 </div>
               </div>
             </div>

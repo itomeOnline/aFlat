@@ -1,0 +1,29 @@
+section.section.excursions
+	.excursions__container.container 
+
+		.excursions__content
+
+			.section_block.excursions__section_block
+				h2.section_block__title.section_block__title--small Бесплатные экскурсии #[br.desktop] по новостройкам
+				p.section_block__text Организуем просмотр квартиры в любое #[br.desktop] удобное для Вас время, даже в выходные.
+
+				.excursions__buttons.section_block__buttons
+					a.excursions__btn.btn.btn--filled(href="/catalog_new")
+						span.btn__text Каталог новостроек
+					button.excursions__btn.btn.btn--filled(data-linked-modal="find_complex")
+						span.btn__text Подобрать новостройку
+
+			.excursions__nav.slider__nav 
+				.excursions__pagination.slider__pagination
+				.slider__buttons
+					button.slider__button.slider__button--prev.excursions__arrow--prev
+						+svg('arrow_small', 'icon')
+					button.slider__button.slider__button--next.excursions__arrow--next
+						+svg('arrow_small', 'icon')
+
+			.excursions__slider.slider.swiper 
+				.swiper-wrapper 
+					.excursions__slide.swiper-slide
+					.excursions__slide.swiper-slide
+					.excursions__slide.swiper-slide
+					.excursions__slide.swiper-slide

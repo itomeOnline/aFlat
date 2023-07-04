@@ -1,0 +1,48 @@
+mixin banksCard(title, img)
+	.banks_card.swiper-slide
+		.banks_card__top
+			.banks_card__img 
+			h3.banks_card__title= title
+		.banks_card__info 
+			.banks_card__line
+				p.banks_card__text Дальневосточная
+				p.banks_card__text.banks_card__text--percent 2%
+			.banks_card__line
+				p.banks_card__text Семейная
+				p.banks_card__text.banks_card__text--percent от 5,3%
+			.banks_card__line
+				p.banks_card__text Военная
+				p.banks_card__text.banks_card__text--percent от 6,7%
+			.banks_card__line
+				p.banks_card__text Господдержка
+				p.banks_card__text.banks_card__text--percent 12%
+		button.banks_card__btn.btn.btn--filled.btn--small(data-linked-modal="")
+			span.btn__text Оставить заявку
+
+
+section.section.banks
+	.banks__container.container 
+
+		.tops__top.banks__top
+			.section_block 
+				h2.section_block__title Банки-партнёры
+
+			.tops__nav.slider__nav 
+				.slider__scroll.banks__scroll
+				.slider__buttons.slider__buttons--margin
+					button.slider__button.slider__button--prev.banks__arrow--prev
+						+svg('arrow_small', 'icon')
+					button.slider__button.slider__button--next.banks__arrow--next
+						+svg('arrow_small', 'icon')
+		
+		.banks__content 
+			.banks__slider.slider.swiper 
+				.swiper-wrapper
+					+banksCard('ВТБ')
+					+banksCard('Альфа-Банк')
+					+banksCard('Дом.рф')
+					+banksCard('Газпромбанк')
+					+banksCard('ВТБ')
+					+banksCard('Альфа-Банк')
+					+banksCard('Дом.рф')
+					+banksCard('Газпромбанк')

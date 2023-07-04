@@ -11,42 +11,42 @@
     &__nav {
         display: flex;
         align-items: center;
-        margin-top: em(50);
+        //margin-top: em(50);
 
         @media(max-width: 500px) {
             flex-direction: column;
-            margin-top: em(24);
+            //margin-top: em(24);
         }
     }
 
     &__scroll {
         opacity: 1!important;
-        flex: 1;
+        width: em(332);
         height: 2px;
-        border-radius: 3px;
-        background: #ECECEC;
+        background: #A6A6A6;
 
         @media(max-width: 500px) {
             width: 100%;
-            flex: auto;
         }
 
         
         .swiper-scrollbar-drag {
             height: 100%;
             background: #242424;
-            border-radius: 3px;
         }
     }
 
     &__pagination {
         font-family: $text-font;
-        font-size: em(18);
-        line-height: dm(22,18);
-        font-weight: 300;
-        color: $c-primary;
+        font-size: em(14);
+        line-height: dm(18,14);
+        font-weight: 500;
 
-        margin: 0 em(15);
+        border-radius: 50px;
+        background: #AEAEAE;
+        padding: .5rem 1rem;
+
+        //margin: 0 em(15);
 
         &.swiper-pagination-lock {
             display: none;
@@ -57,6 +57,10 @@
         display: flex;
         // height: 22px;
 
+        &--margin {
+            margin-left: em(20);
+        }
+
         @media(max-width: 500px) {
             // margin-left: 0;
             // margin-top: em(20);
@@ -64,13 +68,12 @@
     }
 
     &__button {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         padding: 0;
 
-        border: 1px solid #242424;
-        border-radius: 50%;
-        background: white;
+        border-radius: 8px;
+        background: #FFFFFF;
 
         display: flex;
         align-items: center;
@@ -83,27 +86,18 @@
             transform: scaleX(-1);
         }
 
-        &:hover {
-            background: $c-primary;
-            svg {
-                fill: white;
-            }
-        }
+        // &:hover {
+        //     background: $c-primary;
+        //     svg {
+        //         fill: white;
+        //     }
+        // }
 
         svg {
             width: 16px;
             height: 16px;
-            fill: #242424;
+            fill: #000;
             transition: fill .2s;
-
-            .main_section & {
-                fill: white;
-            }
-        }
-
-        .main_section & {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid #FFFFFF;
         }
 
         &.swiper-button-lock {
@@ -112,15 +106,15 @@
 
         &.swiper-button-disabled {
             pointer-events: none;
-            border: 1px solid #C4C4C4;
+            opacity: .6;
 
-            svg {
-                fill: #C4C4C4;
-            }
+            // svg {
+            //     fill: #C4C4C4;
+            // }
         }
 
         & + & {
-            margin-left: 1em;
+            margin-left: .75rem;
 
             svg {
                 // transform: scaleX(-1);

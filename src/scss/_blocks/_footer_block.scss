@@ -1,5 +1,6 @@
 .footer_block {
-	background: #EAEAEA;
+	background: #F4F5F2;
+    border-radius: 16px;
     
     padding: em(40);
 
@@ -27,7 +28,7 @@
         margin-bottom: 1rem;
 
         &:hover {
-            color: #3C5C4A;
+            color: $c-hover;
         }
     }
 
@@ -39,7 +40,7 @@
         transition: color .2s;
 
         &:hover {
-            color: #3C5C4A;
+            color: $c-hover;
         }
 
         & + & {
@@ -60,7 +61,7 @@
         justify-content: center;
 
         border-radius: 50%;
-        background: #C9C9C9;
+        background: $c-primary;
 
         width: em(32);
         height: em(32);
@@ -68,16 +69,13 @@
         transition: background .2s;
 
         &:hover {
-            background: #3C5C4A;
-
-            .icon {
-                fill: #ffffff;
-            }
+            background: $c-hover;
         }
 
         .icon {
             width: 1em;
             height: 1em;
+            fill: #fff;
 
             transition: fill .2s;
         }
@@ -96,7 +94,7 @@
         }
 
         &:nth-child(2) {
-            margin-right: em(128);
+            margin-right: 5em;
         }
     }
 
@@ -108,7 +106,7 @@
         transition: color .2s;
 
         &:hover {
-            color: #3C5C4A;
+            color: $c-hover;
         }
 
         &--nohover:hover {

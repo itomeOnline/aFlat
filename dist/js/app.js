@@ -13898,7 +13898,6 @@
   if (canUseDom) {
     SimpleBar.initHtmlApi();
   }
-  //# sourceMappingURL=simplebar.esm.js.map
 
   class Modal {
   	constructor(el) {

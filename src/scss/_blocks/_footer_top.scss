@@ -29,6 +29,7 @@
         font-weight: 600;
         font-size: em(14);
         line-height: 1.25rem;
+        color: $c-grey;
     }
 
     &__links {
@@ -43,22 +44,24 @@
         font-weight: 600;
         font-size: 1em;
         line-height: em(22,16);
+        color: $c-primary;
 
         padding: 0;
 
         transition: color .2s;
 
         &:hover {
-            color: #3C5C4A;
+            color: $c-hover;
 
             .icon {
-                fill: #3C5C4A;
+                fill: $c-hover;
             }
         }
 
         .icon {
             width: 1em;
             height: 1em;
+            fill: $c-primary;
 
             margin-right: .5rem;
 

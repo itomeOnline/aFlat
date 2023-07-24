@@ -76,10 +76,10 @@
         align-items: center;
 
         &:hover {
-            color: #3C5C4A;
+            color: $c-primary;
 
             .icon {
-                fill: #3C5C4A;
+                fill: $c-primary;
             }
         }
 
@@ -104,8 +104,22 @@
     }
 
     &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo_img {
         width: em(176);
         height: em(28);
+
+        margin-right: .75rem;
+    }
+
+    &__logo_text {
+        color: #838383;
+        font-size: .75rem;
+        line-height: .875rem;
+        font-weight: 400;
     }
 
     &__menu {
@@ -119,6 +133,12 @@
         height: em(22);
 
         padding: 0;
+        
+        &:hover {
+            .icon {
+                fill: $c-primary;
+            }
+        }
 
         .icon {
             width: 100%;

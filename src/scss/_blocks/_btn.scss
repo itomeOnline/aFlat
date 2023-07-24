@@ -1,4 +1,4 @@
-$bg-filled: #000000;
+$bg-filled: $c-primary;
 $borderR: 10px;
 
 $paddingSide: em(28);
@@ -81,20 +81,18 @@ $height: 3.5em;
 		background: $bg-filled;
 
 		&:hover {
-			background: lighten($bg-filled, 5%);           
+			background: $c-hover;           
 		}
-
-
 	}
 
 	&--outlined {
-		border: 1px solid #000000;
-		color: #000000;
+		border: 1px solid $c-primary;
+		color: $c-primary;
 		border-radius: 8px;
 		background: transparent;
 
 		&:hover {
-			background: #000000;
+			background: $c-primary;
 			color: #ffffff;
 		}
 	}

@@ -32,7 +32,9 @@ header.header
 			
 			.header__line.header__line--2
 				a.header__logo(href="/") 
-					+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+					.header__logo_img
+						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+					p.header__logo_text Покупка и продажа #[br] недвижимости
 
 				.header__links
 					.header_location.header_location--catalog(data-dropdown-block="")

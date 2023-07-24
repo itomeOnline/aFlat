@@ -1,5 +1,7 @@
-mixin topsCard(rooms, floor, square, title, price, tag1)
+mixin topsCard(img, rooms, floor, square, title, price, tag1)
 	a.tops_card.swiper-slide(href="/apartment_secondary")
+		.tops_card__bg
+			+img(img, '', 'image')
 		.tops_card__tags 
 			.tops_card__tag
 				+imgSvg(`${assetsPath}/img/icon_fire.svg`, '', 'icon')
@@ -8,7 +10,7 @@ mixin topsCard(rooms, floor, square, title, price, tag1)
 			p.tops_card__caption #{rooms} | #{floor} | #{square}
 			h3.tops_card__title= title
 			p.tops_card__price= price
-			button.tops_card__btn.btn.btn--filled.btn--small
+			button.tops_card__btn.btn.btn--white.btn--small
 				span.btn__text Подробнее
 			
 
@@ -18,7 +20,7 @@ section.section.tops.tops_benefits
 		.tops__top
 			.section_block 
 				h2.section_block__title Выгодные предложения
-				p.section_block__text Успейте найти квартирами по цене ниже рыночной. #[br.desktop] Такие объявления помечены специальным значком
+				p.section_block__text Успейте найти квартирами по цене ниже рыночной. #[br.desktop] #[br.tablet] Такие объявления помечены специальным значком
 
 			.tops__nav.slider__nav 
 				.slider__scroll.tops_benefits__scroll
@@ -32,12 +34,12 @@ section.section.tops.tops_benefits
 			
 			.tops_benefits__slider.slider.swiper 
 				.swiper-wrapper
-					+topsCard('1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
-					+topsCard('2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
-					+topsCard('1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
-					+topsCard('2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
-					+topsCard('1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
-					+topsCard('2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
 			
 			a.tops__btn.btn.btn--filled(href="/catalog_secondary")
 				span.btn__text Перейти в каталог

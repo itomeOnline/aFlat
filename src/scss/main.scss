@@ -65,6 +65,18 @@ img {
 
 br.desktop {
 
+	@media(max-width: 1124px) {
+		display: none;
+	}
+}
+
+br.tablet {
+	display: none;
+
+	@media(max-width: 1124px) {
+		display: initial;
+	}
+
 	@media(max-width: 500px) {
 		display: none;
 	}
@@ -199,3 +211,11 @@ br.mobile {
 @import "_blocks/banks";
 
 @import "_blocks/banks_card";
+
+@import "_blocks/excursions_slide";
+
+@import "_blocks/offers_block";
+
+@import "_blocks/offers";
+
+@import "_blocks/header_mobile";

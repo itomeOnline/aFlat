@@ -34,7 +34,7 @@ header.header
 				a.header__logo(href="/") 
 					.header__logo_img
 						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
-					p.header__logo_text Покупка и продажа #[br] недвижимости
+					p.header__logo_text Покупка и продажа #[br.desktop] недвижимости
 
 				.header__links
 					.header_location.header_location--catalog(data-dropdown-block="")
@@ -60,3 +60,9 @@ header.header
 							a.header_dropdown__btn(href="/faq") FAQ
 							a.header_dropdown__btn(href="/about") О компании
 							a.header_dropdown__btn(href="/contacts") Контакты
+
+				.header_mobile
+					a.header__link.header_mobile__link(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+
+					button.header_mobile__menu(data-linked-modal="modal_menu")
+						+svg('mobile_menu', 'icon')

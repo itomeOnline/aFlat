@@ -13,6 +13,7 @@
         align-items: center;
         //margin-top: em(50);
 
+
         @media(max-width: 500px) {
             flex-direction: column;
             //margin-top: em(24);
@@ -23,7 +24,11 @@
         opacity: 1!important;
         width: em(332);
         height: 2px;
-        background: #A6A6A6;
+        background: #E5E7E0;
+
+        @media(max-width: 1124px) {
+            width: 100%;
+        }
 
         @media(max-width: 500px) {
             width: 100%;
@@ -32,7 +37,7 @@
         
         .swiper-scrollbar-drag {
             height: 100%;
-            background: #242424;
+            background: $c-primary;
         }
     }
 
@@ -43,7 +48,7 @@
         font-weight: 500;
 
         border-radius: 50px;
-        background: #AEAEAE;
+        background: #fff;
         padding: .5rem 1rem;
 
         //margin: 0 em(15);
@@ -86,17 +91,17 @@
             transform: scaleX(-1);
         }
 
-        // &:hover {
-        //     background: $c-primary;
-        //     svg {
-        //         fill: white;
-        //     }
-        // }
+        &:hover {
+            background: $c-primary;
+            svg {
+                fill: white;
+            }
+        }
 
         svg {
             width: 16px;
             height: 16px;
-            fill: #000;
+            fill: $c-primary;
             transition: fill .2s;
         }
 
@@ -106,7 +111,7 @@
 
         &.swiper-button-disabled {
             pointer-events: none;
-            opacity: .6;
+            opacity: .8;
 
             // svg {
             //     fill: #C4C4C4;

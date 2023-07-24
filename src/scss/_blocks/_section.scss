@@ -2,6 +2,10 @@
 	
 	& + & {
 		margin-top: em(120);
+
+		@media(max-width: 1124px) {
+			margin-top: em(100);
+		}
 	}
     
 	// &:last-child,

@@ -1,6 +1,11 @@
 .footer {
     margin-bottom: em(40);
     margin-top: em(120);
+
+    @media(max-width: 1124px) {
+        margin-top: em(100);
+        margin-bottom: em(28);
+    }
 	
     &__content {
         border-radius: 16px;
@@ -9,6 +14,10 @@
 
         width: 100%;
         padding: 0 em(40);
+
+        @media(max-width: 1124px) {
+            padding: 0 em(24);
+        }
     }
 
     &__main {
@@ -17,6 +26,13 @@
         display: grid;
         grid-template-columns: em(412) auto;
         gap: em(28);
+
+        @media(max-width: 1124px) {
+            padding-bottom: em(28);
+
+            grid-template-columns: 1fr 1fr;
+            gap: em(20);
+        }
 
         @media(max-width: 500px) {
             grid-template-columns: 100%;

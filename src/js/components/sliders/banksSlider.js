@@ -35,7 +35,11 @@ function banksSlider () {
             slidesPerView: 1.1,
             spaceBetween: 20
           },
-          700: {
+          500: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          1120: {
             slidesPerView: 4,
             spaceBetween: 28
           },

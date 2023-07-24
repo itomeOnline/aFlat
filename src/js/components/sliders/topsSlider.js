@@ -35,7 +35,11 @@ function topsSlider () {
             slidesPerView: 1.1,
             spaceBetween: 20
           },
-          700: {
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1124: {
             slidesPerView: 3,
             spaceBetween: 28
           },

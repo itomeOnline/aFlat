@@ -8,10 +8,18 @@
 
     border-top: 1px solid #F4F4F4;
 
+    @media(max-width: 1124px) {
+        padding: em(24) 0;
+    }
+
     &__copyright {
         font-size: em(14);
         line-height: 1.25rem;
         font-weight: 400;
+
+        @media(max-width: 1124px) {
+            font-size: em(12);
+        }
 
         .link {
             color: #012DCB;
@@ -33,6 +41,11 @@
             height: em(28);
 
             margin-right: .5rem;
+
+            @media(max-width: 1124px) {
+                width: em(20);
+                height: em(20);
+            }
         }
     }
 }

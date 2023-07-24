@@ -8,13 +8,18 @@
 
 	color: #ffffff;
 	
+	width: em(130);
+	height: em(28);
+
+	@media(max-width: 1124px) {
+		width: em(94);
+		height: em(20);
+	}
 
 	@media(max-width: 500px) {
 		margin-bottom: 1em;
 	}
 
-	width: em(130);
-	height: em(28);
 
 	&__logo {
 		display: flex;

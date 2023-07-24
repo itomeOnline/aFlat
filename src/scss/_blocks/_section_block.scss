@@ -20,6 +20,11 @@
 		line-height: em(50,40);
 		color: #000000;
 
+		@media(max-width: 1124px) {
+			font-size: em(32);
+			line-height: em(40,32);
+		}
+
 		@media(max-width: 500px) {
 			font-size: em(26);
 			line-height: em(30,26);
@@ -33,6 +38,11 @@
 		&--small {
 			font-size: em(32);
 			line-height: em(40,32);
+
+			@media(max-width: 1124px) {
+				font-size: em(28);
+				line-height: em(36,28);
+			}
 		}
 	}
 

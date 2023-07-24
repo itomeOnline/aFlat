@@ -1,11 +1,17 @@
 .banks_card {
-	background: #D9D9D9;
+	background: #fff;
     padding: em(28);
     height: fit-content;
+
+    border-radius: 16px;
+
+    @media(max-width: 1124px) {
+        padding: em(24);
+    }
     
     &__top {
         padding-bottom: 1em;
-        border-bottom: 1px solid #A6A6A6;
+        border-bottom: 1px solid #F4F4F4;
     }
 
     &__img {
@@ -21,10 +27,19 @@
         font-weight: 700;
         font-size: em(24);
         line-height: em(30,24);
+
+        @media(max-width: 1124px) {
+            font-size: em(20);
+            line-height: em(24,20);
+        }
     }
 
     &__info {
         margin: em(16) 0 em(28);
+
+        @media(max-width: 1124px) {
+            margin-bottom: em(20);
+        }
     }
 
     &__line {
@@ -43,7 +58,7 @@
         font-size: em(14);
         line-height: 1.25rem;
         font-weight: 400;
-        color: #545454;
+        color: #838383;
 
         &--percent {
             color: #000;

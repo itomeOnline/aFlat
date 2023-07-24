@@ -2,6 +2,10 @@
 	
     &__content {
         margin-top: em(40);
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+        }
     }
 
     &__table {
@@ -9,5 +13,11 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, em(236));
         gap: em(28);
+
+        @media(max-width: 1124px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, em(240));
+            gap: em(20);
+        }
     }
 }

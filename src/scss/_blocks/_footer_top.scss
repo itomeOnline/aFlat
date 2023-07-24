@@ -5,9 +5,18 @@
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: 1124px) {
+        padding: em(24) 0 em(32);
+    }
+
     &__logo {
         display: flex;
         align-items: center;
+
+        @media(max-width: 1124px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__logo_img {
@@ -20,6 +29,13 @@
 
         transition: opacity .2s;
 
+        @media(max-width: 1124px) {
+            width: em(194);
+            height: em(30);
+
+            margin-right: 0;
+        }
+
         &:hover {
             opacity: .8;
         }
@@ -30,6 +46,24 @@
         font-size: em(14);
         line-height: 1.25rem;
         color: $c-grey;
+
+        @media(max-width: 1124px) {
+            font-size: em(12);
+            line-height: .875rem;
+
+            margin-top: .5rem;
+        }
+
+        br.tablet {
+
+            @media(max-width: 1124px) {
+                display: none;
+            }
+
+            @media(max-width: 500px) {
+                display: initial;
+            }
+        }
     }
 
     &__links {
@@ -49,6 +83,11 @@
         padding: 0;
 
         transition: color .2s;
+
+        @media(max-width: 1124px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+        }
 
         &:hover {
             color: $c-hover;
@@ -70,6 +109,10 @@
 
         & + & {
             margin-left: em(28);
+
+            @media(max-width: 1124px) {
+                margin-left: 1.25rem;
+            }
         }
     }
 }

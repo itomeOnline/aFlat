@@ -7,70 +7,85 @@ section.section.services
 		.services__content
 			.services__table.services__table--1
 				a.services_card(href="/catalog_secondary")
-					.services_card__top
-						p.services_card__text.services_card__text--first Подбор и покупка
-						h3.services_card__title Вторичных #[br] квартир
-
-					button.services_card__btn.btn.btn--outlined.btn--small 
-						span.btn__text Подробнее
-
-				a.services_card.services_card--span2(href="/catalog_new")
-					.services_card__top
-						p.services_card__text.services_card__text--first Подбор и покупка
-						h3.services_card__title Квартир в новостройках
-
-					button.services_card__btn.btn.btn--outlined.btn--small 
-						span.btn__text Подробнее
-
-				a.services_card.services_card--span2(href="/sale")
-					.services_card__top
-						h3.services_card__title Продажа квартиры
-						p.services_card__text и другой недвижимости
-
-					button.services_card__btn.btn.btn--outlined.btn--small 
-						span.btn__text Подробнее
-
-				a.services_card(href="/")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_1.jpg`, '', 'image')
 					.services_card__top
 						h3.services_card__title Аренда жилья
 						p.services_card__text на долгосрочный и краткосрочный период
 
-					button.services_card__btn.btn.btn--outlined.btn--small 
+					button.services_card__btn.btn.btn--white.btn--small 
+						span.btn__text Подробнее
+
+				a.services_card.services_card--span2(href="/catalog_new")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_2.jpg`, '', 'image')
+					.services_card__top
+						p.services_card__text.services_card__text--first Подбор и покупка
+						h3.services_card__title Квартир в новостройках
+
+					button.services_card__btn.btn.btn--white.btn--small 
+						span.btn__text Подробнее
+
+				a.services_card.services_card--span2(href="/sale")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_3.jpg`, '', 'image')
+					.services_card__top
+						p.services_card__text.services_card__text--first Подбор и покупка
+						h3.services_card__title Вторичных квартир
+
+					button.services_card__btn.btn.btn--white.btn--small 
+						span.btn__text Подробнее
+
+				a.services_card(href="/")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_4.jpg`, '', 'image')
+					.services_card__top
+						h3.services_card__title Продажа квартиры
+						p.services_card__text и другой недвижимости
+
+					button.services_card__btn.btn.btn--white.btn--small 
 						span.btn__text Подробнее
 
 			
 			.services__table.services__table--2
 				a.services_card(href="/")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_5.jpg`, '', 'image')
 					.services_card__top
 						h3.services_card__title Сдача квартир
 						p.services_card__text и поиск надежных арендосъемщиков
 
-					button.services_card__btn.btn.btn--outlined.btn--small 
+					button.services_card__btn.btn.btn--white.btn--small 
 						span.btn__text Подробнее
 
 				a.services_card(href="/")
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_bg_6.jpg`, '', 'image')
 					.services_card__top
-						h3.services_card__title Недвижимость #[br] в Тайланде
+						h3.services_card__title Недвижимость #[br] в Таиланде
 
-					button.services_card__btn.btn.btn--outlined.btn--small 
+					button.services_card__btn.btn.btn--white.btn--small 
 						span.btn__text Подробнее
 
 
 				.services_card.services_card--span2.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/services_form_bg.jpg`, '', 'image')
+
 					.services_card__top
 						h3.services_card__title Бесплатная консультация
-						p.services_card__text Менеджер свяжется с вами и подберет подходящий #[br.desktop] вариант и условия покупки.
+						p.services_card__text Менеджер свяжется с вами и подберет  #[br.tablet] подходящий #[br.desktop] вариант и условия покупки.
 
 					form.services_card_form(action="/mailer" data-mailer="" data-form-id="services_main_page")
 						input(type="hidden", name="form", value="Бесплатная консультация (блок сервисы, главная страница)")
 
 						.services_card_form__inputs
 							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')
-							.input_wrapper.input_wrapper--filled(data-input-wrapper="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
 								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
 								label.input_wrapper__label Имя
 								.input_wrapper__tooltip(data-input-tooltip="")
-							.input_wrapper.input_wrapper--filled(data-input-wrapper="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
 								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
 								label.input_wrapper__label Телефон
 								.input_wrapper__tooltip(data-input-tooltip="")

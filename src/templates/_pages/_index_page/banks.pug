@@ -2,6 +2,7 @@ mixin banksCard(title, img)
 	.banks_card.swiper-slide
 		.banks_card__top
 			.banks_card__img 
+				+img(img, '', 'image')
 			h3.banks_card__title= title
 		.banks_card__info 
 			.banks_card__line
@@ -38,11 +39,11 @@ section.section.banks
 		.banks__content 
 			.banks__slider.slider.swiper 
 				.swiper-wrapper
-					+banksCard('ВТБ')
-					+banksCard('Альфа-Банк')
-					+banksCard('Дом.рф')
-					+banksCard('Газпромбанк')
-					+banksCard('ВТБ')
-					+banksCard('Альфа-Банк')
-					+banksCard('Дом.рф')
-					+banksCard('Газпромбанк')
+					+banksCard('ВТБ', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Альфа-Банк', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Дом.рф', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Газпромбанк', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('ВТБ', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Альфа-Банк', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Дом.рф', `${assetsPath}/img/bank_logo_1.jpg`)
+					+banksCard('Газпромбанк', `${assetsPath}/img/bank_logo_1.jpg`)

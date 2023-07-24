@@ -3,16 +3,6 @@ section.section.excursions
 
 		.excursions__content
 
-			.section_block.excursions__section_block
-				h2.section_block__title.section_block__title--small Бесплатные экскурсии #[br.desktop] по новостройкам
-				p.section_block__text Организуем просмотр квартиры в любое #[br.desktop] удобное для Вас время, даже в выходные.
-
-				.excursions__buttons.section_block__buttons
-					a.excursions__btn.btn.btn--filled(href="/catalog_new")
-						span.btn__text Каталог новостроек
-					button.excursions__btn.btn.btn--filled(data-linked-modal="find_complex")
-						span.btn__text Подобрать новостройку
-
 			.excursions__nav.slider__nav 
 				.excursions__pagination.slider__pagination
 				.slider__buttons
@@ -23,7 +13,31 @@ section.section.excursions
 
 			.excursions__slider.slider.swiper 
 				.swiper-wrapper 
-					.excursions__slide.swiper-slide
-					.excursions__slide.swiper-slide
-					.excursions__slide.swiper-slide
-					.excursions__slide.swiper-slide
+					.excursions_slide.swiper-slide
+						.excursions_slide__bg 
+							+img(`${assetsPath}/img/excursions_bg_1.jpg`, '', 'image')
+
+						.section_block.excursions_slide__section_block
+							h2.section_block__title.section_block__title--small Бесплатные экскурсии #[br.desktop]  #[br.tablet] по новостройкам
+							p.section_block__text Организуем просмотр квартиры в любое #[br.desktop] #[br.tablet] удобное для Вас время, даже в выходные.
+
+						.excursions_slide__buttons.section_block__buttons
+							a.excursions_slide__btn.btn.btn--white(href="/catalog_new")
+								span.btn__text Каталог новостроек
+							button.excursions_slide__btn.btn.btn--white(data-linked-modal="find_complex")
+								span.btn__text Подобрать новостройку
+					
+					.excursions_slide.swiper-slide
+						.excursions_slide__bg 
+							+img(`${assetsPath}/img/excursions_bg_1.jpg`, '', 'image')
+
+						.section_block.excursions_slide__section_block
+							h2.section_block__title.section_block__title--small Бесплатные экскурсии #[br.tablet] #[br.desktop] по новостройкам
+							p.section_block__text Организуем просмотр квартиры в любое #[br.desktop] #[br.tablet] удобное для Вас время, даже в выходные.
+
+						.excursions_slide__buttons.section_block__buttons
+							a.excursions_slide__btn.btn.btn--white(href="/catalog_new")
+								span.btn__text Каталог новостроек
+							button.excursions_slide__btn.btn.btn--white(data-linked-modal="find_complex")
+								span.btn__text Подобрать новостройку
+					

@@ -1,0 +1,32 @@
+.modal_menu_column {
+    
+    &__caption {
+        font-size: em(20);
+        line-height: em(24,20);
+        font-weight: 700;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 1rem;
+    }
+
+    &__link {
+        font-size: 1em;
+        line-height: em(22);
+        font-weight: 400;
+        color: #838383;
+
+        transition: color .2s;
+
+        &:hover {
+            color: $c-primary;
+        }
+
+        & + & {
+            margin-top: .5rem;
+        }
+    }
+}

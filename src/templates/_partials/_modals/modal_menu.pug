@@ -1,5 +1,90 @@
-//- .modal_menu.modal(data-modal="menu")
-//-     button.modal_close.modal_menu__close(data-modal-close)
-//-         +svg('close', 'icon')
-//-     .modal_menu__logo
-//-         +imgSvg(`${assetsPath}/img/header-logo.svg`, '', 'image')
+.modal_menu.modal(data-modal="modal_menu")
+	.modal_menu__container.container
+		.modal_menu__top
+			.header__line.header__line--2
+
+				a.header__logo(href="/") 
+					.header__logo_img
+						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
+
+				.header_mobile
+					a.header__link.header_mobile__link(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99 
+
+					button.header_mobile__menu(data-modal-close)
+						+svg('close', 'icon')
+		
+		.modal_menu__buttons.modal_menu__buttons--top 
+			.header_location.header_location--modal_menu(data-location-dropdown-block="")
+				button.header_location__wrap(data-location-dropdown-main-btn="")
+					+svg('geo', 'icon icon__left')
+					p.header__link(data-change-text="") Владивосток
+					+svg('arrow_down', 'icon icon__right')
+				
+				.header_location__dropdown
+					button.header_location__close(data-btn-close="") 
+						+svg('cross', 'icon')
+					p.header_location__title Выберите город
+					.header_location__list 
+						button.header_location__list_btn(data-click-change="") Москва
+						button.header_location__list_btn(data-click-change="") Санкт-Петербург
+						button.header_location__list_btn(data-click-change="") Владивосток
+						button.header_location__list_btn(data-click-change="") Комсомольск-на-Амуре
+						button.header_location__list_btn(data-click-change="") Хабаровск
+
+			a.modal_menu__btn.btn.btn--white.btn--icon_left(href="", target="_blank")
+				+svg('icon_message', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text Написать нам
+			button.modal_menu__btn.btn.btn--white.btn--icon_left(data-linked-modal="modal_phone")
+				+svg('icon_phone', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text Заказать звонок
+
+		.modal_menu__main
+			.modal_menu_column
+				p.modal_menu_column__caption Каталог
+				.modal_menu_column__wrap 
+					a.modal_menu_column__link(href="/catalog_new") Новостройки
+					a.modal_menu_column__link(href="/catalog_second") Вторичка
+					a.modal_menu_column__link(href="/catalog_rent") Аренда
+					a.modal_menu_column__link(href="/catalog_other") Другая
+			
+			.modal_menu_column
+				p.modal_menu_column__caption Сервисы AFLAT 
+				.modal_menu_column__wrap 
+					a.modal_menu_column__link(href="/thailand") Таиланд
+					a.modal_menu_column__link(href="/sale") Продажа
+					a.modal_menu_column__link(href="/rent") Аренда
+					a.modal_menu_column__link(href="/purchase") Покупка
+
+			.modal_menu_column
+				p.modal_menu_column__caption Ипотека
+				.modal_menu_column__wrap 
+					a.modal_menu_column__link(href="/mortgage") Ипотека
+					a.modal_menu_column__link(href="/fareastern_mortgage") Дальневосточная
+					a.modal_menu_column__link(href="/family_mortgage") Семейная
+					a.modal_menu_column__link(href="/support_mortgage") Господдержка
+					a.modal_menu_column__link(href="/military_mortgage") Военная
+
+			.modal_menu_column
+				p.modal_menu_column__caption О компании
+				.modal_menu_column__wrap 
+					a.modal_menu_column__link(href="/about") О компании
+					a.modal_menu_column__link(href="/faq") FAQ
+					a.modal_menu_column__link(href="/contacts") Контакты
+
+		.modal_menu__buttons.modal_menu__buttons--bottom
+			a.modal_menu__btn.btn.btn--white.btn--icon_left(href="", target="_blank")
+				+svg('icon_tg', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text Telegram
+			a.modal_menu__btn.btn.btn--white.btn--icon_left(href="", target="_blank")
+				+svg('icon_wa', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text WhatsApp
+			a.modal_menu__btn.btn.btn--white.btn--icon_left(href="", target="_blank")
+				+svg('icon_vk', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text ВКонтакте
+			a.modal_menu__btn.btn.btn--white.btn--icon_left(href="", target="_blank")
+				+svg('icon_inst', "btn__icon btn__icon--green btn__icon--left")
+				span.btn__text Instagram
+
+		.modal_menu__itome 
+			a.itome(href="https://itome.online/", target="_blank")
+				+imgSvg(`${assetsPath}/img/itome_letters_white.svg`, '', 'image')

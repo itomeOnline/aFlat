@@ -11,6 +11,15 @@
 
         padding: 0;
 
+        .modal_menu & {
+            border-radius: 8px;
+            background: #FFF;
+
+            padding: em(14) em(12);
+
+            width: 100%;
+        }
+
         .icon {
             width: 1em;
             height: 1em;
@@ -22,6 +31,10 @@
 
             &__right {
                 margin-left: .25rem;
+
+                .modal_menu & {
+                    margin-left: auto;
+                }
             }
         }
     }
@@ -54,6 +67,12 @@
             opacity: 1;
             pointer-events: all;
             z-index: 2;
+        }
+
+        .modal_menu & {
+            width: 100%;
+
+            top: em(54);
         }
     }
 

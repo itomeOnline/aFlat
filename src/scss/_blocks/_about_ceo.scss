@@ -1,0 +1,57 @@
+.about_ceo {
+	
+    &__content {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-columns: em(356) auto;
+
+        @media(max-width: 1124px) {
+            grid-template-columns: em(340) auto;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: em(450);
+
+        @media(max-width: 1124px) {
+            height: em(400);
+        }
+
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background: #fff;
+
+        padding: em(40);
+
+        @media(max-width: 1124px) {
+            padding: em(24);
+        }
+    }
+
+    &__caption {
+        font-size: em(16);
+        line-height: em(22,16);
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: em(14);
+        line-height: em(20,14);
+        font-weight: 400;
+        color: #4E4E4E;
+
+        margin-top: .25rem;
+    }
+}

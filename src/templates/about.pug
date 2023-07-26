@@ -1,0 +1,43 @@
+extends _base/_layout
+block settings 
+
+	- title = 'О компании — AFLAT';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.about
+			.about__container.sale_main__container.container 
+				.about__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active О компании
+
+				.sale_main__content.about__content
+					.sale_main__img.about__img
+						+img(`${assetsPath}/img/about_main_img.jpg`, '', 'image')
+					
+					.sale_main__info 
+						.about__logo
+							+imgSvg(`${assetsPath}/img/main_logo_white.svg`, '', 'image')
+						.section_block
+							h2.section_block__title.section_block__title--white Мы не просто агентство, #[br.desktop] #[br.tablet] мы — ваша Семья в мире #[br.tablet] недвижимости
+
+
+		section.section.about_ceo
+			.about_ceo__container.container 
+				.about_ceo__content 
+					.about_ceo__img
+						+img(`${assetsPath}/img/ceo_pic.jpg`, '', 'image')
+
+					.about_ceo__info
+						.section_block
+							h2.section_block__title.section_block__title--small Заголовок состоящий из каких-то громких слов
+							p.section_block__text Суть в том, что люди любят красивые слова, они цепляются за них, хотят поверить вам, а вы в этот момент должны не сдрейфить и надавить на человеческую душу, будь она сильной или слабой.
+
+						.about_ceo__bottom
+							p.about_ceo__caption Директоров Директор Директорович
+							p.about_ceo__text Генеральный директор мира
+						

@@ -1,0 +1,116 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Продажа недвижимости — AFLAT';
+
+mixin respBlock(title, text)
+	.responsibilities_block
+		.responsibilities_block__icon
+		h3.responsibilities_block__title= title
+		p.responsibilities_block__text= text
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.sale_main
+			.sale_main__container.container 
+				.sale_main__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Продажа недвижимости
+
+				.sale_main__content
+					.sale_main__img
+						+img(`${assetsPath}/img/sale_main_img.jpg`, '', 'image')
+					
+					.sale_main__info 
+						.section_block
+							h2.section_block__title.section_block__title--white Продажа недвижимости
+							p.section_block__text.section_block__text--white Поможем найти покупателей и продать квартиру быстро и выгодно
+						
+						button.sale_main__info_btn.btn.btn--filled(data-linked-modal="")
+							span.btn__text Оставить заявку
+
+		section.section.responsibilities
+			.responsibilities__container.container
+				.section_block
+					h2.section_block__title Возьмем на себя
+
+				.responsibilities__content 
+					+respBlock('Ответственность 1', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('Ответственность 2', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('Ответственность 3', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('Ответственность 4', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+
+		
+		section.section.reliably
+			.reliably__container.container
+				.section_block
+					h2.section_block__title.section_block__title--small С нами спокойно #[br.desktop] и надежно
+
+				.reliably__content 
+					.reliably_block
+						.reliably_block__top
+							p.reliably_block__title Самостоятельное оформление
+						
+						.reliably_block__content
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный минус
+								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный минус
+								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный минус
+								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный минус
+								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+					
+					.reliably_block.reliably_block--green
+						.reliably_block__top
+							p.reliably_block__title Оформление #[br.desktop] #[br.tablet] через AFLAT
+							.reliably_block__icon 
+								+imgSvg(`${assetsPath}/img/aflat_logo.svg`, '', 'image')
+						
+						.reliably_block__content
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный плюс
+								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный плюс
+								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+							.reliably_block__wrap 
+								p.reliably_block__caption Жирный плюс
+								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+							
+		section.section.general_form
+			.general_form__container.container 
+				.services_card.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/general_form_bg_1.jpg`, '', 'image')
+
+					.services_card__top
+						h3.services_card__title Обратиться за помощью #[br.desktop] в продаже квартиры
+						p.services_card__text Будем с вами на всех этапах сделки - от #[br.tablet] поиска до оформления #[br.desktop] и получения ключей
+
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="sale_page_form")
+						input(type="hidden", name="form", value="Помощь в продаже квартиры (Страница продажи недвижимости)")
+
+						.services_card_form__inputs
+							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Телефон
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.services_card_form__span2.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+								textarea.input_wrapper__textarea(name="message", placeholder="Описание квартиры")
+
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

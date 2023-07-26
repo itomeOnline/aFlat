@@ -1,0 +1,38 @@
+.breadcrumbs {
+	display: flex;
+    align-items: center;	
+
+    margin-bottom: em(32);
+
+    @media(max-width: 1124px) {
+        margin-bottom: em(20);
+    }
+
+    &__link {
+        font-size: em(12);
+        line-height: em(18,12);
+        font-weight: 400;
+        color: $c-primary;
+
+        transition: color .2s;
+
+        &:hover {
+            color: $c-hover;
+        }
+
+        &.is-active {
+            pointer-events: none;
+            color: #838383;
+        }
+    }
+
+    &__dot {
+        width: 4px;
+        height: 4px;
+
+        border-radius: 50%;
+        background: #838383;
+
+        margin: 0 .5rem;
+    }
+}

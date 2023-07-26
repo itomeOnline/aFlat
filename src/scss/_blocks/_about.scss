@@ -1,0 +1,29 @@
+.about {
+	
+    &__logo {
+        margin-bottom: auto;
+
+        width: em(200);
+        height: em(32);
+
+        @media(max-width: 1124px) {
+            width: em(175);
+            height: em(28);
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: em(228);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+        }
+    }
+}

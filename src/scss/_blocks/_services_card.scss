@@ -57,6 +57,11 @@
             left: 0;
             top: 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%);
+
+            .general_form & {
+                height: em(300);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%);
+            }
         }
 
         .image {
@@ -70,6 +75,11 @@
         font-size: em(32);
         line-height: em(40,32);
         color: #fff;
+
+        @media(max-width: 1124px) {
+            font-size: em(26);
+            line-height: em(30,26);
+        }
     }
 
     &__text {

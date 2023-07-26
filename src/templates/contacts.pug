@@ -1,0 +1,21 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Контакты — AFLAT';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.contacts
+			.contacts__container.sale_main__container.container 
+				.contacts__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active О компании
+
+				.contacts__content
+					.contacts_info
+						.contacts_info__wrap
+							p.contacts_info__text

@@ -6,11 +6,9 @@
 		@media(max-width: 1124px) {
 			margin-top: em(100);
 		}
-	}
-    
-	// &:last-child,
-	// &:first-child {
-	// 	margin-bottom: 5em;
-	// }
 
+		@media(max-width: 500px) {
+			margin-top: em(80);
+		}
+	}
 }

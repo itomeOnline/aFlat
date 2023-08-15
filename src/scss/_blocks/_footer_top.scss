@@ -9,6 +9,12 @@
         padding: em(24) 0 em(32);
     }
 
+    @media(max-width: 500px) {
+        padding: em(24) 0 em(28);
+
+        flex-direction: column;
+    }
+
     &__logo {
         display: flex;
         align-items: center;
@@ -53,22 +59,18 @@
 
             margin-top: .5rem;
         }
-
-        br.tablet {
-
-            @media(max-width: 1124px) {
-                display: none;
-            }
-
-            @media(max-width: 500px) {
-                display: initial;
-            }
-        }
     }
 
     &__links {
         display: flex;
         align-items: center;
+
+        @media(max-width: 500px) {
+            width: 100%;
+            justify-content: space-between;
+
+            margin-top: em(28);
+        }
     }
 
     &__link {

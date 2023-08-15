@@ -6,6 +6,17 @@
         margin-top: em(100);
         margin-bottom: em(28);
     }
+
+    @media(max-width: 500px) {
+        margin-top: em(80);
+    }
+
+    &__container {
+        
+        @media(max-width: 500px) {
+            align-items: center;
+        }
+    }
 	
     &__content {
         border-radius: 16px;
@@ -36,6 +47,9 @@
 
         @media(max-width: 500px) {
             grid-template-columns: 100%;
+            gap: em(16);
+
+            padding-bottom: em(20);
         }
     }
 }

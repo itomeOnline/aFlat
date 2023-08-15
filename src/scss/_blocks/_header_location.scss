@@ -4,6 +4,13 @@
     &--catalog {
         margin-right: em(20);
     }
+
+    &--modal_menu {
+
+        @media(max-width: 500px) {
+            grid-column: span 2;
+        }
+    }
     
     &__wrap {
         display: flex;

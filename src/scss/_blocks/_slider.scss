@@ -11,13 +11,7 @@
     &__nav {
         display: flex;
         align-items: center;
-        //margin-top: em(50);
-
-
-        @media(max-width: 500px) {
-            flex-direction: column;
-            //margin-top: em(24);
-        }
+ 
     }
 
     &__scroll {

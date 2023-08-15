@@ -12,6 +12,12 @@
         padding: em(24) 0;
     }
 
+    @media(max-width: 500px) {
+        justify-content: center;
+
+        padding: em(20) 0 em(24);
+    }
+
     &__copyright {
         font-size: em(14);
         line-height: 1.25rem;
@@ -35,6 +41,21 @@
     &__itome {
         display: flex;
         align-items: center;
+
+        &--desk {
+
+            @media(max-width: 500px) {
+                display: none;
+            }
+        }
+    
+        &--mob {
+            display: none;
+    
+            @media(max-width: 500px) {
+                display: flex;
+            }
+        }
 
         .image {
             width: em(28);

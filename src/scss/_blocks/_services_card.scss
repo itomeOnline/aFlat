@@ -11,6 +11,12 @@
     justify-content: space-between;
 
     position: relative;
+
+    @media(max-width: 500px) {
+        height: em(380);
+
+        padding: em(24);
+    }
 	
     &--span2 {
         grid-column: span 2;
@@ -35,6 +41,7 @@
 
         @media(max-width: 500px) {
             flex-direction: column;
+            grid-column: span 1;
         }
     }
 
@@ -105,5 +112,10 @@
     &__btn {
         width: fit-content;
         margin-left: auto;
+
+        @media(max-width: 500px) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }

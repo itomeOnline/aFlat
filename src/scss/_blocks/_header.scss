@@ -10,8 +10,8 @@
         top: em(28);
     }
 
-    @media(max-width:500px) {
-        top: 0;
+    @media(max-width: 500px) {
+        top: em(20);
     } 	
 
     &__content {
@@ -25,6 +25,11 @@
 
         @media(max-width: 1124px) {
             padding: 0 em(20);
+        }
+
+        @media(max-width: 500px) {
+            padding: 0 em(12);
+            border-radius: 12px;
         }
     }
 
@@ -132,6 +137,11 @@
 
         @media(max-width: 1124px) {
             margin-right: 0;
+        }
+
+        @media(max-width: 500px) {
+            width: em(126);
+            height: em(20);
         }
     }
 

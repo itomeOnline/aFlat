@@ -21,6 +21,17 @@
             top: em(24);
             right: em(24);
         }
+
+        @media(max-width: 500px) {
+            height: fit-content;
+            width: calc(100% - em(48));
+            
+            flex-direction: row;
+            align-items: center;
+
+            left: em(24);
+            top: em(24);
+        }
     }
 
     &__slider {
@@ -29,6 +40,10 @@
 
         @media(max-width: 1124px) {
             height: em(350);
+        }
+
+        @media(max-width: 500px) {
+            height: em(600);
         }
     }
 }

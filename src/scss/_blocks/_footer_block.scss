@@ -8,6 +8,10 @@
         padding: em(24);
     }
 
+    @media(max-width: 500px) {
+        padding: em(20);
+    }
+
     &--1 {
         display: flex;
         flex-direction: column;
@@ -21,6 +25,11 @@
             grid-template-columns: 1fr 1fr;
 
             gap: 0 em(40);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            gap: em(8);
         }
     }
 
@@ -78,6 +87,10 @@
         @media(max-width: 1124px) {
             margin-top: auto;
         }
+
+        @media(max-width: 500px) {
+            margin-top: em(40);
+        }
     }
 
     &__socials_link {
@@ -107,6 +120,10 @@
 
         & + & {
             margin-left: .75rem;
+
+            @media(max-width: 500px) {
+                margin-left: .5rem;
+            }
         }
     }
 

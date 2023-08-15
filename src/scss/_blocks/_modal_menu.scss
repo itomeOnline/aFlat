@@ -8,7 +8,7 @@
 	background: url($assetsPath + '/img/modal_menu_bg.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: em(28) em(34) em(30);
+	padding: em(28) 0 em(30);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -21,7 +21,7 @@
 
 	@media(max-width: 500px) {
 		width: 100%;
-		padding: em(30);
+		padding: em(20) 0 em(28);
 	}
 
 	&.is-active {
@@ -33,6 +33,8 @@
 	&__container {
 		height: 100%;
 		align-items: center;
+
+		overflow: hidden scroll;
 	}
 
 	&__top {
@@ -45,6 +47,12 @@
 		border-radius: 16px;
 
 		padding: 0 em(20);
+
+		@media(max-width: 500px) {
+			border-radius: 12px;
+
+			padding: 0 em(12);
+		}
 	}
 
 	// &__simplebar {
@@ -87,6 +95,12 @@
 		gap: em(40) 0;
 
 		margin-top: em(20);
+
+		@media(max-width: 500px) {
+			padding: em(24);
+			grid-template-columns: 1fr;
+			gap: em(20);
+		}
 	}
 
 	&__buttons {
@@ -99,21 +113,38 @@
 			margin-top: em(28);
 
 			grid-template-columns: repeat(3, 1fr);
+
+			@media(max-width: 500px) {
+				grid-template-columns: 1fr 1fr;
+				gap: em(16);
+
+				margin-top: em(16);
+			}
 		}
 
 		&--bottom {
 			margin-top: em(20);
 
 			grid-template-columns: repeat(4, 1fr);
-		}
 
-		@media(max-width: 500px) {
-			display: flex !important;
+			margin-bottom: em(40);
+
+			@media(max-width: 500px) {
+				grid-template-columns: 1fr 1fr;
+				gap: em(16);
+			}
 		}
 	}
 
 	&__btn {
 		border: 1px solid #fff;
+
+		@media(max-width: 500px) {
+
+			svg {
+				display: none;
+			}
+		}
 	}
 
 	&__itome {

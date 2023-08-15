@@ -16,8 +16,21 @@
 		height: em(20);
 	}
 
-	@media(max-width: 500px) {
-		margin-bottom: 1em;
+	&--desk {
+
+		@media(max-width: 500px) {
+			display: none;
+		}
+	}
+
+	&--mob {
+		display: none;
+
+		@media(max-width: 500px) {
+			display: flex;
+
+			margin: em(20) 0 em(12);
+		}
 	}
 
 

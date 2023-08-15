@@ -14,8 +14,16 @@
         padding: em(24);
     }
 
+    @media(max-width: 500px) {
+        height: em(240);
+    }
+
     &--span2 {
         grid-row: span 2;
+
+        @media(max-width: 500px) {
+            height: em(400);
+        }
     }
 
     &__bg {

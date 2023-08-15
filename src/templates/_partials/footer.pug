@@ -7,7 +7,7 @@ footer.section.footer
 				.footer_top__logo
 					a.footer_top__logo_img(href="/") 
 						+imgSvg(`${assetsPath}/img/main_logo.svg`, '', 'image')
-					p.footer_top__logo_text Покупка и продажа #[br.tablet] недвижимости
+					p.footer_top__logo_text Покупка и продажа #[br.desktop] недвижимости
 
 				.footer_top__links 
 					a.footer_top__link(href="", target="_blank")
@@ -58,10 +58,17 @@ footer.section.footer
 			.footer_bottom
 				p.footer_bottom__copyright © 2023 AFLAT. Все права защищены
 
-				a.itome(href="https://itome.online/", target="_blank")
+				a.itome.itome--desk(href="https://itome.online/", target="_blank")
 					+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
 				
-				.footer_bottom__itome
+				.footer_bottom__itome.footer_bottom__itome--desk
 					+imgSvg(`${assetsPath}/img/itome_icon.svg`, '', 'image')
 					p.footer_bottom__copyright.footer_bottom__copyright--itome Production by #[a.link(href="https://itome.online/", target="_blank") @itome.online]
+		
+		a.itome.itome--mob(href="https://itome.online/", target="_blank")
+			+imgSvg(`${assetsPath}/img/itome_letters.svg`, '', 'image')
+		
+		.footer_bottom__itome.footer_bottom__itome--mob
+			+imgSvg(`${assetsPath}/img/itome_icon.svg`, '', 'image')
+			p.footer_bottom__copyright.footer_bottom__copyright--itome Production by #[a.link(href="https://itome.online/", target="_blank") @itome.online]
 				

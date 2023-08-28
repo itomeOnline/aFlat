@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-    <title>Контакты — AFLAT</title>
+    <title>Каталог вторичного жилья — AFLAT</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -266,18 +266,320 @@
         </div>
       </header>
       <main class="view" data-app-layout="view" data-app-layout-namespace="examples">
-        <section class="section contacts">
-          <div class="contacts__container sale_main__container container"> 
-            <div class="contacts__breadcrumbs breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a>
+        <section class="section catalog">
+          <div class="catalog__container container"> 
+            <div class="catalog__breadcrumbs breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a>
               <div class="breadcrumbs__dot"> </div>
-              <div class="breadcrumbs__link is-active">О компании</div>
+              <div class="breadcrumbs__link is-active">Каталог вторичного жилья</div>
             </div>
-            <div class="contacts__content">
-              <div class="contacts_info">
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__text"></p>
+            <h1 class="section_block__title">Каталог вторичного жилья</h1>
+            <div class="catalog_filters">
+              <div class="catalog_filters__tabs">
+                <button class="catalog_filters__tabs_btn">Сдан</button>
+                <button class="catalog_filters__tabs_btn">Сдача в 2023</button>
+                <button class="catalog_filters__tabs_btn">Сдача в 2024</button>
+                <button class="catalog_filters__tabs_btn">Есть акции</button>
+                <button class="catalog_filters__tabs_btn">С отделкой</button>
+              </div>
+              <div class="catalog_filters__main">
+                <div class="catalog_filters__block">
+                  <p class="catalog_filters__caption">Район</p>
+                  <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="place" data-dropdown-placeholder="Район" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Район1&quot;,&quot;value&quot;:&quot;Район1&quot;},{&quot;key&quot;:&quot;Район2&quot;,&quot;value&quot;:&quot;Район2&quot;},{&quot;key&quot;:&quot;Район3&quot;,&quot;value&quot;:&quot;Район3&quot;},{&quot;key&quot;:&quot;Район4&quot;,&quot;value&quot;:&quot;Район4&quot;},{&quot;key&quot;:&quot;Район5&quot;,&quot;value&quot;:&quot;Район5&quot;},{&quot;key&quot;:&quot;Район6&quot;,&quot;value&quot;:&quot;Район6&quot;}]"></div>
+                </div>
+                <div class="catalog_filters__block">
+                  <p class="catalog_filters__caption">Количество комнат</p>
+                  <div class="catalog_filters__rooms"> 
+                    <button class="catalog_filters__rooms_btn is-active">Студия</button>
+                    <button class="catalog_filters__rooms_btn">1</button>
+                    <button class="catalog_filters__rooms_btn">2</button>
+                    <button class="catalog_filters__rooms_btn">3</button>
+                    <button class="catalog_filters__rooms_btn">4+</button>
+                  </div>
+                </div>
+                <div class="catalog_filters__block">
+                  <p class="catalog_filters__caption">Стоимость, ₽</p>
+                  <div class="catalog_filters__inputs"> 
+                    <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                      <input class="input_wrapper__input" type="text" name="priceFrom" autocomplete="off">
+                      <label class="input_wrapper__label">От</label>
+                    </div>
+                    <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                      <input class="input_wrapper__input" type="text" name="priceTo" autocomplete="off">
+                      <label class="input_wrapper__label">До</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog_filters__block">
+                  <p class="catalog_filters__caption">Площадь, м²</p>
+                  <div class="catalog_filters__inputs"> 
+                    <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                      <input class="input_wrapper__input" type="text" name="squareFrom" autocomplete="off">
+                      <label class="input_wrapper__label">От</label>
+                    </div>
+                    <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                      <input class="input_wrapper__input" type="text" name="squareTo" autocomplete="off">
+                      <label class="input_wrapper__label">До</label>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="catalog_filters_dropdown" data-dropdown-block="">
+                <div class="catalog_filters_dropdown__top">
+                  <button class="catalog_filters_dropdown__btn" data-dropdown-btn> <span class="text">Еще фильтры</span>
+                    <svg class="icon icon--right">
+                      <use xlink:href="#arrow_down"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog_filters_dropdown__btn">
+                    <svg class="icon icon--left">
+                      <use xlink:href="#cross"></use>
+                    </svg><span class="text">Сбросить все фильтры</span>
+                  </button>
+                </div>
+                <div class="catalog_filters_dropdown__content">
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Мебель</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">С мебелью</button>
+                      <button class="catalog_filters__tabs_btn is-active">Без мебели</button>
+                      <button class="catalog_filters__tabs_btn catalog_filters__tabs_btn--reset">
+                        <svg class="icon">
+                          <use xlink:href="#cross"></use>
+                        </svg> Сбросить
+                      </button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Ремонт</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">C ремонтом</button>
+                      <button class="catalog_filters__tabs_btn">Без ремонта</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Тип</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Кирпичный</button>
+                      <button class="catalog_filters__tabs_btn">Монолитный</button>
+                      <button class="catalog_filters__tabs_btn">Кирпично-монолитный</button>
+                      <button class="catalog_filters__tabs_btn">Панельный</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="catalog_filters__caption catalog_filters__caption--count">Найдено 10 квартир</p>
+            </div>
+            <div class="catalog__content"><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">1 комната | 6 этаж | 51 м²</p>
+                  <h3 class="tops_card__title">Анны Щетининой, 26 </h3>
+                  <p class="tops_card__price">от 7 264 060 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a><a class="tops_card swiper-slide" href="/apartment_secondary">
+                <div class="tops_card__bg">
+                  <picture class="image">
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.webp" type="image/webp"/>
+                    <source data-lazy="data-lazy" data-srcset="/assets/img/tops_benefits_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/tops_benefits_1.jpg" alt=""/>
+                  </picture>
+                </div>
+                <div class="tops_card__tags"> 
+                  <div class="tops_card__tag"><img class="icon" data-src="/assets/img/icon_fire.svg" alt="" data-lazy=""/><span class="text">Цена ниже рыночной</span>
+                  </div>
+                </div>
+                <div class="tops_card__info">
+                  <p class="tops_card__caption">2 комната | 7 этаж | 60 м²</p>
+                  <h3 class="tops_card__title">Ватутина, 4д </h3>
+                  <p class="tops_card__price">8 000 000 ₽</p>
+                  <button class="tops_card__btn btn btn--white btn--small"><span class="btn__text">Подробнее</span></button>
+                </div></a>
+            </div>
+            <div class="catalog_pagination">
+              <div class="catalog_pagination__wrap">
+                <button class="catalog_pagination__arrow catalog_pagination__arrow--prev is-disabled"> 
+                  <svg class="icon">
+                    <use xlink:href="#arrow_small"></use>
+                  </svg>
+                </button>
+                <button class="catalog_pagination__num is-active">1</button>
+                <button class="catalog_pagination__num">2</button>
+                <button class="catalog_pagination__num">3</button>
+                <button class="catalog_pagination__arrow catalog_pagination__arrow--next"> 
+                  <svg class="icon">
+                    <use xlink:href="#arrow_small"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="catalog_pagination__btn_more btn btn--outlined btn--small"><span class="btn__text">Показать ещё</span></button>
             </div>
           </div>
         </section>

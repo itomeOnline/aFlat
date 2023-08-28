@@ -1,0 +1,138 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Каталог вторичного жилья — AFLAT';
+
+mixin topsCard(img, rooms, floor, square, title, price, tag1)
+	a.tops_card.swiper-slide(href="/apartment_secondary")
+		.tops_card__bg
+			+img(img, '', 'image')
+		.tops_card__tags 
+			.tops_card__tag
+				+imgSvg(`${assetsPath}/img/icon_fire.svg`, '', 'icon')
+				span.text= tag1
+		.tops_card__info
+			p.tops_card__caption #{rooms} | #{floor} | #{square}
+			h3.tops_card__title= title
+			p.tops_card__price= price
+			button.tops_card__btn.btn.btn--white.btn--small
+				span.btn__text Подробнее
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.catalog
+			.catalog__container.container 
+				.catalog__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Каталог вторичного жилья
+
+				
+				h1.section_block__title Каталог вторичного жилья
+
+				.catalog_filters
+					.catalog_filters__tabs
+						button.catalog_filters__tabs_btn Сдан
+						button.catalog_filters__tabs_btn Сдача в 2023
+						button.catalog_filters__tabs_btn Сдача в 2024
+						button.catalog_filters__tabs_btn Есть акции
+						button.catalog_filters__tabs_btn С отделкой
+					
+					.catalog_filters__main
+						.catalog_filters__block
+							p.catalog_filters__caption Район
+							.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]')
+						.catalog_filters__block
+							p.catalog_filters__caption Количество комнат
+							.catalog_filters__rooms 
+								button.catalog_filters__rooms_btn.is-active Студия
+								button.catalog_filters__rooms_btn 1
+								button.catalog_filters__rooms_btn 2
+								button.catalog_filters__rooms_btn 3
+								button.catalog_filters__rooms_btn 4+
+
+						.catalog_filters__block
+							p.catalog_filters__caption Стоимость, ₽
+							.catalog_filters__inputs 
+								.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+									input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+									label.input_wrapper__label От
+								.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+									input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+									label.input_wrapper__label До
+						
+						.catalog_filters__block
+							p.catalog_filters__caption Площадь, м²
+							.catalog_filters__inputs 
+								.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+									input.input_wrapper__input(type="text" name="squareFrom" autocomplete="off")
+									label.input_wrapper__label От
+								.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+									input.input_wrapper__input(type="text" name="squareTo" autocomplete="off")
+									label.input_wrapper__label До
+						
+
+					.catalog_filters_dropdown(data-dropdown-block="")
+						.catalog_filters_dropdown__top
+							button.catalog_filters_dropdown__btn(data-dropdown-btn) 
+								span.text Еще фильтры
+								+svg('arrow_down', 'icon icon--right')
+							button.catalog_filters_dropdown__btn
+								+svg('cross', 'icon icon--left')
+								span.text Сбросить все фильтры
+
+						.catalog_filters_dropdown__content
+							.catalog_filters__block
+								p.catalog_filters__caption Мебель
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn С мебелью
+									button.catalog_filters__tabs_btn.is-active Без мебели
+									button.catalog_filters__tabs_btn.catalog_filters__tabs_btn--reset #[+svg('cross', 'icon')] Сбросить
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Ремонт
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn C ремонтом
+									button.catalog_filters__tabs_btn Без ремонта
+									
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Тип
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Кирпичный
+									button.catalog_filters__tabs_btn Монолитный
+									button.catalog_filters__tabs_btn Кирпично-монолитный
+									button.catalog_filters__tabs_btn Панельный
+
+					p.catalog_filters__caption.catalog_filters__caption--count Найдено 10 квартир
+
+				.catalog__content
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
+					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '2 комната', '7 этаж', '60 м²', 'Ватутина, 4д ', '8 000 000 ₽', 'Цена ниже рыночной')
+
+				.catalog_pagination
+					.catalog_pagination__wrap
+						button.catalog_pagination__arrow.catalog_pagination__arrow--prev.is-disabled 
+							+svg('arrow_small', 'icon')
+
+						button.catalog_pagination__num.is-active 1
+						button.catalog_pagination__num 2
+						button.catalog_pagination__num 3
+
+
+						button.catalog_pagination__arrow.catalog_pagination__arrow--next 
+							+svg('arrow_small', 'icon')
+
+					button.catalog_pagination__btn_more.btn.btn--outlined.btn--small
+						span.btn__text Показать ещё

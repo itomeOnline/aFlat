@@ -7,6 +7,8 @@ import IMask from "imask";
 import SimpleBar from "simplebar";
 import "simplebar/dist/simplebar.css";
 import ModalDispatcher from "./components/modalDispatcher";
+import Dropdown from './components/dropdown';
+
 import formSubmit from "./components/form";
 import cookieTooltip from "./components/cookieTooltip";
 import headerDropdown from "./components/headerDropdown";
@@ -48,6 +50,11 @@ document.addEventListener("DOMContentLoaded", _ => {
     topsBenefitsSlider();
     excursionsSlider();
     banksSlider();
+
+
+    document.querySelectorAll('[data-dropdown]').forEach(el => {
+        new Dropdown(el);
+    })
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,

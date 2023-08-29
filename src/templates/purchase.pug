@@ -3,9 +3,10 @@ block settings
 
 	- title = 'Покупка недвижимости — AFLAT';
 
-mixin respBlock(title, text)
+mixin respBlock(icon, title, text)
 	.responsibilities_block
 		.responsibilities_block__icon
+			+svg(icon, 'icon')
 		h3.responsibilities_block__title= title
 		p.responsibilities_block__text= text
 
@@ -26,7 +27,7 @@ block content
 					.sale_main__info 
 						.section_block
 							h2.section_block__title.section_block__title--white Покупка недвижимости
-							p.section_block__text.section_block__text--white Поможем найти и купить недвижимость на вторичном рынке. #[br.desktop] #[br.tablet] Будем рядом на каждом этапе — от выбора квартиры, риэлтора до покупки. #[br.desktop] #[br.tablet] Обеспечим безопасность и защитим от дополнительных трат.
+							p.section_block__text.section_block__text--white Поможем подобрать объект в новостройке или на вторичном рынке под ваш запрос и бюджет
 						
 						button.sale_main__info_btn.btn.btn--filled(data-linked-modal="")
 							span.btn__text Оставить заявку
@@ -37,10 +38,10 @@ block content
 					h2.section_block__title Возьмем на себя
 
 				.responsibilities__content 
-					+respBlock('Ответственность 1', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 2', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 3', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 4', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('res_icon_5', 'Поиск объекта', 'AFLAT является официальным партнёром большинства застройщиков города, поэтому мы не берём комиссию за подбор и покупку квартиры в новостройке.')
+					+respBlock('res_icon_2', 'Экскурсия на объект', 'Даже если дом ещё не сдан, проводим показы и напрямую можем задать любые вопросы застройщику.')
+					+respBlock('res_icon_3', 'Одобрение ипотеки', 'Заявку отправляем одновременно в несколько банков и выбираем наилучшие условия для своих клиентов.')
+					+respBlock('res_icon_6', 'Оформление документов', 'Все объекты мы проверяем на юридическую чистоту и гарантируем 100% безопасность.')
 
 		
 		section.section.reliably
@@ -55,17 +56,15 @@ block content
 						
 						.reliably_block__content
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Затраченное время
+								p.reliably_block__text Под ваш запрос может подойти несколько десятков, а то и сотен квартир. Представьте, сколько вы потратите времени и сил, чтобы всё отсмотреть
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Отказ банка
+								p.reliably_block__text Если вам нужна ипотека, но нет официального дохода, то получить одобрение будет очень сложно
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
-							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Юридические вопросы
+								p.reliably_block__text Вся ответственность за проверку объекта и подготовку документов ложится на вас
+							
 					
 					.reliably_block.reliably_block--green
 						.reliably_block__top
@@ -75,14 +74,14 @@ block content
 						
 						.reliably_block__content
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Затраченное время
+								p.reliably_block__text Оно минимально. Мы подбираем объекты, исходя из вашего запроса и бюджета. Отправляем на согласование только лучшие варианты 
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Одобрение ипотеки
+								p.reliably_block__text Сопровождаем сделку на всех этапах. Наши клиенты получают одобрение от банка даже в самых сложных случаях
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Юридические вопросы
+								p.reliably_block__text Их решает наш юрист. Всё чисто и прозрачно. Вам не за что переживать
 							
 		section.section.general_form
 			.general_form__container.container 
@@ -91,8 +90,8 @@ block content
 						+img(`${assetsPath}/img/general_form_bg_1.jpg`, '', 'image')
 
 					.services_card__top
-						h3.services_card__title Сдать квартиру быстро, выгодно #[br.tablet] и надежно
-						p.services_card__text Будем с вами на всех этапах сделки - от поиска до оформления #[br.desktop] и получения ключей
+						h3.services_card__title Обратиться за помощью #[br.desktop] в покупке квартиры
+						p.services_card__text Оставьте заявку, и мы проведём с вами онлайн-встречу в любое удобное для вас время, вне зависимости от того, в каком часовом поясе вы сейчас находитесь.
 
 					form.services_card_form(action="/mailer" data-mailer="" data-form-id="purchase_page_form")
 						input(type="hidden", name="form", value="Помощь в покупке недвижимости (Страница помощи покупки недвижимости)")

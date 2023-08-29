@@ -4,13 +4,18 @@
         margin-top: em(40);
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: em(28);
 
         @media(max-width: 1124px) {
             margin-top: em(32);
-            grid-template-columns: 1fr 1fr;
             gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            margin-top: em(28);
+            gap: em(16);
         }
     }
 }

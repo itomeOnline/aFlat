@@ -3,9 +3,10 @@ block settings
 
 	- title = 'Продажа недвижимости — AFLAT';
 
-mixin respBlock(title, text)
+mixin respBlock(icon, title, text)
 	.responsibilities_block
 		.responsibilities_block__icon
+			+svg(icon, 'icon')
 		h3.responsibilities_block__title= title
 		p.responsibilities_block__text= text
 
@@ -25,8 +26,8 @@ block content
 					
 					.sale_main__info 
 						.section_block
-							h2.section_block__title.section_block__title--white Продажа недвижимости
-							p.section_block__text.section_block__text--white Поможем найти покупателей и продать квартиру быстро и выгодно
+							h2.section_block__title.section_block__title--white Продажа #[br.mobile] недвижимости
+							p.section_block__text.section_block__text--white Поможем найти покупателей и продать вашу квартиру. Быстро и выгодно. #[br.desktop] #[br.tablet] Под каждого клиента мы выстраиваем индивидуальную рекламную #[br.tablet] кампанию, где продуманы все шаги.
 						
 						button.sale_main__info_btn.btn.btn--filled(data-linked-modal="")
 							span.btn__text Оставить заявку
@@ -37,16 +38,16 @@ block content
 					h2.section_block__title Возьмем на себя
 
 				.responsibilities__content 
-					+respBlock('Ответственность 1', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 2', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 3', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 4', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('res_icon_1', 'Подготовка объекта', 'Перед тем, как выставить объект на продажу, проведём профессиональную фотосессию. Дадим советы по улучшению эстетического вида, чтобы увеличить стоимость квартиры и повысить эффективность сделки.')
+					+respBlock('res_icon_2', 'Показ объекта', 'Организуем просмотры и договариваемся со всеми потенциальными покупателями о времени посещения, учитывая ваш график и другие обстоятельства.')
+					+respBlock('res_icon_3', 'Одобрение ипотеки', 'Поможем оформить ипотеку для покупателей. Одобрение и всю работу с документами берём на себя. Подбираем оптимальную ипотечную программу, чтобы сделка оказалось выгодной для обеих сторон.')
+					+respBlock('res_icon_4', 'Маркетинговая стратегия', 'Наш маркетолог размещает рекламу на специальных сайтах, в соцсетях и тематических площадках в интернете. Индивидуальный подход — под каждого клиента.')
 
 		
 		section.section.reliably
 			.reliably__container.container
 				.section_block
-					h2.section_block__title.section_block__title--small С нами спокойно #[br.desktop] и надежно
+					h2.section_block__title.section_block__title--small С нами спокойно #[br.desktop] #[br.mobile] и надежно
 
 				.reliably__content 
 					.reliably_block
@@ -55,34 +56,37 @@ block content
 						
 						.reliably_block__content
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Затраченное время
+								p.reliably_block__text Не зная всех тонкостей сделок #[br.desktop] #[br.tablet] с недвижимостью, вы можете #[br.desktop] #[br.tablet] продавать свою квартиру годами
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Цена ниже рынка
+								p.reliably_block__text Очень сложно продавать квартиру, если #[br.desktop] #[br.tablet] вы не знаете, из чего складывается её стоимость. Есть риск «пролететь» по цене
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Поиск покупателей
+								p.reliably_block__text Сначала вы тратите время и деньги на рекламу, затем на показы. Просмотры сильно выматывают, если люди не заинтересованы в покупке
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный минус
-								p.reliably_block__text Зачем делать что-то самому, если можно воспользоваться услугами профессионалов
+								p.reliably_block__caption Юридические вопросы
+								p.reliably_block__text Вся ответственность за проверку объекта #[br.desktop] #[br.tablet] и подготовку документов ложится на вас
 					
 					.reliably_block.reliably_block--green
 						.reliably_block__top
-							p.reliably_block__title Оформление #[br.desktop] #[br.tablet] через AFLAT
+							p.reliably_block__title Продажа через #[br] AFLAT
 							.reliably_block__icon 
 								+imgSvg(`${assetsPath}/img/aflat_logo.svg`, '', 'image')
 						
 						.reliably_block__content
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Затраченное время
+								p.reliably_block__text Оно минимально. Абсолютно всю #[br.desktop] #[br.tablet] работу выполняет наша команда: #[br.desktop] #[br.tablet] от фотографирования объекта до заключения сделки
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Выгодная продажа
+								p.reliably_block__text Мы делаем анализ рыночной стоимости всех объектов, чтобы цена вашего объекта соответствовала реальности. Цель: продать выгодно и быстро
 							.reliably_block__wrap 
-								p.reliably_block__caption Жирный плюс
-								p.reliably_block__text Можете расслабиться на диванчике, пока профессионалы работают
+								p.reliably_block__caption Поиск покупателей
+								p.reliably_block__text Мы знаем все площадки для рекламы недвижимости. Кроме того, у нас есть база из 5 000 потенциальных покупателей
+							.reliably_block__wrap 
+								p.reliably_block__caption Юридические вопросы
+								p.reliably_block__text Их решает наш юрист. Всё чисто и прозрачно. Вам не за что переживать
 							
 		section.section.general_form
 			.general_form__container.container 
@@ -92,7 +96,7 @@ block content
 
 					.services_card__top
 						h3.services_card__title Обратиться за помощью #[br.desktop] в продаже квартиры
-						p.services_card__text Будем с вами на всех этапах сделки - от #[br.tablet] поиска до оформления #[br.desktop] и получения ключей
+						p.services_card__text Оставьте заявку, и мы проведём с вами онлайн-встречу в любое удобное для вас время, вне зависимости от того, в каком часовом поясе вы сейчас находитесь.
 
 					form.services_card_form(action="/mailer" data-mailer="" data-form-id="sale_page_form")
 						input(type="hidden", name="form", value="Помощь в продаже квартиры (Страница продажи недвижимости)")

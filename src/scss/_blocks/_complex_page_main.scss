@@ -1,0 +1,74 @@
+.complex_page_main {
+	
+    &__container {
+        padding-top: em(210);
+
+        @media(max-width: 1124px) {
+            padding-top: em(124);
+        }
+
+        @media(max-width: 500px) {
+            padding-top: em(80);
+        }
+    }
+
+    &__nav {
+        margin-top: em(20);
+
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 1124px) {
+            margin-top: em(16);
+        }
+
+        @media(max-width: 500px) {
+            overflow: scroll hidden;
+
+            scrollbar-width: none;
+            -webkit-scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+            	height: 0px;
+            	width: 0px;
+            	background: transparent;
+            }
+        }
+    }
+
+    &__nav_link {
+        font-size: em(16);
+        line-height: em(22);
+        font-weight: 400;
+        color: $c-primary;
+
+        white-space: nowrap;
+
+        transition: color .2s;
+
+        @media(max-width: 1124px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+        }
+
+        &:hover {
+            color: $c-hover;
+        }
+
+        & + & {
+            margin-left: .75rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+        margin-top: em(40);
+
+        position: relative;
+
+        @media(max-width: 1124px) {
+            margin-top: em(28);
+        }
+    }
+}

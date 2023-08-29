@@ -1,10 +1,10 @@
 extends _base/_layout
 block settings 
 
-	- title = 'Каталог вторичного жилья — AFLAT';
+	- title = 'Каталог другой недвижимости — AFLAT';
 
 mixin topsCard(img, rooms, floor, square, title, price, tag1)
-	a.tops_card.swiper-slide(href="/apartment_secondary")
+	a.tops_card.swiper-slide(href="/apartment_other")
 		.tops_card__bg
 			+img(img, '', 'image')
 		.tops_card__tags 
@@ -26,31 +26,17 @@ block content
 				.catalog__breadcrumbs.breadcrumbs
 					a.breadcrumbs__link(href="/") Главная
 					.breadcrumbs__dot 
-					.breadcrumbs__link.is-active Каталог вторичного жилья
+					.breadcrumbs__link.is-active Другая недвижимость
 
 				
-				h1.section_block__title Каталог вторичного жилья
+				h1.section_block__title Другая недвижимость
 
 				.catalog_filters
-					.catalog_filters__tabs
-						button.catalog_filters__tabs_btn Сдан
-						button.catalog_filters__tabs_btn Сдача в 2023
-						button.catalog_filters__tabs_btn Сдача в 2024
-						button.catalog_filters__tabs_btn Есть акции
-						button.catalog_filters__tabs_btn С отделкой
 					
 					.catalog_filters__main
 						.catalog_filters__block
 							p.catalog_filters__caption Район
 							.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]')
-						.catalog_filters__block
-							p.catalog_filters__caption Количество комнат
-							.catalog_filters__rooms 
-								button.catalog_filters__rooms_btn.is-active Студия
-								button.catalog_filters__rooms_btn 1
-								button.catalog_filters__rooms_btn 2
-								button.catalog_filters__rooms_btn 3
-								button.catalog_filters__rooms_btn 4+
 
 						.catalog_filters__block
 							p.catalog_filters__caption Стоимость, ₽
@@ -73,39 +59,13 @@ block content
 									label.input_wrapper__label До
 						
 
-					.catalog_filters_dropdown(data-dropdown-block="")
+					.catalog_filters_dropdown
 						.catalog_filters_dropdown__top
-							button.catalog_filters_dropdown__btn(data-dropdown-btn) 
-								span.text Еще фильтры
-								+svg('arrow_down', 'icon icon--right')
-							button.catalog_filters_dropdown__btn
+							button.catalog_filters_dropdown__btn.catalog_filters_dropdown__btn--reset
 								+svg('cross', 'icon icon--left')
 								span.text Сбросить все фильтры
 
-						.catalog_filters_dropdown__content
-							.catalog_filters__block
-								p.catalog_filters__caption Мебель
-								.catalog_filters__tabs
-									button.catalog_filters__tabs_btn С мебелью
-									button.catalog_filters__tabs_btn.is-active Без мебели
-									button.catalog_filters__tabs_btn.catalog_filters__tabs_btn--reset #[+svg('cross', 'icon')] Сбросить
-							
-							.catalog_filters__block
-								p.catalog_filters__caption Ремонт
-								.catalog_filters__tabs
-									button.catalog_filters__tabs_btn C ремонтом
-									button.catalog_filters__tabs_btn Без ремонта
-									
-							
-							.catalog_filters__block
-								p.catalog_filters__caption Тип
-								.catalog_filters__tabs
-									button.catalog_filters__tabs_btn Кирпичный
-									button.catalog_filters__tabs_btn Монолитный
-									button.catalog_filters__tabs_btn Кирпично-монолитный
-									button.catalog_filters__tabs_btn Панельный
-
-					p.catalog_filters__caption.catalog_filters__caption--count Найдено 10 квартир
+					p.catalog_filters__caption.catalog_filters__caption--count Найдено 12 объектов
 
 				.catalog__content
 					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
@@ -148,8 +108,8 @@ block content
 						h3.services_card__title Не нашли подходящий вариант?
 						p.services_card__text Мы ежедневно пополняем базу квартир. Если вы не нашли подходящую на сайте, оставьте заявку. Сегодня-завтра она #[br.desktop] может появиться у нас в базе, и вы узнаете о ней первым
 
-					form.services_card_form(action="/mailer" data-mailer="" data-form-id="catalog_secondary_page_form")
-						input(type="hidden", name="form", value="Помощь в подборе квартиры (Страница каталога вторички)")
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="catalog_other_page_form")
+						input(type="hidden", name="form", value="Помощь в подборе объекта (Страница другой недвижимости)")
 
 						.services_card_form__inputs
 							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')

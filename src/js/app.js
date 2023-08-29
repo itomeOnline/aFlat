@@ -17,6 +17,7 @@ import topsSlider from "./components/sliders/topsSlider";
 import topsBenefitsSlider from "./components/sliders/topsBenefitsSlider";
 import excursionsSlider from "./components/sliders/excursionsSlider";
 import banksSlider from "./components/sliders/banksSlider";
+import complexMainSlider from "./components/sliders/complexMainSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     topsBenefitsSlider();
     excursionsSlider();
     banksSlider();
+    complexMainSlider();
 
 
     document.querySelectorAll('[data-dropdown]').forEach(el => {

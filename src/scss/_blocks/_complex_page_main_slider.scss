@@ -1,0 +1,47 @@
+.complex_page_main_slider {
+	position: relative;
+
+    height: em(600);
+
+    @media(max-width: 1124px) {
+        height: em(400);
+    }
+
+    @media(max-width: 500px) {
+        height: em(340);
+    }
+    
+    &__nav {
+        width: calc(100% - em(80));
+
+        justify-content: space-between;
+
+        position: absolute;
+        bottom: em(40);
+        left: em(40);
+        z-index: 2;
+
+        @media(max-width: 1124px) {
+            width: calc(100% - em(48));
+
+            bottom: em(24);
+            left: em(24);
+        }
+    }
+
+    &__slide {
+        height: 100%;
+
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        .image {
+            object-fit: cover;
+        }
+    }
+}

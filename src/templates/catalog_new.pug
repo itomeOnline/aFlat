@@ -109,3 +109,35 @@ block content
 
 					button.catalog_pagination__btn_more.btn.btn--outlined.btn--small
 						span.btn__text Показать ещё
+
+
+		section.section.general_form
+			.general_form__container.container 
+				.services_card.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/general_form_bg_2.jpg`, '', 'image')
+
+					.services_card__top
+						h3.services_card__title Не нашли подходящий вариант?
+						p.services_card__text Мы ежедневно пополняем базу квартир. Если вы не нашли подходящую на сайте, оставьте заявку. Сегодня-завтра она #[br.desktop] может появиться у нас в базе, и вы узнаете о ней первым
+
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="catalog_new_page_form")
+						input(type="hidden", name="form", value="Помощь в подборе квартиры (Страница каталога новостроек)")
+
+						.services_card_form__inputs
+							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Телефон
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.services_card_form__span2.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+								textarea.input_wrapper__textarea(name="description", placeholder="Сообщение")
+
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Перезвоните мне
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

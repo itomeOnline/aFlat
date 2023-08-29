@@ -1,10 +1,10 @@
 extends _base/_layout
 block settings 
 
-	- title = 'Каталог вторичного жилья — AFLAT';
+	- title = 'Аренда жилья — AFLAT';
 
 mixin topsCard(img, rooms, floor, square, title, price, tag1)
-	a.tops_card.swiper-slide(href="/apartment_secondary")
+	a.tops_card.swiper-slide(href="/apartment_rent")
 		.tops_card__bg
 			+img(img, '', 'image')
 		.tops_card__tags 
@@ -26,18 +26,12 @@ block content
 				.catalog__breadcrumbs.breadcrumbs
 					a.breadcrumbs__link(href="/") Главная
 					.breadcrumbs__dot 
-					.breadcrumbs__link.is-active Каталог вторичного жилья
+					.breadcrumbs__link.is-active Аренда жилья
 
 				
-				h1.section_block__title Каталог вторичного жилья
+				h1.section_block__title Аренда жилья
 
 				.catalog_filters
-					.catalog_filters__tabs
-						button.catalog_filters__tabs_btn Сдан
-						button.catalog_filters__tabs_btn Сдача в 2023
-						button.catalog_filters__tabs_btn Сдача в 2024
-						button.catalog_filters__tabs_btn Есть акции
-						button.catalog_filters__tabs_btn С отделкой
 					
 					.catalog_filters__main
 						.catalog_filters__block
@@ -104,8 +98,17 @@ block content
 									button.catalog_filters__tabs_btn Монолитный
 									button.catalog_filters__tabs_btn Кирпично-монолитный
 									button.catalog_filters__tabs_btn Панельный
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Срок аренды
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Долгосрочная (год или более)
+									button.catalog_filters__tabs_btn Среднесрочная (3 - 11 месяцев)
+									button.catalog_filters__tabs_btn Краткосрочная (1 - 3 месяцев)
+									button.catalog_filters__tabs_btn.is-active Посуточная
+									button.catalog_filters__tabs_btn.catalog_filters__tabs_btn--reset #[+svg('cross', 'icon')] Сбросить
 
-					p.catalog_filters__caption.catalog_filters__caption--count Найдено 10 квартир
+					p.catalog_filters__caption.catalog_filters__caption--count Найдено 10 объектов
 
 				.catalog__content
 					+topsCard(`${assetsPath}/img/tops_benefits_1.jpg`, '1 комната', '6 этаж', '51 м²', 'Анны Щетининой, 26 ', 'от 7 264 060 ₽', 'Цена ниже рыночной')
@@ -148,8 +151,8 @@ block content
 						h3.services_card__title Не нашли подходящий вариант?
 						p.services_card__text Мы ежедневно пополняем базу квартир. Если вы не нашли подходящую на сайте, оставьте заявку. Сегодня-завтра она #[br.desktop] может появиться у нас в базе, и вы узнаете о ней первым
 
-					form.services_card_form(action="/mailer" data-mailer="" data-form-id="catalog_secondary_page_form")
-						input(type="hidden", name="form", value="Помощь в подборе квартиры (Страница каталога вторички)")
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="catalog_rent_page_form")
+						input(type="hidden", name="form", value="Помощь в подборе объекта (Страница каталога аренды жилья)")
 
 						.services_card_form__inputs
 							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')

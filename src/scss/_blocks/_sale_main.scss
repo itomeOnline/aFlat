@@ -1,5 +1,4 @@
 .sale_main {
-	
     
     &__container {
         padding-top: em(210);
@@ -7,11 +6,14 @@
         @media(max-width: 1124px) {
             padding-top: em(124);
         }
+
+        @media(max-width: 500px) {
+            padding-top: em(80);
+        }
     }
 
     &__content {
         position: relative;
-
     }
 
     &__img {
@@ -27,6 +29,10 @@
             height: em(350);
         }
 
+        @media(max-width: 500px) {
+            height: em(450);
+        }
+
         &::before {
             content: '';
             display: block;
@@ -40,6 +46,10 @@
 
             @media(max-width: 1124px) {
                 height: em(200);
+            }
+
+            @media(max-width: 500px) {
+                height: em(300);
             }
         }
 

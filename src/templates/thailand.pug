@@ -1,0 +1,77 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Таиланд — AFLAT';
+
+mixin respBlock(icon, title, text)
+	.responsibilities_block
+		.responsibilities_block__icon
+			+svg(icon, 'icon')
+		h3.responsibilities_block__title!= title
+		p.responsibilities_block__text!= text
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.sale_main.rent
+			.sale_main__container.container 
+				.sale_main__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Таиланд
+
+				.sale_main__content
+					.sale_main__img
+						+img(`${assetsPath}/img/thailand_main_img.jpg`, '', 'image')
+					
+					.sale_main__info 
+						.section_block
+							h2.section_block__title.section_block__title--white Недвижимость #[br.mobile] в Таиланде
+							p.section_block__text.section_block__text--white Для путешествий, инвестиций или постоянного проживания. Подберём #[br.tablet] идеальный вариант #[br.desktop] по бюджету, условиям и расположению. Хотите #[br.tablet] въезжать в страну неограниченное количество #[br.desktop] раз — поможем приобрести #[br.tablet] недвижимость и получить вид на жительство на 5, 10 или 20 лет.
+						
+						a.sale_main__info_btn.btn.btn--filled(href="/catalog_other")
+							span.btn__text Перейти в каталог
+
+		section.section.responsibilities
+			.responsibilities__container.container
+				.section_block
+					h2.section_block__title Почему вы #[br.mobile] останетесь довольны
+					p.section_block__text Наши преимущества
+
+				.responsibilities__content 
+					+respBlock('res_icon_7', 'Большая база <br class="mobile"> недвижимости', 'Мы много лет работаем с первичным <br class="tablet"> и вторичным рынком Тайланда. Знаем абсолютно все нюансы законодательства, плюсы и минусы всех районов, поэтому можем предложить разные варианты для покупки и аренды: квартиры, дома, виллы или коттеджа. В нашей базе (…) тысяч объектов недвижимости.')
+					+respBlock('res_icon_8', 'Онлайн-встречи <br class="tablet mobile"> в удобное время', 'Ещё до вашей поездки в Тайланд мы создадим видео-чат <br class="desktop"> и ответим на все вопросы. Вы можете находиться в любом городе РФ: для того, чтобы получить консультацию, вам не нужно приходить <br class="tablet"> к нам в офис. Не тратьте на это время, <br class="tablet"> мы подстроимся под вас.')
+					+respBlock('res_icon_9', 'Защита со всех сторон', 'Все объекты на вторичном рынке мы проверяем <br class="desktop"> на юридическую чистоту <br class="tablet"> и гарантируем 100% <br class="desktop"> безопасность. <br class="tablet"> С застройщиками проводим сделки <br class="desktop"> напрямую, без посредников и без комиссии.')
+					+respBlock('res_icon_10', 'Гарантированный доход', 'Поможем приобрести удачный и выгодный вариант недвижимости для инвестиций за рубежом. Вы сможете заработать от 7% до 10% годового дохода от стоимости объекта.')
+
+							
+		section.section.general_form
+			.general_form__container.container 
+				.services_card.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/general_form_bg_3.jpg`, '', 'image')
+
+					.services_card__top
+						h3.services_card__title Подобрать #[br.tablet] #[br.mobile] недвижимость #[br] в Таиланде
+						p.services_card__text Подберем недвижимость в Тайланде для переезда, путешествий, инвестиций или других целей. Организуем и сопроводим вас не только на этапе выбора, но и будем с вами при оформлении всех документов.
+
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="rent_page_form")
+						input(type="hidden", name="form", value="Помощь в подборе недвижимости в Таиланде (Страница подбора недвижимости в Таиланде)")
+
+						.services_card_form__inputs
+							//-.services_card_form__span2.select(data-dropdown="", data-dropdown-name="property_type", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Мне нужен одностраничник","value":"Мне нужен одностраничник"},{"key":"Мне нужен полноценный сайт для компании","value":"Мне нужен полноценный сайт для компании"},{"key":"Мне нужен каталог","value":"Мне нужен каталог"},{"key":"Мне нужен интернет-магазин","value":"Мне нужен интернет-магазин"},{"key":"Мне нужен небольшой сайт","value":"Мне нужен небольшой сайт"},{"key":"Мне нужен сайт-визитка","value":"Мне нужен сайт-визитка"},{"key":"Мне нужен микросайт","value":"Мне нужен микросайт"}]')
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Телефон
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.services_card_form__span2.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+								textarea.input_wrapper__textarea(name="message", placeholder="Описание квартиры")
+
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

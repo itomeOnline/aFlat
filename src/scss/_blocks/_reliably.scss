@@ -21,5 +21,11 @@
             margin-top: em(32);
             gap: em(20);
         }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            margin-top: em(28);
+            gap: em(16);
+        }
     }
 }

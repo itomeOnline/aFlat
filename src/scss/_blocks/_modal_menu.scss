@@ -35,6 +35,15 @@
 		align-items: center;
 
 		overflow: hidden scroll;
+
+		scrollbar-width: none;
+		-webkit-scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			height: 0px;
+			width: 0px;
+			background: transparent;
+		}
 	}
 
 	&__top {

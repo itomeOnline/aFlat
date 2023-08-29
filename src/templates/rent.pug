@@ -3,9 +3,10 @@ block settings
 
 	- title = 'Сдать недвижимость в аренду — AFLAT';
 
-mixin respBlock(title, text)
+mixin respBlock(icon, title, text)
 	.responsibilities_block
 		.responsibilities_block__icon
+			+svg(icon, 'icon')
 		h3.responsibilities_block__title= title
 		p.responsibilities_block__text= text
 
@@ -25,8 +26,8 @@ block content
 					
 					.sale_main__info 
 						.section_block
-							h2.section_block__title.section_block__title--white Сдать недвижимость #[br.desktop] #[br.tablet] в аренду
-							p.section_block__text.section_block__text--white Поможем сдать вашу недвижимость быстро, выгодно и надежно
+							h2.section_block__title.section_block__title--white Сдать недвижимость #[br.mobile] в аренду
+							p.section_block__text.section_block__text--white Поможем найти порядочных постояльцев и быстро сдать вашу квартиру: #[br.desktop] #[br.tablet] посуточно, от месяца до полугода или для долгосрочного проживания.
 						
 						button.sale_main__info_btn.btn.btn--filled(data-linked-modal="")
 							span.btn__text Оставить заявку
@@ -37,10 +38,10 @@ block content
 					h2.section_block__title Возьмем на себя
 
 				.responsibilities__content 
-					+respBlock('Ответственность 1', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 2', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 3', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
-					+respBlock('Ответственность 4', 'Описание ответственности, которую готова взять на свои плечи компания под названием aFlat')
+					+respBlock('res_icon_1', 'Оценка и фотосъёмка', 'Проводим профессиональную фотосессию, а также выявляем ваши потребности и пожелания к будущим арендосъёмщикам.')
+					+respBlock('res_icon_2', 'Показ объекта', 'Организуем просмотры и договариваемся со всеми потенциальными клиентами о времени посещения, учитывая ваш график и другие обстоятельства.')
+					+respBlock('res_icon_3', 'Заключение договора', 'Договор даёт гарантию соблюдения всех обязательств со стороны арендосъёмщика. Если необходимо, осуществляем в дальнейшем доверительное управление объектом.')
+					+respBlock('res_icon_4', 'Реклама объекта', 'Выставляем квартиру на рекламных площадках. Если необходимо, даём советы по улучшению эстетического вида жилья.')
 
 							
 		section.section.general_form
@@ -51,7 +52,8 @@ block content
 
 					.services_card__top
 						h3.services_card__title Сдать квартиру быстро, выгодно #[br.tablet] и надежно
-						p.services_card__text Будем с вами на всех этапах сделки - от поиска до оформления #[br.desktop] и получения ключей
+						p.services_card__text Вы узнаете, как можно заработать на аренде и, возможно, заходите сдавать и другие объекты недвижимости на постоянной основе. В России или за границей. 
+						p.services_card__text Оставьте заявку, и мы проведём с вами онлайн-встречу в любое удобное для вас время, вне зависимости от того, в каком часовом поясе вы сейчас находитесь.
 
 					form.services_card_form(action="/mailer" data-mailer="" data-form-id="rent_page_form")
 						input(type="hidden", name="form", value="Помощь в сдаче квартиры (Страница сдачи недвижимости в аренду)")

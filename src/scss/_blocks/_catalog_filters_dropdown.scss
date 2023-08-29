@@ -9,7 +9,7 @@
             margin-top: em(28);
             padding-top: em(28);
 
-            max-height: 20em;
+            max-height: 40em;
             opacity: 1;
             pointer-events: all;
 
@@ -53,6 +53,10 @@
         color: $c-primary;
 
         transition: color .2s;
+
+        &--reset {
+            margin-left: auto;
+        }
 
         .icon {
             width: 16px;

@@ -546,6 +546,42 @@
             </div>
           </div>
         </section>
+        <section class="section general_form">
+          <div class="general_form__container container"> 
+            <div class="services_card services_card--form">
+              <div class="services_card__bg"> 
+                <picture class="image">
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/general_form_bg_2.webp" type="image/webp"/>
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/general_form_bg_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/general_form_bg_2.jpg" alt=""/>
+                </picture>
+              </div>
+              <div class="services_card__top">
+                <h3 class="services_card__title">Не нашли подходящий вариант?</h3>
+                <p class="services_card__text">Мы ежедневно пополняем базу квартир. Если вы не нашли подходящую на сайте, оставьте заявку. Сегодня-завтра она <br class="desktop"> может появиться у нас в базе, и вы узнаете о ней первым</p>
+              </div>
+              <form class="services_card_form" action="/mailer" data-mailer="" data-form-id="catalog_new_page_form">
+                <input type="hidden" name="form" value="Помощь в подборе квартиры (Страница каталога новостроек)">
+                <div class="services_card_form__inputs">
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+                    <label class="input_wrapper__label">Имя</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                  </div>
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+                    <label class="input_wrapper__label">Телефон</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                  </div>
+                  <div class="services_card_form__span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+                    <textarea class="input_wrapper__textarea" name="description" placeholder="Сообщение"></textarea>
+                  </div>
+                </div>
+                <button class="services_card_form__btn btn btn--filled"><span class="btn__text">Перезвоните мне</span></button>
+                <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки <br class="desktop"> персональных данных</p>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="section footer">
         <div class="footer__container container">

@@ -1,0 +1,27 @@
+mixin layoutsCard(img, rooms, price, square)
+	a.layouts_card(href="/apartment_new")
+		.tops_card__img
+			+img(img, '', 'image')
+		.layouts_card__info
+			p.layouts_card__caption= rooms
+			h3.layouts_card__price= price
+			p.layouts_card__square= square
+			button.layouts_card__btn.btn.btn--filled.btn--small
+				span.btn__text Смотреть
+
+section#layouts.section.complex_page_layouts(data-scroll-id="layouts")
+	.complex_page_layouts__container.container 
+
+		.section_block 
+			h2.section_block__title Расположение
+
+		.complex_page_layouts__content
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+			+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')

@@ -18,6 +18,9 @@ import topsBenefitsSlider from "./components/sliders/topsBenefitsSlider";
 import excursionsSlider from "./components/sliders/excursionsSlider";
 import banksSlider from "./components/sliders/banksSlider";
 import complexMainSlider from "./components/sliders/complexMainSlider";
+import mapWidget from "./components/mapWidget";
+import complexProgressSlider from "./components/sliders/complexProgressSlider";
+import fullGallerySlider from "./components/sliders/fullGallerySlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -46,12 +49,15 @@ document.addEventListener("DOMContentLoaded", _ => {
 
     headerDropdown();
     headerLocationDropdown();
+    mapWidget();
 
     topsSlider();
     topsBenefitsSlider();
     excursionsSlider();
     banksSlider();
     complexMainSlider();
+    complexProgressSlider();
+    fullGallerySlider();
 
 
     document.querySelectorAll('[data-dropdown]').forEach(el => {

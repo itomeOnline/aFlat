@@ -1,10 +1,16 @@
-.banks {
-
+.complex_page_layouts {
+	
     &__content {
         margin-top: em(40);
 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: em(28);
+
         @media(max-width: 1124px) {
             margin-top: em(32);
+            gap: em(20);
+            grid-template-columns: 1fr 1fr;
         }
 
         @media(max-width: 500px) {

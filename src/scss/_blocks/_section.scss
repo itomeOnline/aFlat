@@ -1,14 +1,14 @@
 .section {
 	
 	& + & {
-		margin-top: em(120);
+		padding-top: em(120);
 
 		@media(max-width: 1124px) {
-			margin-top: em(100);
+			padding-top: em(100);
 		}
 
 		@media(max-width: 500px) {
-			margin-top: em(80);
+			padding-top: em(80);
 		}
 	}
 }

@@ -1,0 +1,56 @@
+section.section.complex_page_main
+	.complex_page_main__container.container 
+		.complex_page_main__breadcrumbs.breadcrumbs
+			a.breadcrumbs__link(href="/") Главная
+			.breadcrumbs__dot 
+			a.breadcrumbs__link(href="/catalog_new") Каталог новостроек
+			.breadcrumbs__dot 
+			.breadcrumbs__link.is-active Premium Park Дом №1
+
+		
+		h1.section_block__title Premium Park Дом №1
+
+		.complex_page_main__nav
+			a.complex_page_main__nav_link(href="#about", data-anchor="about") О проекте 
+			a.complex_page_main__nav_link(href="#location", data-anchor="location") Расположение
+			a.complex_page_main__nav_link(href="#progress", data-anchor="progress") Ход строительства
+			a.complex_page_main__nav_link(href="#layouts", data-anchor="layouts") Планировки
+
+		.complex_page_main__content 
+			.complex_page_main_slider.slider.swiper 
+
+				.complex_page_main_slider__nav.slider__nav
+					.complex_page_main_slider__pagination.slider__pagination
+					.slider__buttons
+						button.slider__button.slider__button--prev.complex_page_main_slider__arrow--prev
+							+svg('arrow_small', 'icon')
+						button.slider__button.slider__button--next.complex_page_main_slider__arrow--next
+							+svg('arrow_small', 'icon')
+
+				.swiper-wrapper 
+					.complex_page_main_slider__slide.swiper-slide
+						.complex_page_main_slider__img 
+							+img(`${assetsPath}/img/complex_page_main_pic_1.jpg`, '', 'image')
+					.complex_page_main_slider__slide.swiper-slide
+						.complex_page_main_slider__img 
+							+img(`${assetsPath}/img/complex_page_main_pic_1.jpg`, '', 'image')
+					.complex_page_main_slider__slide.swiper-slide
+						.complex_page_main_slider__img 
+							+img(`${assetsPath}/img/complex_page_main_pic_1.jpg`, '', 'image')
+
+			.complex_page_main_info
+				.complex_page_main_info__table 
+					.complex_page_main_info__item
+						p.complex_page_main_info__item_text Стоимость
+						p.complex_page_main_info__item_title от 4 000 000  ₽ 
+					.complex_page_main_info__item
+						p.complex_page_main_info__item_text В ипотеку
+						p.complex_page_main_info__item_title от 10 000 ₽ / мес 
+					.complex_page_main_info__item
+						p.complex_page_main_info__item_text Свободно 
+						p.complex_page_main_info__item_title 245 квартир
+					.complex_page_main_info__item
+						p.complex_page_main_info__item_text Срок сдачи
+						p.complex_page_main_info__item_title 4 квартал, 2023
+				a.complex_page_main_info__btn.btn.btn--filled(href="#layouts", data-anchor="layouts")
+					span.btn__text Смотреть квартиры

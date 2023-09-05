@@ -83,12 +83,20 @@
 
         &--prev {
             transform: scaleX(-1);
+
+            .project_more_info & {
+                transform: rotate(270deg) !important;
+            }
         }
 
         &:hover {
             background: $c-primary;
             svg {
                 fill: white;
+            }
+
+            .project_more_info & {
+                border: 1px solid $c-primary;
             }
         }
 
@@ -97,6 +105,12 @@
             height: 16px;
             fill: $c-primary;
             transition: fill .2s;
+        }
+
+        .project_more_info & {
+            border: 1px solid #E5E7E0;
+
+            transform: rotate(90deg);
         }
 
         &.swiper-button-lock {

@@ -1,0 +1,44 @@
+.mortgage_calc {
+	
+    &.privacy {
+        margin: 0;
+    }
+
+    &__content {
+        margin-top: em(32);
+
+        display: grid;
+        grid-template-columns: auto em(356);
+        gap: em(28);
+
+        position: relative;
+
+        @media(max-width: 1124px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__title {
+        margin-top: 7.5rem;
+
+        @media(max-width: 1124px) {
+            margin-top: 6.25rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__programs {
+        margin-top: em(40);
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+        }
+
+        @media(max-width: 500px) {
+            margin-top: em(28);
+        }
+    }
+}

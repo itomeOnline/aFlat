@@ -1,0 +1,107 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Ипотека — AFLAT';
+
+mixin mortgageBlock(img, title, text, crit1, crit2, crit3, crit4, link, hashtag)
+	.mortgage_program_block(data-sector=hashtag)
+		.mortgage_program_block__img 
+			+img(img, '', 'image')
+		.mortgage_program_block__info 
+			h3.mortgage_program_block__title= title 
+			p.mortgage_program_block__text!= text 
+			.mortgage_program_block__table 
+				.mortgage_program_block__table_cell 
+					p.mortgage_program_block__table_caption Макс. размер #[br] кредита, ₽
+					p.mortgage_program_block__table_title= crit1
+				.mortgage_program_block__table_cell 
+					p.mortgage_program_block__table_caption Первоначальный #[br] взнос
+					p.mortgage_program_block__table_title= crit2
+				.mortgage_program_block__table_cell 
+					p.mortgage_program_block__table_caption Ставка
+					p.mortgage_program_block__table_title= crit3
+				.mortgage_program_block__table_cell 
+					p.mortgage_program_block__table_caption Срок кредита, #[br] лет
+					p.mortgage_program_block__table_title= crit4
+			.mortgage_program_block__buttons 
+				button.mortgage_program_block__btn.btn.btn--filled(data-linked-modal="")
+					span.btn__text Подать заявку
+				a.mortgage_program_block__btn.btn.btn--outlined(href=link, data-anchor="")
+					span.btn__text Читать подробнее
+
+	
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.mortgage_main
+			.mortgage_main__container.sale_main__container.container
+				.mortgage_main__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Ипотека
+
+				.mortgage_main__content
+					.mortgage_main__img
+						+img(`${assetsPath}/img/mortgage_main_pic.jpg`, '', 'image')
+
+					.mortgage_main__tabs
+						.mortgage_main__tabs_btn Дальневосточная
+						.mortgage_main__tabs_btn Семейная
+						.mortgage_main__tabs_btn Господдержка
+						.mortgage_main__tabs_btn Военная
+					
+					.mortgage_main__info 
+						.section_block
+							h2.section_block__title Ипотека
+							p.section_block__text.section_block__text--600.section_block__text--black Поможем снизить ставку и оформить #[br.mobile] ипотеку #[br.tablet] конкретно под ваш случай
+						
+						a.mortgage_main__info_btn.btn.btn--filled(href="#", data-anchor="")
+							span.btn__text Рассчитать ипотеку
+
+		
+		section.section.mortgage_calc.privacy
+			.mortgage_calc__container.container 
+				h2.section_block__title Ипотечный калькулятор
+
+				.mortgage_calc__content 
+					.mortgage_calc__main 
+
+						.mortgage_calc_table(data-sector="calc")
+							.mortgage_calc_table__block.mortgage_calc_table__block--top 
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Стоимость квартиры, ₽ 
+									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+										label.input_wrapper__label От
+								.mortgage_calc_table__wrap 
+									.mortgage_calc_table__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+										label.input_wrapper__label До
+
+							.mortgage_calc_table__block
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Первоначальный взнос
+									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_wrapper__input(type="text" name="firstPayment" autocomplete="off")
+										label.input_wrapper__label %
+
+						
+						h2.section_block__title.mortgage_calc__title Программы по ипотеке
+
+						.mortgage_calc__programs
+							+mortgageBlock(`${assetsPath}/img/mortgage_program_1.jpg`, 'Дальневосточная ипотека', 'Проект господдержки, направленный на поддержку молодых семей с детьми и без.Этот вид кредита позволяет получить жилье под 2% на территории Дальневосточного федерального округа. Действует программа до 2024 года.', '6 млн.', 'От 15%', 'От 2%', 'До 20', '/fareastern_mortgage', 'dv')
+							+mortgageBlock(`${assetsPath}/img/mortgage_program_2.jpg`, 'Семейная', 'Теперь льготную семейную ипотеку могут взять не только семьи с ребенком, рожденным после 1 января 2018 года, но и родители двух и более несовершеннолетних детей. При этом нет дополнительных ограничений по возрасту. А материнский капитал можно использовать в качестве частичной оплаты.', '6 млн.', 'От 15%', 'От 2%', 'До 20', '/family_mortgage', 'family')
+							+mortgageBlock(`${assetsPath}/img/mortgage_program_3.jpg`, 'Господдержка', 'Покупка строящегося жилья у юрлица или в готовой новостройке у застройщика. Покупка или строительство дома с помощью юрлица или индивидуального предпринимателя.', '6 млн.', 'От 15%', 'От 2%', 'До 20', '/support_mortgage', 'gos')
+							+mortgageBlock(`${assetsPath}/img/mortgage_program_4.jpg`, 'Военная', 'Программа создана для участников накопительно-ипотечной системы согласно №117-ФЗ. Накопительный счет можно использовать через 3 года после включения в НИС.', '6 млн.', 'От 15%', 'От 2%', 'До 20', '/military_mortgage', 'military')
+								
+
+					.mortgage_calc_pagination
+						a.mortgage_calc_pagination__btn.privacy_pagination__link(href="#calc", data-anchor-link="", data-scroll-section="") Ипотечный калькулятор
+						a.mortgage_calc_pagination__btn.privacy_pagination__link(href="#dv", data-anchor-link="", data-scroll-section="") Дальневосточная ипотека
+						a.mortgage_calc_pagination__btn.privacy_pagination__link(href="#family", data-anchor-link="", data-scroll-section="") Семейная
+						a.mortgage_calc_pagination__btn.privacy_pagination__link(href="#gos", data-anchor-link="", data-scroll-section="") Господдержка
+						a.mortgage_calc_pagination__btn.privacy_pagination__link(href="#military", data-anchor-link="", data-scroll-section="") Военная
+
+

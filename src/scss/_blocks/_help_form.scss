@@ -1,0 +1,69 @@
+.help_form {
+	
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        .image {
+            object-fit: cover;
+
+            &--desk {
+
+                @media(max-width: 1124px) {
+                    display: none;
+                }
+            }
+
+            &--tablet {
+                display: none;
+
+                @media(max-width: 1124px) {
+                    display: initial;
+                }
+
+                @media(max-width: 500px) {
+                    display: none;
+                }
+            }
+
+            &--mob {
+                display: none;
+
+                @media(max-width: 500px) {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    &__content {
+
+        @media(max-width: 1124px) {
+            flex-direction: column;
+        }
+    }
+
+    &__form {
+
+        @media(max-width: 1124px) {
+            width: 100%;
+            margin-left: 0;
+
+            margin-top: em(28);
+        }
+
+        .services_card_form__inputs {
+            grid-template-columns: 1fr 1fr;
+
+            @media(max-width: 500px) {
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}

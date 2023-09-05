@@ -73,10 +73,18 @@
         @media(max-width: 1124px) {
             padding: em(24);
         }
+
+        @media(max-width: 500px) {
+            width: 100%;
+        }
     }
 
     &__info_btn {
         margin-top: auto;
         max-width: fit-content;
+
+        @media(max-width: 500px) {
+            max-width: 100%;
+        }
     }
 }

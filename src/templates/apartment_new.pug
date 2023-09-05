@@ -1,0 +1,102 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Карточка квартиры новостройки — AFLAT';
+
+
+mixin layoutsCard(img, rooms, price, square)
+	a.layouts_card.swiper-slide(href="/apartment_new")
+		.tops_card__img
+			+img(img, '', 'image')
+		.layouts_card__info
+			p.layouts_card__caption= rooms
+			h3.layouts_card__price= price
+			p.layouts_card__square= square
+			button.layouts_card__btn.btn.btn--filled.btn--small
+				span.btn__text Смотреть
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.apartment_new
+			.apartment_new__container.container 
+				.apartment_new__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/catalog_new") Каталог новостроек
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/complex_page")  Premium Park Дом №1
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active 2 комнатная, 60 м²
+
+				
+				h1.section_block__title 2 комнатная, 60 м²
+
+
+		section.section.general_form.mortgage_form
+			.general_form__container.container 
+				.services_card.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/general_form_bg_4.jpg`, '', 'image')
+
+					.services_card__top
+						h3.services_card__title Рассчитать #[br.tablet] ипотеку
+						p.services_card__text Заполните поля и мы перезвоним вам с расчетом ежемесячного платежа под выбранные вами условия.
+
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="calc_mortgage_complex_page_form")
+						input(type="hidden", name="form", value="Рассчитать ипотеку (Страница новостройки)")
+
+						.services_card_form__inputs
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="firstPayment" required autocomplete="off")
+								label.input_wrapper__label Первый взнос
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="creditTerm" required autocomplete="off")
+								label.input_wrapper__label Срок кредита
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="conditions" required autocomplete="off")
+								label.input_wrapper__label Специальные условия
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Ваше имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Номер телефона
+								.input_wrapper__tooltip(data-input-tooltip="")
+							
+
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных
+
+
+		section.section.apartment_layouts
+			.apartment_layouts__container.container 
+
+				.tops__top.apartment_layouts__top
+					.section_block 
+						h2.section_block__title Другие квартиры в этом ЖК
+
+					.tops__nav.slider__nav 
+						.slider__scroll.apartment_layouts__scroll
+						.slider__buttons.slider__buttons--margin
+							button.slider__button.slider__button--prev.apartment_layouts__arrow--prev
+								+svg('arrow_small', 'icon')
+							button.slider__button.slider__button--next.apartment_layouts__arrow--next
+								+svg('arrow_small', 'icon')
+				
+				.apartment_layouts__content
+					.apartment_layouts__slider.slider.swiper 
+						.swiper-wrapper 
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')
+							+layoutsCard(`${assetsPath}/img/layouts_pic_1.png`, '2 комнаты', '7 264 060 ₽', '60 м²')

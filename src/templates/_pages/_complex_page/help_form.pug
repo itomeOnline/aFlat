@@ -1,0 +1,39 @@
+section.section.general_form.help_form
+	.general_form__container.container 
+		.services_card.services_card--form.help_form__content
+			.help_form__bg
+				+imgSvg(`${assetsPath}/img/help_form_img.svg`, '', 'image image--desk')
+				+imgSvg(`${assetsPath}/img/help_form_img_tablet.svg`, '', 'image image--tablet')
+				+imgSvg(`${assetsPath}/img/help_form_img_mob.svg`, '', 'image image--mob')
+
+			.services_card__top
+				h3.services_card__title Поможем с выбором
+				p.services_card__text Получите информацию про платежи #[br.mobile] и график #[br.desktop.tablet] погашения ипотеки в этом #[br.mobile] жилом комплексе
+
+			form.services_card_form.help_form__form(action="/mailer" data-mailer="" data-form-id="help_complex_page_form")
+				input(type="hidden", name="form", value="Помощь с выбором (Страница новостройки)")
+
+				.services_card_form__inputs
+					
+					.catalog_filters__select.select(data-dropdown="", data-dropdown-name="roomsCount", data-dropdown-placeholder="Количество комнат", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+					.catalog_filters__select.select(data-dropdown="", data-dropdown-name="roomsFinishing", data-dropdown-placeholder="Отделка", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+					.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+						input.input_wrapper__input(type="text" name="square" required autocomplete="off")
+						label.input_wrapper__label Площадь
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.catalog_filters__select.select(data-dropdown="", data-dropdown-name="paymentOption", data-dropdown-placeholder="Вариант оплаты", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+					.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+						input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+						label.input_wrapper__label Ваше имя
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+						input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+						label.input_wrapper__label Номер телефона
+						.input_wrapper__tooltip(data-input-tooltip="")
+					.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+						input.input_wrapper__input(type="text" name="price" required autocomplete="off")
+						label.input_wrapper__label Стоимость
+						.input_wrapper__tooltip(data-input-tooltip="")
+					button.help_form__btn.btn.btn--filled
+						span.btn__text Подобрать
+				

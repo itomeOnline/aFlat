@@ -144,6 +144,10 @@
 
         transition: color .2s, border .2s;
 
+        @media(max-width: 1124px) {
+            padding: 9px .75rem;
+        }
+
         &.is-active {
             color: $c-primary;
             border-bottom: 1px solid $c-primary;

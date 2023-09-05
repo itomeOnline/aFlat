@@ -64,6 +64,29 @@
 			line-height: em(18,12);
 		}
 
+		&--24 {
+			font-size: em(24);
+			line-height: em(30,24);
+			font-weight: 600;
+
+			margin-top: .5em;
+
+			@media(max-width: 500px) {
+				font-size: em(18);
+				line-height: 1.5rem;
+
+				margin-top: .5rem;
+			}
+		}
+
+		&--600 {
+			font-weight: 600;
+
+			@media(max-width: 1124px) {
+				font-size: em(14);
+				line-height: 1.25rem;
+			}
+		}
 		
 		&--white {
 			color: #fff;

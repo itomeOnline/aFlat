@@ -35,6 +35,10 @@
         }
     }
 
+    &.swiper-slide {
+        box-shadow: none;
+    }
+
     &__img {
         width: 100%;
         height: em(250);

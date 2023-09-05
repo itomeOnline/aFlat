@@ -21,6 +21,9 @@ import complexMainSlider from "./components/sliders/complexMainSlider";
 import mapWidget from "./components/mapWidget";
 import complexProgressSlider from "./components/sliders/complexProgressSlider";
 import fullGallerySlider from "./components/sliders/fullGallerySlider";
+import apartmentLayoutsSlider from "./components/sliders/apartmentLayoutsSlider";
+import projectMoreSlider from "./components/sliders/projectMoreSlider";
+import tab from "./components/faqTabs";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -58,11 +61,17 @@ document.addEventListener("DOMContentLoaded", _ => {
     complexMainSlider();
     complexProgressSlider();
     fullGallerySlider();
+    apartmentLayoutsSlider();
+    projectMoreSlider();
 
 
     document.querySelectorAll('[data-dropdown]').forEach(el => {
         new Dropdown(el);
     })
+
+    if (document.querySelector('[data-tab-wrapper]')) {
+        tab(document.querySelector('[data-tab-wrapper]'));
+    }
 
     let scroll = new LocomotiveScroll({ 
         getDirection: true,
@@ -122,7 +131,12 @@ document.addEventListener("DOMContentLoaded", _ => {
       
                 const sector = link.getAttribute('href').replace('#', '');
                 const pos = document.querySelector(`[data-sector="${sector}"]`).offsetTop;
-                window.scrollTo(0, pos);
+
+                if (document.querySelector('.mortgage_calc')) {
+                    scroll.scrollTo(pos + 800);
+                } else {
+                    scroll.scrollTo(pos);
+                }
             });
         });
       

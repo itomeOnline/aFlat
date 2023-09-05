@@ -1,0 +1,153 @@
+.mortgage_program_block {
+	
+    &__img {
+        width: 100%;
+        height: em(366);
+
+        overflow: hidden;
+
+        border-radius: 16px 16px 0 0;
+
+        @media(max-width: 500px) {
+            height: em(250);
+        }
+
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        margin-top: -16px;
+
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0px -12px 40px 0px rgba(0, 0, 0, 0.12);
+
+        padding: em(20) em(28) em(28);
+
+        position: relative;
+        z-index: 2;
+
+        @media(max-width: 1124px) {
+            padding: em(20) em(24) em(24);
+        }
+
+        @media(max-width: 500px) {
+            padding: em(24);
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: em(32);
+        line-height: em(40,32);
+        color: #000;
+
+        @media(max-width: 1124px) {
+            font-size: em(28);
+            line-height: em(36,28);
+        }
+
+        @media(max-width: 500px) {
+            font-size: em(24);
+            line-height: em(30,24);
+        }
+    }
+
+    &__text {
+        font-size: em(16);
+        line-height: em(24);
+        font-weight: 400;
+        letter-spacing: -0.02em;
+
+        margin-top: 1rem;
+
+        @media(max-width: 1124px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-top: .75rem;
+        }
+    }
+
+    &__table {
+        margin-top: em(40);
+        padding-top: em(20);
+
+        width: 100%;
+        border-top: 1px solid #E5E7E0;
+
+        display: grid;
+        grid-template-columns: repeat(4, em(142));
+        gap: 1rem;
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+            gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            margin-top: em(28);
+
+            grid-template-columns: 1fr 1fr;
+            gap: em(20) 1em;
+        }
+    }
+
+    &__table_caption {
+        font-size: em(12);
+        line-height: .875rem;
+        font-weight: 400;
+        color: #838383;
+
+        height: 2em;
+
+        margin-bottom: .25rem;
+    }
+
+    &__table_title {
+        font-size: em(24);
+        line-height: em(30,24);
+        font-weight: 700;
+        color: #000;
+
+        margin-bottom: .25rem;
+    }
+
+    &__buttons {
+        width: 100%;
+
+        margin-top: em(40);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: em(28);
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+            gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            margin-top: em(28);
+            grid-template-columns: 100%;
+            gap: em(12);
+        }
+    }
+
+    & + & {
+        margin-top: em(28);
+
+        @media(max-width: 1124px) {
+            margin-top: em(20);
+        }
+
+        @media(max-width: 500px) {
+            margin-top: 1em;
+        }
+    }
+}

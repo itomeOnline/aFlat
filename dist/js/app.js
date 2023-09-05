@@ -21207,6 +21207,233 @@
     });
   }
 
+  /* eslint no-underscore-dangle: "off" */
+  function Autoplay({
+    swiper,
+    extendParams,
+    on,
+    emit
+  }) {
+    let timeout;
+    swiper.autoplay = {
+      running: false,
+      paused: false
+    };
+    extendParams({
+      autoplay: {
+        enabled: false,
+        delay: 3000,
+        waitForTransition: true,
+        disableOnInteraction: true,
+        stopOnLastSlide: false,
+        reverseDirection: false,
+        pauseOnMouseEnter: false
+      }
+    });
+
+    function run() {
+      if (!swiper.size) {
+        swiper.autoplay.running = false;
+        swiper.autoplay.paused = false;
+        return;
+      }
+
+      const $activeSlideEl = swiper.slides.eq(swiper.activeIndex);
+      let delay = swiper.params.autoplay.delay;
+
+      if ($activeSlideEl.attr('data-swiper-autoplay')) {
+        delay = $activeSlideEl.attr('data-swiper-autoplay') || swiper.params.autoplay.delay;
+      }
+
+      clearTimeout(timeout);
+      timeout = nextTick(() => {
+        let autoplayResult;
+
+        if (swiper.params.autoplay.reverseDirection) {
+          if (swiper.params.loop) {
+            swiper.loopFix();
+            autoplayResult = swiper.slidePrev(swiper.params.speed, true, true);
+            emit('autoplay');
+          } else if (!swiper.isBeginning) {
+            autoplayResult = swiper.slidePrev(swiper.params.speed, true, true);
+            emit('autoplay');
+          } else if (!swiper.params.autoplay.stopOnLastSlide) {
+            autoplayResult = swiper.slideTo(swiper.slides.length - 1, swiper.params.speed, true, true);
+            emit('autoplay');
+          } else {
+            stop();
+          }
+        } else if (swiper.params.loop) {
+          swiper.loopFix();
+          autoplayResult = swiper.slideNext(swiper.params.speed, true, true);
+          emit('autoplay');
+        } else if (!swiper.isEnd) {
+          autoplayResult = swiper.slideNext(swiper.params.speed, true, true);
+          emit('autoplay');
+        } else if (!swiper.params.autoplay.stopOnLastSlide) {
+          autoplayResult = swiper.slideTo(0, swiper.params.speed, true, true);
+          emit('autoplay');
+        } else {
+          stop();
+        }
+
+        if (swiper.params.cssMode && swiper.autoplay.running) run();else if (autoplayResult === false) {
+          run();
+        }
+      }, delay);
+    }
+
+    function start() {
+      if (typeof timeout !== 'undefined') return false;
+      if (swiper.autoplay.running) return false;
+      swiper.autoplay.running = true;
+      emit('autoplayStart');
+      run();
+      return true;
+    }
+
+    function stop() {
+      if (!swiper.autoplay.running) return false;
+      if (typeof timeout === 'undefined') return false;
+
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = undefined;
+      }
+
+      swiper.autoplay.running = false;
+      emit('autoplayStop');
+      return true;
+    }
+
+    function pause(speed) {
+      if (!swiper.autoplay.running) return;
+      if (swiper.autoplay.paused) return;
+      if (timeout) clearTimeout(timeout);
+      swiper.autoplay.paused = true;
+
+      if (speed === 0 || !swiper.params.autoplay.waitForTransition) {
+        swiper.autoplay.paused = false;
+        run();
+      } else {
+        ['transitionend', 'webkitTransitionEnd'].forEach(event => {
+          swiper.$wrapperEl[0].addEventListener(event, onTransitionEnd);
+        });
+      }
+    }
+
+    function onVisibilityChange() {
+      const document = getDocument();
+
+      if (document.visibilityState === 'hidden' && swiper.autoplay.running) {
+        pause();
+      }
+
+      if (document.visibilityState === 'visible' && swiper.autoplay.paused) {
+        run();
+        swiper.autoplay.paused = false;
+      }
+    }
+
+    function onTransitionEnd(e) {
+      if (!swiper || swiper.destroyed || !swiper.$wrapperEl) return;
+      if (e.target !== swiper.$wrapperEl[0]) return;
+      ['transitionend', 'webkitTransitionEnd'].forEach(event => {
+        swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);
+      });
+      swiper.autoplay.paused = false;
+
+      if (!swiper.autoplay.running) {
+        stop();
+      } else {
+        run();
+      }
+    }
+
+    function onMouseEnter() {
+      if (swiper.params.autoplay.disableOnInteraction) {
+        stop();
+      } else {
+        emit('autoplayPause');
+        pause();
+      }
+
+      ['transitionend', 'webkitTransitionEnd'].forEach(event => {
+        swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);
+      });
+    }
+
+    function onMouseLeave() {
+      if (swiper.params.autoplay.disableOnInteraction) {
+        return;
+      }
+
+      swiper.autoplay.paused = false;
+      emit('autoplayResume');
+      run();
+    }
+
+    function attachMouseEvents() {
+      if (swiper.params.autoplay.pauseOnMouseEnter) {
+        swiper.$el.on('mouseenter', onMouseEnter);
+        swiper.$el.on('mouseleave', onMouseLeave);
+      }
+    }
+
+    function detachMouseEvents() {
+      swiper.$el.off('mouseenter', onMouseEnter);
+      swiper.$el.off('mouseleave', onMouseLeave);
+    }
+
+    on('init', () => {
+      if (swiper.params.autoplay.enabled) {
+        start();
+        const document = getDocument();
+        document.addEventListener('visibilitychange', onVisibilityChange);
+        attachMouseEvents();
+      }
+    });
+    on('beforeTransitionStart', (_s, speed, internal) => {
+      if (swiper.autoplay.running) {
+        if (internal || !swiper.params.autoplay.disableOnInteraction) {
+          swiper.autoplay.pause(speed);
+        } else {
+          stop();
+        }
+      }
+    });
+    on('sliderFirstMove', () => {
+      if (swiper.autoplay.running) {
+        if (swiper.params.autoplay.disableOnInteraction) {
+          stop();
+        } else {
+          pause();
+        }
+      }
+    });
+    on('touchEnd', () => {
+      if (swiper.params.cssMode && swiper.autoplay.paused && !swiper.params.autoplay.disableOnInteraction) {
+        run();
+      }
+    });
+    on('destroy', () => {
+      detachMouseEvents();
+
+      if (swiper.autoplay.running) {
+        stop();
+      }
+
+      const document = getDocument();
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+    });
+    Object.assign(swiper.autoplay, {
+      pause,
+      run,
+      start,
+      stop
+    });
+  }
+
   function effectInit(params) {
     const {
       effect,
@@ -21687,6 +21914,141 @@
       
   }
 
+  // import 'swiper/components/scrollbar/scrollbar.min.css';
+
+  function apartmentLayoutsSlider () {
+
+    const slider = new Swiper('.apartment_layouts__slider', {
+        modules: [ Navigation, Scrollbar, Mousewheel],
+        slidesPerView: 3,
+        speed: 700,
+        spaceBetween: 28,
+        watchOverflow: true,
+        mousewheelControl: true,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        navigation: {
+            nextEl: '.apartment_layouts__arrow--next',
+            prevEl: '.apartment_layouts__arrow--prev',
+        },
+        scrollbar: {
+            el: '.apartment_layouts__scroll',
+            draggable: true,
+          },
+        breakpoints: {
+          300: {
+            slidesPerView: 1.2,
+            spaceBetween: 20
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1220: {
+            slidesPerView: 3,
+            spaceBetween: 28
+          },
+        }
+      });
+
+
+  }
+
+  function projectMoreSlider () {
+      let texts = ['О жилом комплексе', 'О доме', 'Где находится', 'Парковка', 'Дополнительные зоны'];
+      const slider = new Swiper('.project_more_info__slider', {
+        modules: [ Navigation, Autoplay, Pagination, EffectFade],
+        slidesPerView: 1,
+  	    speed: 700,
+  	    spaceBetween: 8,
+  	    loop: true,
+  	    autoplay: {
+  	      delay: 3000,
+  	    },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        loopedSlides: 5,
+        navigation: {
+            nextEl: '.project_more_info__slider_btn--next',
+            prevEl: '.project_more_info__slider_btn--prev',
+        },
+        pagination: {
+          el: '.project_more_info__pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<button class="' + className + '"><span>'  + (texts[index]) + '</span></button>';
+          },
+        },
+        // breakpoints: {
+        //   300: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 16,
+        //     direction: 'vertical',
+        //   },
+        //   500: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 20,
+        //     direction: 'vertical',
+        //   },
+        //   1124: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 8,
+        //     direction: 'horizontal',
+        //   },
+        // }
+  	           
+        });
+  }
+
+  function tab(item){
+      let dom = {},
+      activeBtn = item.querySelector('.is-active[data-tab-id]'),
+      activeTab = item.querySelector('.is-active[data-tab]');
+
+      function cacheDom () {
+          dom.tabBtns = item.querySelectorAll('[data-tab-id]');
+          dom.tabItems = item.querySelectorAll('[data-tab]');
+      }
+
+      function selectTab (target) {
+          const tabId = target.dataset.tabId;
+
+          //setActiveTab
+
+          activeTab.classList.remove('is-active');
+          activeTab = item.querySelector(`[data-tab="${tabId}"]`);
+          activeTab.classList.add('is-active');
+
+
+          //setActiveBtn
+          const btnPosX = target.offsetLeft;
+          const btnWidth = target.offsetWidth;
+
+          activeBtn.classList.remove('is-active');
+          activeBtn = target;
+          activeBtn.classList.add('is-active');
+
+          // changeLinePosition(btnWidth ,btnPosX)
+      }
+
+      
+      function bindEvents() {
+          dom.tabBtns.forEach( btn => {
+              btn.addEventListener('click', ({target}) => selectTab(target.closest('[data-tab-id]')));
+          });
+      }
+
+      function init() {
+          cacheDom();
+          bindEvents();
+      }
+
+      init();
+  }
+
   setTimeout(() => { 
       document.querySelector('body').classList.add('on-loaded');
   }, 1000);
@@ -21723,11 +22085,17 @@
       complexMainSlider();
       complexProgressSlider();
       fullGallerySlider();
+      apartmentLayoutsSlider();
+      projectMoreSlider();
 
 
       document.querySelectorAll('[data-dropdown]').forEach(el => {
           new Dropdown(el);
       });
+
+      if (document.querySelector('[data-tab-wrapper]')) {
+          tab(document.querySelector('[data-tab-wrapper]'));
+      }
 
       let scroll = new Smooth({ 
           getDirection: true,
@@ -21787,7 +22155,12 @@
         
                   const sector = link.getAttribute('href').replace('#', '');
                   const pos = document.querySelector(`[data-sector="${sector}"]`).offsetTop;
-                  window.scrollTo(0, pos);
+
+                  if (document.querySelector('.mortgage_calc')) {
+                      scroll.scrollTo(pos + 800);
+                  } else {
+                      scroll.scrollTo(pos);
+                  }
               });
           });
         

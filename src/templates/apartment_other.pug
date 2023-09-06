@@ -1,0 +1,89 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Карточка квартиры другой недвижимости — AFLAT';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.apartment_new
+			.apartment_new__container.sale_main__container.container 
+				.apartment_new__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/catalog_other") Другая недвижимость
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active 100-летия Владивостока, 176
+
+				
+				h1.section_block__title 100-летия Владивостока, 176
+
+				.apartment_new__content
+					.apartment_new__gallery
+						.apartment_new_slider--sec.swiper.slider(data-gallery-slides='["/assets/img/apart_other_pic.jpg","/assets/img/apart_other_pic.jpg","/assets/img/apart_other_pic.jpg", "/assets/img/apart_other_pic.jpg"]')
+							
+							button.apartment_new_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+								+svg('full', 'icon')
+
+							.apartment_new_slider__nav.slider__nav
+								.apartment_new_slider__pagination.slider__pagination
+								.slider__buttons
+									button.slider__button.slider__button--prev.apartment_new_slider__arrow--prev
+										+svg('arrow_small', 'icon')
+									button.slider__button.slider__button--next.apartment_new_slider__arrow--next
+										+svg('arrow_small', 'icon')
+
+							.swiper-wrapper
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+									+img(`${assetsPath}/img/apart_other_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+									+img(`${assetsPath}/img/apart_other_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+									+img(`${assetsPath}/img/apart_other_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+									+img(`${assetsPath}/img/apart_other_pic.jpg`, '', 'image')
+
+					.apartment_new_info
+						h2.apartment_new_info__title О квартире
+						.apartment_new_info__table 
+							.apartment_new_info__line 
+								p.apartment_new_info__text Район
+								p.apartment_new_info__text.apartment_new_info__text--600 Первая речка
+							.apartment_new_info__line 
+								p.apartment_new_info__text Тип недвижимости
+								p.apartment_new_info__text.apartment_new_info__text--600 Офис
+							.apartment_new_info__line 
+								p.apartment_new_info__text Площадь
+								p.apartment_new_info__text.apartment_new_info__text--600 60 м²
+							
+
+						p.apartment_new_info__title.apartment_new_info__title--price от 7 221 720 ₽
+
+						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="")
+							span.btn__text Записаться на просмотр
+
+				.complex_page_about__content.complex_page_about__content--sec 
+					.complex_page_about__block.complex_page_about__block--right 
+						.complex_page_about__block_section
+							p.complex_page_about__title Описание
+							p.complex_page_about__text Продается нежилое помещение, расположенное в Новострое ЖК Академический.Есть приятный бонус, помещение сдается на выгодных условиях.Этаж 1-ый, отдельный выход со своим витражным тамбуром. Свежий, стильный ремонт. Пол керамогранит, приточная и вытяжная вентиляция, качественная сантехника. Есть водонагреватель и кондиционер. Хорошие пластиковые окна и двери. Помещение в идеальном состоянии.Все договора с ресурсоснабжающими организациями заключены.Установлена пожарная сигнализация, есть придомовая парковка, проведен Интернет.Так как в помещении ведется действующий бизнес, просмотр только по предварительному согласованию.Документы готовы, обременений нет, собственник один.Присутствует оформительский пакет, зависит от сложности вашего способа приобретения.Звоните, ответим на все ваши вопросы.
+
+		section.section.complex_page_location
+			.complex_page_location__container.container 
+
+				.section_block 
+					h2.section_block__title Расположение
+
+				.complex_page_location__content.complex_page_about__content
+					#locationMap.complex_page_location__map
+
+					.complex_page_about__block
+						.complex_page_about__block_section
+							p.complex_page_about__title.complex_page_about__title--small Что находится рядом?
+							p.complex_page_about__text Первая очередь Central Park будет расположена в районе улиц Верхняя и Высокая - на сопке Шошина в районе 3-ей Рабочей, с которой открывается потрясающий панорамный вид на Владивосток и Амурский залив.
+
+						.complex_page_about__buttons 
+							a.complex_page_location__btn.btn.btn--filled(href="",  target="_blank")
+								span.btn__text Показать на Яндекс.Картах

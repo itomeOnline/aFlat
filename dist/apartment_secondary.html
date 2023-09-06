@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-    <title>Контакты — AFLAT</title>
+    <title>Карточка квартиры вторички — AFLAT</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -89,6 +89,10 @@
 	
 		<symbol id="fire" viewBox="0 0 16 16">
 			<g fill-rule="evenodd" clip-rule="evenodd" clip-path="url(#a)"><path d="M13.86 10.34a5.897 5.897 0 0 1-5.891 5.648c-3.258 0-5.898-2.73-5.898-5.898 0-.424-.008-1.27.627-2.698.38-.855.618-1.392.753-1.882.074-.27.218-.699.627 0 .242.411.251 1.003.251 1.003s.9-.69 1.506-2.007c.89-1.932.18-3.087-.062-3.89-.084-.278-.137-.778.439-.565.587.216 2.138 1.302 2.949 2.447 1.157 1.633 1.568 3.2 1.568 3.2s.37-.46.502-.941c.149-.544.15-1.082.628-.502.453.551 1.127 1.587 1.506 2.572.688 1.789.495 3.514.495 3.514z"/><path d="M7.969 15.988A4.078 4.078 0 0 1 3.89 11.91c0-1.36.548-2.185 1.688-3.304.73-.716 1.413-1.596 1.703-2.195.057-.118.187-.733.689-.013.263.377.675 1.048.94 1.621.456.988.564 1.945.564 1.945s.447-.263.753-.94c.1-.22.299-1.046.856-.22.41.608.972 1.699.964 3.106a4.078 4.078 0 0 1-4.078 4.078z"/><path d="M8.031 11.533c.58 0 .58 1.075 1.318 2.51.49.956-.243 1.945-1.318 1.945-1.074 0-1.631-.87-1.631-1.945 0-1.074 1.05-2.51 1.631-2.51z"/></g><defs><linearGradient id="b" x1="7.977" y1="16" x2="7.977" y2=".012" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4C0D"/><stop offset="1" stop-color="#FC9502"/></linearGradient><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
+		</symbol>
+	
+		<symbol id="full" viewBox="0 0 16 16">
+			<path d="M2.667 1.333c-.737 0-1.334.597-1.334 1.333v2.667a.667.667 0 0 0 1.334 0V2.666h2.666a.667.667 0 0 0 0-1.333H2.667zm10.666 0c.737 0 1.334.597 1.334 1.333v2.667a.667.667 0 0 1-1.334 0V2.666h-2.666a.667.667 0 1 1 0-1.333h2.666zm0 13.334c.737 0 1.334-.597 1.334-1.334v-2.666a.667.667 0 0 0-1.334 0v2.666h-2.666a.667.667 0 0 0 0 1.334h2.666zm-12-1.334c0 .737.597 1.334 1.334 1.334h2.666a.667.667 0 0 0 0-1.334H2.667v-2.666a.667.667 0 1 0-1.334 0v2.666z"/>
 		</symbol>
 	
 		<symbol id="geo" viewBox="0 0 16 16">
@@ -399,166 +403,197 @@
         </div>
       </header>
       <main class="view" data-app-layout="view" data-app-layout-namespace="examples">
-        <section class="section contacts">
-          <div class="contacts__container sale_main__container container"> 
-            <div class="contacts__breadcrumbs breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a>
+        <section class="section apartment_new">
+          <div class="apartment_new__container sale_main__container container"> 
+            <div class="apartment_new__breadcrumbs breadcrumbs"><a class="breadcrumbs__link" href="/">Главная</a>
+              <div class="breadcrumbs__dot"> </div><a class="breadcrumbs__link" href="/catalog_secondary">Каталог вторичного жилья</a>
               <div class="breadcrumbs__dot"> </div>
-              <div class="breadcrumbs__link is-active">Контакты</div>
+              <div class="breadcrumbs__link is-active">Калинина 11а к2, 68 м²</div>
             </div>
-            <h1 class="section_block__title">Контакты</h1>
-            <div class="contacts__content">
-              <div class="contacts_info">
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__caption">Адрес</p><a class="contacts_info__title contacts_info__title--link" href="" target="_blank">Владивосток, Дальневосточная, 13</a>
-                </div>
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__caption">Телефон</p><a class="contacts_info__title contacts_info__title--link" href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
-                </div>
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__caption">Электронная почта</p><a class="contacts_info__title contacts_info__title--link" href="mailto:aflat@aflat.ru">aflat@aflat.ru</a>
-                </div>
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__caption">Режим работы</p><a class="contacts_info__title">Пн-Пт, 9:00-18:00</a>
-                </div>
-                <div class="contacts_info__wrap">
-                  <p class="contacts_info__caption">Социальные сети и мессенджеры</p>
-                  <div class="contacts_info__line"> <a class="footer_block__socials_link" href="" target="_blank">
-                      <svg class="icon">
-                        <use xlink:href="#icon_tg"></use>
-                      </svg></a><a class="footer_block__socials_link" href="" target="_blank">
-                      <svg class="icon">
-                        <use xlink:href="#icon_wa"></use>
-                      </svg></a><a class="footer_block__socials_link" href="" target="_blank">
-                      <svg class="icon">
-                        <use xlink:href="#icon_vk"></use>
-                      </svg></a><a class="footer_block__socials_link" href="" target="_blank">
-                      <svg class="icon">
-                        <use xlink:href="#icon_inst"></use>
-                      </svg></a></div>
+            <h1 class="section_block__title">Калинина 11а к2, 68 м²</h1>
+            <div class="apartment_new__content">
+              <div class="apartment_new__gallery">
+                <div class="apartment_new_slider--sec swiper slider" data-gallery-slides="[&quot;/assets/img/apart_sec_pic.jpg&quot;,&quot;/assets/img/apart_sec_pic.jpg&quot;,&quot;/assets/img/apart_sec_pic.jpg&quot;, &quot;/assets/img/apart_sec_pic.jpg&quot;]">
+                  <button class="apartment_new_slider__full" data-full-button="" data-linked-modal="modal_gallery">
+                    <svg class="icon">
+                      <use xlink:href="#full"></use>
+                    </svg>
+                  </button>
+                  <div class="apartment_new_slider__nav slider__nav">
+                    <div class="apartment_new_slider__pagination slider__pagination"></div>
+                    <div class="slider__buttons">
+                      <button class="slider__button slider__button--prev apartment_new_slider__arrow--prev">
+                        <svg class="icon">
+                          <use xlink:href="#arrow_small"></use>
+                        </svg>
+                      </button>
+                      <button class="slider__button slider__button--next apartment_new_slider__arrow--next">
+                        <svg class="icon">
+                          <use xlink:href="#arrow_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-wrapper">
+                    <div class="apartment_new_slider__slide swiper-slide" data-linked-modal="modal_gallery" data-id="0">
+                      <picture class="image">
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.webp" type="image/webp"/>
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/apart_sec_pic.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="apartment_new_slider__slide swiper-slide" data-linked-modal="modal_gallery" data-id="1">
+                      <picture class="image">
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.webp" type="image/webp"/>
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/apart_sec_pic.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="apartment_new_slider__slide swiper-slide" data-linked-modal="modal_gallery" data-id="2">
+                      <picture class="image">
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.webp" type="image/webp"/>
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/apart_sec_pic.jpg" alt=""/>
+                      </picture>
+                    </div>
+                    <div class="apartment_new_slider__slide swiper-slide" data-linked-modal="modal_gallery" data-id="3">
+                      <picture class="image">
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.webp" type="image/webp"/>
+                        <source data-lazy="data-lazy" data-srcset="/assets/img/apart_sec_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/apart_sec_pic.jpg" alt=""/>
+                      </picture>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="contacts_slider slider swiper">
-                <p class="contacts_slider__text">Офис AFLAT</p>
-                <div class="excursions__nav slider__nav contacts_slider__nav"> 
-                  <div class="contacts_slider__pagination slider__pagination"></div>
-                  <div class="slider__buttons">
-                    <button class="slider__button slider__button--prev contacts_slider__arrow--prev">
-                      <svg class="icon">
-                        <use xlink:href="#arrow_small"></use>
-                      </svg>
-                    </button>
-                    <button class="slider__button slider__button--next contacts_slider__arrow--next">
-                      <svg class="icon">
-                        <use xlink:href="#arrow_small"></use>
-                      </svg>
-                    </button>
+              <div class="apartment_new_info">
+                <h2 class="apartment_new_info__title">О квартире</h2>
+                <div class="apartment_new_info__table"> 
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Адрес</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">Верхняя улица, 16</p>
+                  </div>
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Этаж</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">8</p>
+                  </div>
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Комнат</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">2 комнаты</p>
+                  </div>
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Площадь</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">60 м²</p>
+                  </div>
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Высота потолков</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">2,8 метров</p>
+                  </div>
+                  <div class="apartment_new_info__line"> 
+                    <p class="apartment_new_info__text">Мебель</p>
+                    <p class="apartment_new_info__text apartment_new_info__text--600">С мебелью</p>
                   </div>
                 </div>
-                <div class="swiper-wrapper"> 
-                  <div class="contacts_slider__slide swiper-slide">
-                    <picture class="image">
-                      <source data-lazy="data-lazy" data-srcset="/assets/img/office_pic.webp" type="image/webp"/>
-                      <source data-lazy="data-lazy" data-srcset="/assets/img/office_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/office_pic.jpg" alt=""/>
-                    </picture>
-                  </div>
-                  <div class="contacts_slider__slide swiper-slide">
-                    <picture class="image">
-                      <source data-lazy="data-lazy" data-srcset="/assets/img/office_pic.webp" type="image/webp"/>
-                      <source data-lazy="data-lazy" data-srcset="/assets/img/office_pic.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/office_pic.jpg" alt=""/>
-                    </picture>
-                  </div>
+                <p class="apartment_new_info__title apartment_new_info__title--price">от 7 221 720 ₽</p>
+                <button class="apartment_new_info__btn btn btn--filled" data-linked-modal=""><span class="btn__text">Записаться на просмотр</span></button>
+              </div>
+            </div>
+            <div class="complex_page_about__content complex_page_about__content--sec"> 
+              <div class="complex_page_about__block complex_page_about__block--right"> 
+                <div class="complex_page_about__block_section">
+                  <p class="complex_page_about__title">Описание</p>
+                  <p class="complex_page_about__text">Предлагаем к продаже, уютную трехкомнатную квартиру в современном доме. В квартире сделан стильный, качественный ремонт из дорогостоящих материалов. На полу цементная стяжка, постелен ламинат, теплый пол. Стены выровнены, поклеены обои, в гостиной и прихожей качественная декоративная штукатурка. Натяжной потолок, софиты, грамотное зонирование освещения. Окна пластиковые. Установлены хорошие межкомнатные двери и качественная входная дверь. Ванная комната сделана под ключ, стены и пол кафельная плитка, потолок натяжной, софиты. Сантехника и проводка новые. Просторная солнечная лоджия (застеклена и утеплена). Установлены водомерные счетчики. Сделана качественная шумоизоляция вкруг (стены и потолок), в квартире очень тихо, соседей не слышно).Дом расположен в районе с развитой инфраструктурой. В шаговой доступности Школы №64, №80 и детский сад №11. Спортивный клуб, Стадион. Салон красоты. Кафе. Аптеки, Банки. Детские развлекательные комплексы. Множество магазинов продовольственных и бытовых товаров. Рядом с домом остановка общественного автотранспорта Ладыгина. В непосредственной близости ТЦ Ладыгина, а так же ТЦ Зеленый угол и Квартал. В самом доме расположен мини-маркет и частный детский сад. <br> <br> Мебель и бытовая техника <br> Практически вся мебель и бытовая техника остается. <br> Инфраструктура и коммуникации <br> Домофон, Консьерж, 2 Лифта, Парковка вокруг дома, а так возле дома несколько платных парковок. Видеонаблюение по периметру дома и в доме. ТСЖ.Придомовая территория облагорожена. Просторная детская площадка с безопасным ограждением </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section contacts_team">
-          <div class="contacts_team__container container"> 
-            <div class="tops__top contacts_team__top">
-              <div class="section_block"> 
-                <h2 class="section_block__title">Сотрудники</h2>
-              </div>
-              <div class="tops__nav slider__nav"> 
-                <div class="slider__scroll contacts_team__scroll"></div>
-                <div class="slider__buttons slider__buttons--margin">
-                  <button class="slider__button slider__button--prev contacts_team__arrow--prev">
-                    <svg class="icon">
-                      <use xlink:href="#arrow_small"></use>
-                    </svg>
-                  </button>
-                  <button class="slider__button slider__button--next contacts_team__arrow--next">
-                    <svg class="icon">
-                      <use xlink:href="#arrow_small"></use>
-                    </svg>
-                  </button>
+        <section class="section complex_page_location">
+          <div class="complex_page_location__container container"> 
+            <div class="section_block"> 
+              <h2 class="section_block__title">Расположение</h2>
+            </div>
+            <div class="complex_page_location__content complex_page_about__content">
+              <div class="complex_page_location__map" id="locationMap"></div>
+              <div class="complex_page_about__block">
+                <div class="complex_page_about__block_section">
+                  <p class="complex_page_about__title complex_page_about__title--small">Что находится рядом?</p>
+                  <p class="complex_page_about__text">Первая очередь Central Park будет расположена в районе улиц Верхняя и Высокая - на сопке Шошина в районе 3-ей Рабочей, с которой открывается потрясающий панорамный вид на Владивосток и Амурский залив.</p>
                 </div>
+                <div class="complex_page_about__buttons"> <a class="complex_page_location__btn btn btn--filled" href="" target="_blank"><span class="btn__text">Показать на Яндекс.Картах</span></a></div>
               </div>
             </div>
-            <div class="contacts_team__content"> 
-              <div class="contacts_team__slider slider swiper"> 
-                <div class="swiper-wrapper">
-                  <div class="contacts_team_slide swiper-slide"> 
-                    <div class="contacts_team_slide__img"> 
-                      <picture class="image">
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.webp" type="image/webp"/>
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/team_pic_1.jpg" alt=""/>
-                      </picture>
-                    </div>
-                    <div class="contacts_team_slide__info"> 
-                      <p class="contacts_team_slide__name">Фамилия Имя</p>
-                      <p class="contacts_team_slide__text">Должность</p>
-                    </div>
+          </div>
+        </section>
+        <section class="section buy_choice">
+          <div class="buy_choice__container container"> 
+            <h2 class="section_block__title">Варианты покупки</h2>
+            <div class="buy_choice__content"> 
+              <div class="buy_choice__block">
+                <div class="buy_choice__block_icon"> <img class="icon" data-src="/assets/img/buy_choice_icon_1.svg" alt="" data-lazy=""/>
+                </div>
+                <p class="buy_choice__block_text">В ипотеку</p>
+              </div>
+              <div class="buy_choice__block">
+                <div class="buy_choice__block_icon"> <img class="icon" data-src="/assets/img/buy_choice_icon_2.svg" alt="" data-lazy=""/>
+                </div>
+                <p class="buy_choice__block_text">Единым платежом</p>
+              </div>
+              <div class="buy_choice__block">
+                <div class="buy_choice__block_icon"> <img class="icon" data-src="/assets/img/buy_choice_icon_3.svg" alt="" data-lazy=""/>
+                </div>
+                <p class="buy_choice__block_text">Материнским капиталом</p>
+              </div>
+              <div class="buy_choice__block">
+                <div class="buy_choice__block_icon"> <img class="icon" data-src="/assets/img/buy_choice_icon_4.svg" alt="" data-lazy=""/>
+                </div>
+                <p class="buy_choice__block_text">Другие виды сертификатов</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section general_form mortgage_form">
+          <div class="general_form__container container"> 
+            <div class="services_card services_card--form">
+              <div class="services_card__bg"> 
+                <picture class="image">
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/general_form_bg_4.webp" type="image/webp"/>
+                  <source data-lazy="data-lazy" data-srcset="/assets/img/general_form_bg_4.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/general_form_bg_4.jpg" alt=""/>
+                </picture>
+              </div>
+              <div class="services_card__top">
+                <h3 class="services_card__title">Рассчитать <br class="tablet"> ипотеку</h3>
+                <p class="services_card__text">Заполните поля и мы перезвоним вам с расчетом ежемесячного платежа под выбранные вами условия.</p>
+              </div>
+              <form class="services_card_form" action="/mailer" data-mailer="" data-form-id="calc_mortgage_apart_sec_page_form">
+                <input type="hidden" name="form" value="Рассчитать ипотеку (Страница карточки вторички)">
+                <div class="services_card_form__inputs">
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="text" name="firstPayment" required autocomplete="off">
+                    <label class="input_wrapper__label">Первый взнос</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
                   </div>
-                  <div class="contacts_team_slide swiper-slide"> 
-                    <div class="contacts_team_slide__img"> 
-                      <picture class="image">
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.webp" type="image/webp"/>
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/team_pic_1.jpg" alt=""/>
-                      </picture>
-                    </div>
-                    <div class="contacts_team_slide__info"> 
-                      <p class="contacts_team_slide__name">Фамилия Имя</p>
-                      <p class="contacts_team_slide__text">Должность</p>
-                    </div>
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="text" name="creditTerm" required autocomplete="off">
+                    <label class="input_wrapper__label">Срок кредита</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
                   </div>
-                  <div class="contacts_team_slide swiper-slide"> 
-                    <div class="contacts_team_slide__img"> 
-                      <picture class="image">
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.webp" type="image/webp"/>
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/team_pic_1.jpg" alt=""/>
-                      </picture>
-                    </div>
-                    <div class="contacts_team_slide__info"> 
-                      <p class="contacts_team_slide__name">Фамилия Имя</p>
-                      <p class="contacts_team_slide__text">Должность</p>
-                    </div>
+                  <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank" data-dropdown-placeholder="Банк" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Банк1&quot;,&quot;value&quot;:&quot;Банк1&quot;},{&quot;key&quot;:&quot;Банк2&quot;,&quot;value&quot;:&quot;Банк2&quot;},{&quot;key&quot;:&quot;Банк3&quot;,&quot;value&quot;:&quot;Банк3&quot;},{&quot;key&quot;:&quot;Банк4&quot;,&quot;value&quot;:&quot;Банк4&quot;},{&quot;key&quot;:&quot;Банк5&quot;,&quot;value&quot;:&quot;Банк5&quot;},{&quot;key&quot;:&quot;Банк6&quot;,&quot;value&quot;:&quot;Банк6&quot;}]"></div>
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="text" name="conditions" required autocomplete="off">
+                    <label class="input_wrapper__label">Специальные условия</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
                   </div>
-                  <div class="contacts_team_slide swiper-slide"> 
-                    <div class="contacts_team_slide__img"> 
-                      <picture class="image">
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.webp" type="image/webp"/>
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/team_pic_1.jpg" alt=""/>
-                      </picture>
-                    </div>
-                    <div class="contacts_team_slide__info"> 
-                      <p class="contacts_team_slide__name">Фамилия Имя</p>
-                      <p class="contacts_team_slide__text">Должность</p>
-                    </div>
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+                    <label class="input_wrapper__label">Ваше имя</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
                   </div>
-                  <div class="contacts_team_slide swiper-slide"> 
-                    <div class="contacts_team_slide__img"> 
-                      <picture class="image">
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.webp" type="image/webp"/>
-                        <source data-lazy="data-lazy" data-srcset="/assets/img/team_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/team_pic_1.jpg" alt=""/>
-                      </picture>
-                    </div>
-                    <div class="contacts_team_slide__info"> 
-                      <p class="contacts_team_slide__name">Фамилия Имя</p>
-                      <p class="contacts_team_slide__text">Должность</p>
-                    </div>
+                  <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                    <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+                    <label class="input_wrapper__label">Номер телефона</label>
+                    <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
                   </div>
                 </div>
-              </div>
+                <button class="services_card_form__btn btn btn--filled"><span class="btn__text">Оставить заявку</span></button>
+                <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки <br class="desktop"> персональных данных</p>
+              </form>
             </div>
           </div>
         </section>

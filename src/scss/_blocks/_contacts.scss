@@ -1,15 +1,14 @@
-.apartment_new {
+.contacts {
 	
     &__content {
         margin-top: em(40);
 
         display: grid;
-        grid-template-columns: auto em(356);
+        grid-template-columns: 1fr 1fr;
         gap: em(28);
 
         @media(max-width: 1124px) {
             margin-top: em(32);
-            grid-template-columns: 1fr 1fr;
             gap: em(20);
         }
 
@@ -18,16 +17,6 @@
             gap: em(16);
 
             grid-template-columns: 100%;
-        }
-    }
-
-    &__gallery {
-        height: em(450);
-
-        position: relative;
-
-        @media(max-width: 1124px) {
-            height: em(392);
         }
     }
 }

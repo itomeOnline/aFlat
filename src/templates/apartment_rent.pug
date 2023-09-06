@@ -1,0 +1,98 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Карточка арендной квартиры — AFLAT';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.apartment_new
+			.apartment_new__container.sale_main__container.container 
+				.apartment_new__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/catalog_rent") Аренда жилья
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Отлогая, 10, 40 м²
+
+				
+				h1.section_block__title Отлогая, 10, 40 м²
+
+				.apartment_new__content
+					.apartment_new__gallery
+						.apartment_new_slider--sec.swiper.slider(data-gallery-slides='["/assets/img/apart_rent_pic.jpg","/assets/img/apart_rent_pic.jpg","/assets/img/apart_rent_pic.jpg", "/assets/img/apart_rent_pic.jpg"]')
+							
+							button.apartment_new_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+								+svg('full', 'icon')
+
+							.apartment_new_slider__nav.slider__nav
+								.apartment_new_slider__pagination.slider__pagination
+								.slider__buttons
+									button.slider__button.slider__button--prev.apartment_new_slider__arrow--prev
+										+svg('arrow_small', 'icon')
+									button.slider__button.slider__button--next.apartment_new_slider__arrow--next
+										+svg('arrow_small', 'icon')
+
+							.swiper-wrapper
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+									+img(`${assetsPath}/img/apart_rent_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+									+img(`${assetsPath}/img/apart_rent_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+									+img(`${assetsPath}/img/apart_rent_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+									+img(`${assetsPath}/img/apart_rent_pic.jpg`, '', 'image')
+
+					.apartment_new_info
+						h2.apartment_new_info__title О квартире
+						.apartment_new_info__table 
+							.apartment_new_info__line 
+								p.apartment_new_info__text Адрес
+								p.apartment_new_info__text.apartment_new_info__text--600 Отлогая, 10
+							.apartment_new_info__line 
+								p.apartment_new_info__text Тип
+								p.apartment_new_info__text.apartment_new_info__text--600 Квартира
+							.apartment_new_info__line 
+								p.apartment_new_info__text Комнат
+								p.apartment_new_info__text.apartment_new_info__text--600 2 комнаты
+							.apartment_new_info__line 
+								p.apartment_new_info__text Площадь
+								p.apartment_new_info__text.apartment_new_info__text--600 40 м²
+							.apartment_new_info__line 
+								p.apartment_new_info__text Срок аренды
+								p.apartment_new_info__text.apartment_new_info__text--600 Долгосрочная
+							.apartment_new_info__line 
+								p.apartment_new_info__text Мебель
+								p.apartment_new_info__text.apartment_new_info__text--600 С мебелью
+							
+
+						p.apartment_new_info__title.apartment_new_info__title--price 40 000 ₽ / мес 
+
+						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="")
+							span.btn__text Записаться на просмотр
+
+				.complex_page_about__content.complex_page_about__content--sec 
+					.complex_page_about__block.complex_page_about__block--right 
+						.complex_page_about__block_section
+							p.complex_page_about__title Описание
+							p.complex_page_about__text AFLAT предлагает к аренде уютную квартиру, с двумя изолированными комнатами и просторной гостевой зоной отдыха. Для вашего комфортного проживания, Квартира укомплектована всей самой необходимой мебелью и бытовой техникой. Сделан качественный ЕВРО-ремонт. Квартира очень светлая и теплая.
+
+		section.section.complex_page_location
+			.complex_page_location__container.container 
+
+				.section_block 
+					h2.section_block__title Расположение
+
+				.complex_page_location__content.complex_page_about__content
+					#locationMap.complex_page_location__map
+
+					.complex_page_about__block
+						.complex_page_about__block_section
+							p.complex_page_about__title.complex_page_about__title--small Что находится рядом?
+							p.complex_page_about__text Первая очередь Central Park будет расположена в районе улиц Верхняя и Высокая - на сопке Шошина в районе 3-ей Рабочей, с которой открывается потрясающий панорамный вид на Владивосток и Амурский залив.
+
+						.complex_page_about__buttons 
+							a.complex_page_location__btn.btn.btn--filled(href="",  target="_blank")
+								span.btn__text Показать на Яндекс.Картах

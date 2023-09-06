@@ -19,7 +19,7 @@ block content
 	main.view(data-app-layout="view", data-app-layout-namespace="examples")
 
 		section.section.apartment_new
-			.apartment_new__container.container 
+			.apartment_new__container.sale_main__container.container 
 				.apartment_new__breadcrumbs.breadcrumbs
 					a.breadcrumbs__link(href="/") Главная
 					.breadcrumbs__dot 
@@ -32,6 +32,80 @@ block content
 				
 				h1.section_block__title 2 комнатная, 60 м²
 
+				.apartment_new__content 
+					.apartment_new__gallery
+						.apartment_new_slider.swiper.slider(data-gallery-slides='["/assets/img/apartment_new_img_2.jpg","/assets/img/apartment_new_img_1.jpg","/assets/img/apartment_new_img_2.jpg", "/assets/img/apartment_new_img_1.jpg"]')
+							
+							button.apartment_new_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+								+svg('full', 'icon')
+
+							.apartment_new_slider__nav.slider__nav
+								.apartment_new_slider__pagination.slider__pagination
+								.slider__buttons
+									button.slider__button.slider__button--prev.apartment_new_slider__arrow--prev
+										+svg('arrow_small', 'icon')
+									button.slider__button.slider__button--next.apartment_new_slider__arrow--next
+										+svg('arrow_small', 'icon')
+
+							.swiper-wrapper
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+									+img(`${assetsPath}/img/apartment_new_img_2.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+									+img(`${assetsPath}/img/apartment_new_img_1.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+									+img(`${assetsPath}/img/apartment_new_img_2.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+									+img(`${assetsPath}/img/apartment_new_img_1.jpg`, '', 'image')
+
+						.apartment_new_slider__thumbs.swiper.slider
+							.swiper-wrapper
+								.apartment_new_slider__thumbs_slide.swiper-slide
+									+img(`${assetsPath}/img/apartment_new_img_2.jpg`, '', 'image')
+								.apartment_new_slider__thumbs_slide.swiper-slide
+									+img(`${assetsPath}/img/apartment_new_img_1.jpg`, '', 'image')
+								.apartment_new_slider__thumbs_slide.swiper-slide
+									+img(`${assetsPath}/img/apartment_new_img_2.jpg`, '', 'image')
+								.apartment_new_slider__thumbs_slide.swiper-slide
+									+img(`${assetsPath}/img/apartment_new_img_1.jpg`, '', 'image')
+
+					.apartment_new_info
+						h2.apartment_new_info__title О квартире
+						.apartment_new_info__table 
+							.apartment_new_info__line 
+								p.apartment_new_info__text Проект
+								p.apartment_new_info__text.apartment_new_info__text--600 Premium Park Дом №1 
+							.apartment_new_info__line 
+								p.apartment_new_info__text Адрес
+								p.apartment_new_info__text.apartment_new_info__text--600 Верхняя улица, 16
+							.apartment_new_info__line 
+								p.apartment_new_info__text Этаж
+								p.apartment_new_info__text.apartment_new_info__text--600 8
+							.apartment_new_info__line 
+								p.apartment_new_info__text Комнат
+								p.apartment_new_info__text.apartment_new_info__text--600 2 комнаты
+							.apartment_new_info__line 
+								p.apartment_new_info__text Площадь
+								p.apartment_new_info__text.apartment_new_info__text--600 60 м²
+							.apartment_new_info__line 
+								p.apartment_new_info__text Высота потолков
+								p.apartment_new_info__text.apartment_new_info__text--600 2,8 метров
+
+						p.apartment_new_info__title.apartment_new_info__title--price от 7 221 720 ₽
+
+						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="")
+							span.btn__text Забронировать квартиру
+
+				.apartment_new_banner
+					<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378 337" fill="none">
+						<path d="M377.943 173.907L183.143 0L0.20969 174.751L0 337L187.678 336.967V258.953L73.6394 258.815L73.6985 206.504L184.813 100.307L304.82 207.367L304.82 337L378 337L377.943 173.907Z" fill="white" fill-opacity="0.2"/>
+					</svg>
+					.apartment_new_banner__icon
+						+imgSvg(`${assetsPath}/img/apart_new_form_icon.svg`, '', 'image')
+					.apartment_new_banner__info 
+						p.apartment_new_info__title.apartment_new_info__title--white Записаться на встречу
+						p.apartment_new_banner__text Можем провести бесплатную экскурсию #[br.tablet] #[br.mobile] по любой квартире, #[br.desktop] в любой новостройке #[br.tablet] #[br.mobile] и в удобное для вас время.
+					button.apartment_new_banner__btn.btn.btn--white(data-linked-modal="")
+						span.btn__text Записаться
 
 		section.section.general_form.mortgage_form
 			.general_form__container.container 

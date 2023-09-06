@@ -1,0 +1,147 @@
+.apartment_new_slider {
+	position: relative;
+    
+    border-radius: 16px;
+    overflow: hidden;
+
+    height: 100%;
+
+    width: em(740);
+
+    @media(max-width: 1124px) {
+        width: em(340);
+    }
+
+    @media(max-width: 500px) {
+        width: 100%;
+    }
+
+    &--sec {
+        position: relative;
+    
+            border-radius: 16px;
+            overflow: hidden;
+
+            height: 100%;
+
+            width: em(740);
+
+            @media(max-width: 1124px) {
+                width: em(340);
+            }
+
+            @media(max-width: 500px) {
+                width: 100%;
+            }
+    }
+
+    &__full {
+        border-radius: 8px;
+        border: 1px solid #E5E7E0;
+        background: #FFF;
+
+        padding: 0;
+
+        width: 28px;
+        height: 28px;
+
+        transition: border .2s, background .2s;
+
+        position: absolute;
+        top: em(28);
+        right: em(28);
+        z-index: 2;
+
+        @media(max-width: 1124px) {
+            top: em(24);
+            right: em(24);
+        }
+
+        &:hover {
+            background: $c-primary;
+            border: 1px solid $c-primary;
+
+            .icon {
+                fill: #FFF;
+            }
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+
+            fill: #000;
+
+            transition: fill .2s;
+        }
+    }
+
+    &__nav {
+        width: calc(100% - em(56));
+
+        justify-content: space-between;
+
+        position: absolute;
+        bottom: em(28);
+        left: em(28);
+        z-index: 2;
+
+        @media(max-width: 1124px) {
+            width: calc(100% - em(48));
+
+            bottom: em(24);
+            left: em(24);
+        }
+    }
+
+    &__pagination {
+        border: 1px solid #E5E7E0;
+    }
+
+    &__slide {
+        height: 100%;
+
+        background: #fff;
+
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__thumbs {
+        position: absolute;
+        top: em(28);
+        left: em(28);
+
+        z-index: 2;
+
+        width: fit-content;
+        height: calc(100% - em(118));
+
+        @media(max-width: 1124px) {
+            display: none;
+        }
+    }
+
+    &__thumbs_slide {
+        width: em(74);
+        height: em(74);
+
+        border-radius: 8px;
+        overflow: hidden;
+
+        border: 1px solid white;
+
+        transition: border .2s;
+
+        cursor: pointer;
+
+        .image {
+            object-fit: cover;
+        }
+
+        &.swiper-slide-thumb-active {
+            border: 1px solid $c-primary;
+        }
+    }
+}

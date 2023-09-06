@@ -24,6 +24,10 @@ import fullGallerySlider from "./components/sliders/fullGallerySlider";
 import apartmentLayoutsSlider from "./components/sliders/apartmentLayoutsSlider";
 import projectMoreSlider from "./components/sliders/projectMoreSlider";
 import tab from "./components/faqTabs";
+import contactsSlider from "./components/sliders/contactsSlider";
+import teamSlider from "./components/sliders/teamSlider";
+import apartmentNewSliders from "./components/sliders/apartmentNewSliders";
+import apartmentSecSlider from "./components/sliders/apartmentSecSlider";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -63,6 +67,10 @@ document.addEventListener("DOMContentLoaded", _ => {
     fullGallerySlider();
     apartmentLayoutsSlider();
     projectMoreSlider();
+    contactsSlider();
+    teamSlider();
+    apartmentNewSliders();
+    apartmentSecSlider();
 
 
     document.querySelectorAll('[data-dropdown]').forEach(el => {

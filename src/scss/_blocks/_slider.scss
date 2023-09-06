@@ -50,6 +50,10 @@
         &.swiper-pagination-lock {
             display: none;
         }
+
+        .modal_gallery & {
+            border: 1px solid #E5E7E0;
+        }
     }
 
     &__buttons {
@@ -95,7 +99,9 @@
                 fill: white;
             }
 
-            .project_more_info & {
+            .project_more_info &,
+            .apartment_new_slider &,
+            .modal_gallery & {
                 border: 1px solid $c-primary;
             }
         }
@@ -111,6 +117,11 @@
             border: 1px solid #E5E7E0;
 
             transform: rotate(90deg);
+        }
+
+        .apartment_new_slider &,
+        .modal_gallery & {
+            border: 1px solid #E5E7E0;
         }
 
         &.swiper-button-lock {

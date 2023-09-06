@@ -22,6 +22,10 @@
             grid-template-columns: 100%;
             gap: em(16);
         }
+
+        &--sec {
+            grid-template-columns: 100%;
+        }
     }
 
     &__block {

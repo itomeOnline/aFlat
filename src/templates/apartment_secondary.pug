@@ -1,0 +1,161 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Карточка квартиры вторички — AFLAT';
+
+
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.apartment_new
+			.apartment_new__container.sale_main__container.container 
+				.apartment_new__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/catalog_secondary") Каталог вторичного жилья
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Калинина 11а к2, 68 м²
+
+				
+				h1.section_block__title Калинина 11а к2, 68 м²
+
+				.apartment_new__content
+					.apartment_new__gallery
+						.apartment_new_slider--sec.swiper.slider(data-gallery-slides='["/assets/img/apart_sec_pic.jpg","/assets/img/apart_sec_pic.jpg","/assets/img/apart_sec_pic.jpg", "/assets/img/apart_sec_pic.jpg"]')
+							
+							button.apartment_new_slider__full(data-full-button="", data-linked-modal="modal_gallery")
+								+svg('full', 'icon')
+
+							.apartment_new_slider__nav.slider__nav
+								.apartment_new_slider__pagination.slider__pagination
+								.slider__buttons
+									button.slider__button.slider__button--prev.apartment_new_slider__arrow--prev
+										+svg('arrow_small', 'icon')
+									button.slider__button.slider__button--next.apartment_new_slider__arrow--next
+										+svg('arrow_small', 'icon')
+
+							.swiper-wrapper
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="0")
+									+img(`${assetsPath}/img/apart_sec_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="1")
+									+img(`${assetsPath}/img/apart_sec_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="2")
+									+img(`${assetsPath}/img/apart_sec_pic.jpg`, '', 'image')
+								.apartment_new_slider__slide.swiper-slide(data-linked-modal="modal_gallery", data-id="3")
+									+img(`${assetsPath}/img/apart_sec_pic.jpg`, '', 'image')
+
+					.apartment_new_info
+						h2.apartment_new_info__title О квартире
+						.apartment_new_info__table 
+							.apartment_new_info__line 
+								p.apartment_new_info__text Адрес
+								p.apartment_new_info__text.apartment_new_info__text--600 Верхняя улица, 16
+							.apartment_new_info__line 
+								p.apartment_new_info__text Этаж
+								p.apartment_new_info__text.apartment_new_info__text--600 8
+							.apartment_new_info__line 
+								p.apartment_new_info__text Комнат
+								p.apartment_new_info__text.apartment_new_info__text--600 2 комнаты
+							.apartment_new_info__line 
+								p.apartment_new_info__text Площадь
+								p.apartment_new_info__text.apartment_new_info__text--600 60 м²
+							.apartment_new_info__line 
+								p.apartment_new_info__text Высота потолков
+								p.apartment_new_info__text.apartment_new_info__text--600 2,8 метров
+							.apartment_new_info__line 
+								p.apartment_new_info__text Мебель
+								p.apartment_new_info__text.apartment_new_info__text--600 С мебелью
+
+						p.apartment_new_info__title.apartment_new_info__title--price от 7 221 720 ₽
+
+						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="")
+							span.btn__text Записаться на просмотр
+
+				.complex_page_about__content.complex_page_about__content--sec 
+					.complex_page_about__block.complex_page_about__block--right 
+						.complex_page_about__block_section
+							p.complex_page_about__title Описание
+							p.complex_page_about__text Предлагаем к продаже, уютную трехкомнатную квартиру в современном доме. В квартире сделан стильный, качественный ремонт из дорогостоящих материалов. На полу цементная стяжка, постелен ламинат, теплый пол. Стены выровнены, поклеены обои, в гостиной и прихожей качественная декоративная штукатурка. Натяжной потолок, софиты, грамотное зонирование освещения. Окна пластиковые. Установлены хорошие межкомнатные двери и качественная входная дверь. Ванная комната сделана под ключ, стены и пол кафельная плитка, потолок натяжной, софиты. Сантехника и проводка новые. Просторная солнечная лоджия (застеклена и утеплена). Установлены водомерные счетчики. Сделана качественная шумоизоляция вкруг (стены и потолок), в квартире очень тихо, соседей не слышно).Дом расположен в районе с развитой инфраструктурой. В шаговой доступности Школы №64, №80 и детский сад №11. Спортивный клуб, Стадион. Салон красоты. Кафе. Аптеки, Банки. Детские развлекательные комплексы. Множество магазинов продовольственных и бытовых товаров. Рядом с домом остановка общественного автотранспорта Ладыгина. В непосредственной близости ТЦ Ладыгина, а так же ТЦ Зеленый угол и Квартал. В самом доме расположен мини-маркет и частный детский сад. #[br] #[br] Мебель и бытовая техника #[br] Практически вся мебель и бытовая техника остается. #[br] Инфраструктура и коммуникации #[br] Домофон, Консьерж, 2 Лифта, Парковка вокруг дома, а так возле дома несколько платных парковок. Видеонаблюение по периметру дома и в доме. ТСЖ.Придомовая территория облагорожена. Просторная детская площадка с безопасным ограждением 
+
+		section.section.complex_page_location
+			.complex_page_location__container.container 
+
+				.section_block 
+					h2.section_block__title Расположение
+
+				.complex_page_location__content.complex_page_about__content
+					#locationMap.complex_page_location__map
+
+					.complex_page_about__block
+						.complex_page_about__block_section
+							p.complex_page_about__title.complex_page_about__title--small Что находится рядом?
+							p.complex_page_about__text Первая очередь Central Park будет расположена в районе улиц Верхняя и Высокая - на сопке Шошина в районе 3-ей Рабочей, с которой открывается потрясающий панорамный вид на Владивосток и Амурский залив.
+
+						.complex_page_about__buttons 
+							a.complex_page_location__btn.btn.btn--filled(href="",  target="_blank")
+								span.btn__text Показать на Яндекс.Картах
+
+		section.section.buy_choice
+			.buy_choice__container.container 
+				h2.section_block__title Варианты покупки
+
+				.buy_choice__content 
+					.buy_choice__block
+						.buy_choice__block_icon 
+							+imgSvg(`${assetsPath}/img/buy_choice_icon_1.svg`, '', 'icon')
+						p.buy_choice__block_text В ипотеку
+					.buy_choice__block
+						.buy_choice__block_icon 
+							+imgSvg(`${assetsPath}/img/buy_choice_icon_2.svg`, '', 'icon')
+						p.buy_choice__block_text Единым платежом
+					.buy_choice__block
+						.buy_choice__block_icon 
+							+imgSvg(`${assetsPath}/img/buy_choice_icon_3.svg`, '', 'icon')
+						p.buy_choice__block_text Материнским капиталом
+					.buy_choice__block
+						.buy_choice__block_icon 
+							+imgSvg(`${assetsPath}/img/buy_choice_icon_4.svg`, '', 'icon')
+						p.buy_choice__block_text Другие виды сертификатов
+
+		section.section.general_form.mortgage_form
+			.general_form__container.container 
+				.services_card.services_card--form
+					.services_card__bg 
+						+img(`${assetsPath}/img/general_form_bg_4.jpg`, '', 'image')
+
+					.services_card__top
+						h3.services_card__title Рассчитать #[br.tablet] ипотеку
+						p.services_card__text Заполните поля и мы перезвоним вам с расчетом ежемесячного платежа под выбранные вами условия.
+
+					form.services_card_form(action="/mailer" data-mailer="" data-form-id="calc_mortgage_apart_sec_page_form")
+						input(type="hidden", name="form", value="Рассчитать ипотеку (Страница карточки вторички)")
+
+						.services_card_form__inputs
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="firstPayment" required autocomplete="off")
+								label.input_wrapper__label Первый взнос
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="creditTerm" required autocomplete="off")
+								label.input_wrapper__label Срок кредита
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="conditions" required autocomplete="off")
+								label.input_wrapper__label Специальные условия
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Ваше имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Номер телефона
+								.input_wrapper__tooltip(data-input-tooltip="")
+							
+
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

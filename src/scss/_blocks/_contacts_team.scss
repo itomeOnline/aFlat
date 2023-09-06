@@ -1,0 +1,21 @@
+.contacts_team {
+	
+    &__content {
+        margin-top: em(40);
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+        }
+
+        @media(max-width: 500px) {
+            margin-top: em(28);
+        }
+    }
+
+    &__slider {
+
+        @media(max-width: 500px) {
+            overflow: visible;
+        }
+    }
+}

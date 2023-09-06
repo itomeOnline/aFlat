@@ -1,0 +1,81 @@
+.contacts_team_slide {
+	position: relative;	
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: em(500);
+
+        position: relative;
+
+        @media(max-width: 1124px) {
+            height: em(300);
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: em(200);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+            z-index: 1;
+
+            @media(max-width: 1124px) {
+                height: em(180);
+            }
+        }
+
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        padding: em(28);
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+
+        @media(max-width: 1124px) {
+            padding: em(24);
+        }
+    }
+
+    &__name {
+        font-size: em(24);
+        line-height: em(30,24);
+        font-weight: 700;
+        color: #fff;
+
+        @media(max-width: 1124px) {
+            font-size: em(20);
+            line-height: em(24,20);
+        }
+    }
+
+    &__text {
+        font-size: 1em;
+        line-height: em(22,16);
+        font-weight: 400;
+        color: #fff;
+
+        margin-top: .5rem;
+
+        @media(max-width: 1124px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+
+            margin-top: .25rem;
+        }
+    }
+}

@@ -3,7 +3,13 @@ block settings
 
 	- title = 'Контакты — AFLAT';
 
-
+mixin teamSlide(img, name, job)
+	.contacts_team_slide.swiper-slide 
+		.contacts_team_slide__img 
+			+img(img, '', 'image')
+		.contacts_team_slide__info 
+			p.contacts_team_slide__name= name
+			p.contacts_team_slide__text= job
 
 block content
 	main.view(data-app-layout="view", data-app-layout-namespace="examples")
@@ -13,9 +19,73 @@ block content
 				.contacts__breadcrumbs.breadcrumbs
 					a.breadcrumbs__link(href="/") Главная
 					.breadcrumbs__dot 
-					.breadcrumbs__link.is-active О компании
+					.breadcrumbs__link.is-active Контакты
+
+				h1.section_block__title Контакты
 
 				.contacts__content
 					.contacts_info
 						.contacts_info__wrap
-							p.contacts_info__text
+							p.contacts_info__caption Адрес
+							a.contacts_info__title.contacts_info__title--link(href="", target="_blank") Владивосток, Дальневосточная, 13
+						.contacts_info__wrap
+							p.contacts_info__caption Телефон
+							a.contacts_info__title.contacts_info__title--link(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99
+						.contacts_info__wrap
+							p.contacts_info__caption Электронная почта
+							a.contacts_info__title.contacts_info__title--link(href="mailto:aflat@aflat.ru") aflat@aflat.ru
+						.contacts_info__wrap
+							p.contacts_info__caption Режим работы
+							a.contacts_info__title Пн-Пт, 9:00-18:00
+						
+						.contacts_info__wrap
+							p.contacts_info__caption Социальные сети и мессенджеры
+							.contacts_info__line 
+								a.footer_block__socials_link(href="", target="_blank")
+									+svg('icon_tg', 'icon')
+								a.footer_block__socials_link(href="", target="_blank")
+									+svg('icon_wa', 'icon')
+								a.footer_block__socials_link(href="", target="_blank")
+									+svg('icon_vk', 'icon')
+								a.footer_block__socials_link(href="", target="_blank")
+									+svg('icon_inst', 'icon')
+
+					.contacts_slider.slider.swiper
+						p.contacts_slider__text Офис AFLAT
+						.excursions__nav.slider__nav.contacts_slider__nav 
+							.contacts_slider__pagination.slider__pagination
+							.slider__buttons
+								button.slider__button.slider__button--prev.contacts_slider__arrow--prev
+									+svg('arrow_small', 'icon')
+								button.slider__button.slider__button--next.contacts_slider__arrow--next
+									+svg('arrow_small', 'icon')
+						
+						.swiper-wrapper 
+							.contacts_slider__slide.swiper-slide
+								+img(`${assetsPath}/img/office_pic.jpg`, '', 'image')
+							.contacts_slider__slide.swiper-slide
+								+img(`${assetsPath}/img/office_pic.jpg`, '', 'image')
+
+		section.section.contacts_team
+			.contacts_team__container.container 
+
+				.tops__top.contacts_team__top
+					.section_block 
+						h2.section_block__title Сотрудники
+
+					.tops__nav.slider__nav 
+						.slider__scroll.contacts_team__scroll
+						.slider__buttons.slider__buttons--margin
+							button.slider__button.slider__button--prev.contacts_team__arrow--prev
+								+svg('arrow_small', 'icon')
+							button.slider__button.slider__button--next.contacts_team__arrow--next
+								+svg('arrow_small', 'icon')
+				
+				.contacts_team__content 
+					.contacts_team__slider.slider.swiper 
+						.swiper-wrapper
+							+teamSlide(`${assetsPath}/img/team_pic_1.jpg`, 'Фамилия Имя', 'Должность')
+							+teamSlide(`${assetsPath}/img/team_pic_1.jpg`, 'Фамилия Имя', 'Должность')
+							+teamSlide(`${assetsPath}/img/team_pic_1.jpg`, 'Фамилия Имя', 'Должность')
+							+teamSlide(`${assetsPath}/img/team_pic_1.jpg`, 'Фамилия Имя', 'Должность')
+							+teamSlide(`${assetsPath}/img/team_pic_1.jpg`, 'Фамилия Имя', 'Должность')

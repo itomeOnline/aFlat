@@ -1,0 +1,127 @@
+.apartment_new_banner {
+    margin-top: em(28);
+
+	width: 100%;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #0A7339 0%, #10D669 100%);
+
+    padding: em(28);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width: 1124px) {
+        margin-top: em(20);
+        padding: em(24);
+    }
+
+    @media(max-width: 500px) {
+        margin-top: em(16);
+        background: linear-gradient(180deg, #0A7339 0%, #10D669 100%);
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        position: absolute;
+        z-index: 1;
+        right: em(94);
+        bottom: em(-80);
+
+        width: em(378);
+        height: em(336);
+
+        @media(max-width: 1124px) {
+            width: em(362);
+            height: em(322);
+
+            right: 0;
+            bottom: em(-76);
+        }
+
+        @media(max-width: 500px) {
+            width: em(418);
+            height: em(372);
+
+            right: em(-124);
+            bottom: auto;
+            top: em(64);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        z-index: 2;
+
+        width: 86px;
+        height: 86px;
+
+        margin-right: em(28);
+
+        flex: none;
+
+        @media(max-width: 1124px) {
+            width: 60px;
+            height: 60px;
+
+            margin-right: em(24);
+        }
+
+        @media(max-width: 500px) {
+            width: 40px;
+            height: 40px;
+
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__text {
+        font-size: em(16);
+        line-height: em(22,16);
+        font-weight: 400;
+        color: #fff;
+
+        margin-top: .75rem;
+
+        @media(max-width: 1124px) {
+            font-size: em(14);
+            line-height: 1.25rem;
+
+            margin-top: .5rem;
+        }
+    }
+
+    &__btn {
+        margin-left: auto;
+
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        max-width: 18.75rem;
+
+        @media(max-width: 1124px) {
+            max-width: 12.25rem;
+        }
+
+        @media(max-width: 500px) {
+            max-width: 100%;
+            
+            margin-left: 0;
+            margin-top: 6.875rem;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Военная ипотека — AFLAT';
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.dv_mortgage
+			.dv_mortgage__container.sale_main__container.container
+				.dv_mortgage__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/mortgage") Ипотека
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Военная ипотека
+
+				h1.section_block__title Военная ипотека
+				
+				.mortgage_program_block.dv_mortgage__card
+					.mortgage_program_block__info 
+						p.mortgage_program_block__text Программа создана для участников накопительно-ипотечной системы согласно №117-ФЗ. Накопительный счет можно использовать через 3 года после включения в НИС.
+						.mortgage_program_block__table 
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Макс. размер #[br] кредита, ₽
+								p.mortgage_program_block__table_title 6 млн.
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Первоначальный #[br] взнос
+								p.mortgage_program_block__table_title От 15%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Ставка
+								p.mortgage_program_block__table_title От 2%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Срок кредита, #[br] лет
+								p.mortgage_program_block__table_title До 20
+					.mortgage_program_block__img 
+						+img(`${assetsPath}/img/mortgage_program_4.jpg`, '', 'image image--position')
+
+				.dv_mortgage__content 
+					h2.section_block__title.section_block__title--small Подробнее об ипотеке
+
+					.dv_mortgage__block
+						p.dv_mortgage__text Военной ипотекой называют целевые кредиты на покупку жилья, погашение которых осуществляет государство, пока военнослужащие проходят военную службу. Накопительно-ипотечная система обеспечения военнослужащих жильем (НИС). Управляет НИС и выплачивает ипотечные взносы ФГКУ «Росвоенипотека», находящееся в введении Минобороны.Участниками системы могут стать все военнослужащие, заключившие свои первые контракты после 2005 года. #[br] Накопления состоят из взносов от государства и дохода от их инвестирования. Размер годового взноса одинаковый для всех военнослужащих и не зависит от званий, родов войск и выслуги лет. Ежегодно он увеличивается. #[br] Обеспечение по кредиту #[br] Залог кредитуемого жилого помещения #[br] Страхование #[br] Обязательно для залогового имущества
+						h3.dv_mortgage__title.dv_mortgage__title--margin Требования к заёмщикам
+						p.dv_mortgage__text Возраст на момент предоставления кредита #[br] не менее 21 года #[br] Возраст на момент погашения кредита #[br] 75 лет #[br] Условия #[br] военнослужащий со свидетельством участника НИС #[br] Гражданство #[br] Российская Федерация
+
+		section.section.general_form.help_form.help_form--mortgage
+			.general_form__container.container 
+				.services_card.services_card--form.help_form__content
+					.help_form__bg
+						+imgSvg(`${assetsPath}/img/help_form_img.svg`, '', 'image image--desk')
+						+imgSvg(`${assetsPath}/img/help_form_img_mob.svg`, '', 'image image--mob')
+
+					.services_card__top
+						h3.services_card__title Хотите узнать #[br.tablet] #[br.mobile]больше?
+						p.services_card__text Менеджер свяжется с вами и подберет подходящий вариант #[br.desktop] и условия покупки.
+
+					form.services_card_form.help_form__form(action="/mailer" data-mailer="" data-form-id="know_more_military_mortgage_page_form")
+						input(type="hidden", name="form", value="Узнать больше про ипотеку (Страница Военной ипотеки)")
+
+						.services_card_form__inputs
+							
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Ваше имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Номер телефона
+								.input_wrapper__tooltip(data-input-tooltip="")
+							
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

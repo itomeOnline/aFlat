@@ -1,0 +1,75 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Господдержка — AFLAT';
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.dv_mortgage
+			.dv_mortgage__container.sale_main__container.container
+				.dv_mortgage__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/mortgage") Ипотека
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Господдержка
+
+				h1.section_block__title Господдержка
+				
+				.mortgage_program_block.dv_mortgage__card
+					.mortgage_program_block__info 
+						p.mortgage_program_block__text Покупка строящегося жилья у юрлица или в готовой новостройке у застройщика. Покупка или строительство дома с помощью юрлица или индивидуального предпринимателя.
+						.mortgage_program_block__table 
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Макс. размер #[br] кредита, ₽
+								p.mortgage_program_block__table_title 6 млн.
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Первоначальный #[br] взнос
+								p.mortgage_program_block__table_title От 15%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Ставка
+								p.mortgage_program_block__table_title От 2%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Срок кредита, #[br] лет
+								p.mortgage_program_block__table_title До 20
+					.mortgage_program_block__img 
+						+img(`${assetsPath}/img/mortgage_program_3.jpg`, '', 'image')
+
+				.dv_mortgage__content 
+					h2.section_block__title.section_block__title--small Подробнее об ипотеке
+
+					.dv_mortgage__block
+						p.dv_mortgage__text Стандартная ставка по этой программе: 7,35%, но её можно снизить. Со всеми скидками ставка в первый год будет 0,1% . Действует при покупке жилья у определённых застройщиков. Размер скидки зависит от срока кредита: до 7 лет — 7,8%, 8—12 лет — 7,5%, 13–30 лет — 7,2%. Если скидка выше базовой ставки, ставка в первый год будет 0,1%. Решение принимает застройщик. #[br] Купите квартиру в новостройке, дом или возьмите ипотеку на строительство дома #[br] Максимальная сумма кредита — 3 млн рублей для всех регионов России #[br] Кредит не предоставляется #[br] • на приобретение недвижимости на вторичном рынке #[br] • на покупку апартаментов #[br] • на рефинансирование действующей ипотеки
+						h3.dv_mortgage__title.dv_mortgage__title--margin Требования к заёмщикам
+						p.dv_mortgage__text Возраст на момент предоставления кредита #[br] не менее 21 года #[br] Возраст на момент погашения кредита #[br] 75 лет #[br] Стаж работы #[br] не менее 3 месяцев на текущем месте работы #[br] Привлечение созаемщиков #[br] Созаемщиками могут выступать не более 3-х физических лиц, чей доход учитывается при расчете кредита. Требования к созаемщику аналогичны требованиям, предъявляемым к заемщику. #[br] Супруг(а) основного заемщика является созаемщиком в обязательном порядке*, вне зависимости от платежеспособности и возраста. #[br] * За исключением случаев наличия действующего брачного договора/нотариального согласия супруга(и) на заключение кредитного договора или отсутствия гражданства РФ. #[br] Гражданство #[br] Российская Федерация
+
+		section.section.general_form.help_form.help_form--mortgage
+			.general_form__container.container 
+				.services_card.services_card--form.help_form__content
+					.help_form__bg
+						+imgSvg(`${assetsPath}/img/help_form_img.svg`, '', 'image image--desk')
+						+imgSvg(`${assetsPath}/img/help_form_img_mob.svg`, '', 'image image--mob')
+
+					.services_card__top
+						h3.services_card__title Хотите узнать #[br.tablet] #[br.mobile]больше?
+						p.services_card__text Менеджер свяжется с вами и подберет подходящий вариант #[br.desktop] и условия покупки.
+
+					form.services_card_form.help_form__form(action="/mailer" data-mailer="" data-form-id="know_more_gos_mortgage_page_form")
+						input(type="hidden", name="form", value="Узнать больше про ипотеку (Страница Господдержки)")
+
+						.services_card_form__inputs
+							
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Ваше имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Номер телефона
+								.input_wrapper__tooltip(data-input-tooltip="")
+							
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных

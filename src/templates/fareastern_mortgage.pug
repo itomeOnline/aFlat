@@ -1,0 +1,75 @@
+extends _base/_layout
+block settings 
+
+	- title = 'Дальневосточная ипотека — AFLAT';
+
+block content
+	main.view(data-app-layout="view", data-app-layout-namespace="examples")
+
+		section.section.dv_mortgage
+			.dv_mortgage__container.sale_main__container.container
+				.dv_mortgage__breadcrumbs.breadcrumbs
+					a.breadcrumbs__link(href="/") Главная
+					.breadcrumbs__dot 
+					a.breadcrumbs__link(href="/mortgage") Ипотека
+					.breadcrumbs__dot 
+					.breadcrumbs__link.is-active Дальневосточная ипотека
+
+				h1.section_block__title Дальневосточная ипотека
+				
+				.mortgage_program_block.dv_mortgage__card
+					.mortgage_program_block__info 
+						p.mortgage_program_block__text Проект господдержки, направленный на поддержку молодых семей с детьми и без. Этот вид кредита позволяет получить жилье под 2% на территории Дальневосточного федерального округа. Действует программа до 2024 года.
+						.mortgage_program_block__table 
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Макс. размер #[br] кредита, ₽
+								p.mortgage_program_block__table_title 6 млн.
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Первоначальный #[br] взнос
+								p.mortgage_program_block__table_title От 15%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Ставка
+								p.mortgage_program_block__table_title От 2%
+							.mortgage_program_block__table_cell 
+								p.mortgage_program_block__table_caption Срок кредита, #[br] лет
+								p.mortgage_program_block__table_title До 20
+					.mortgage_program_block__img 
+						+img(`${assetsPath}/img/mortgage_program_1.jpg`, '', 'image')
+
+				.dv_mortgage__content 
+					h2.section_block__title.section_block__title--small Подробнее об ипотеке
+
+					.dv_mortgage__block
+						h3.dv_mortgage__title Условия кредитования
+						p.dv_mortgage__text до 31 декабря 2024 года включительно #[br] Лица, имеющие право на получение кредита в рамках госпрограммы #[br] Граждане РФ: #[br] • по программе «Молодая семья» — брак, в котором оба супруга не достигли 36-летнего возраста, или неполная семья (с одним родителем и детьми до 18 лет), в которой родитель не достиг 36-летнего возраста #[br] • заемщик или супруг (супруга) заемщика ранее не заключали кредитный договор по программе #[br] • участники программы «Дальневосточный гектар» #[br] Цель кредита #[br] • Готовое жилье #[br] • Новостройка #[br] • Индивидуальное жилищное строительство #[br] • «Дальневосточный гектар» #[br] Валюта кредита #[br] Рубли РФ #[br] Мин. сумма кредита #[br] 300 000 ₽ #[br] Макс. сумма кредита #[br] 6 000 000 ₽ #[br] Не должна превышать 85% стоимости жилья или имущества, передаваемого в залог. #[br] Срок кредита #[br] до 20 лет #[br] Кредитуемый объект недвижимости #[br] На территории субъекта РФ, входящего в состав Дальневосточного федерального округа: #[br] • квартира #[br] • таунхаус #[br] На территории сельского поселения, входящего в состав Дальневосточного федерального округа: #[br] • квартира #[br] • таунхаус #[br] • жилой дом #[br] • жилой дом c земельным участком #[br] Строительство жилого дома на земельном участке и приобретение земельного участка для этих целей на территории Дальневосточного федерального округа #[br] Строительство жилого дома для участников программы «Дальневосточный гектар» #[br] Обеспечение по кредиту #[br] • Залог кредитуемого или иного жилого помещения #[br] • На период до оформления в залог кредитуемого жилого помещения требуется оформление залога имущественных прав либо поручительства физлиц #[br] Если в качестве залога оформляется жилой дом, расположенный на земельном участке, требуется одновременное оформление залога этого земельного участка #[br] Страхование #[br] • Залоговое имущество #[br] • Жизнь и здоровье заемщика #[br] Регистрация в ДФО #[br] Для получения кредита по программе «Дальневосточная ипотека» регистрация на территории ДФО не обязательна, однако в случае ее отсутствия на момент заключения кредитного договора, после регистрации права собственности необходимо зарегистрироваться по адресу приобретенного объекта недвижимости в течение 270 дней.
+
+		section.section.general_form.help_form.help_form--mortgage
+			.general_form__container.container 
+				.services_card.services_card--form.help_form__content
+					.help_form__bg
+						+imgSvg(`${assetsPath}/img/help_form_img.svg`, '', 'image image--desk')
+						+imgSvg(`${assetsPath}/img/help_form_img_mob.svg`, '', 'image image--mob')
+
+					.services_card__top
+						h3.services_card__title Хотите узнать #[br.tablet] #[br.mobile]больше?
+						p.services_card__text Менеджер свяжется с вами и подберет подходящий вариант #[br.desktop] и условия покупки.
+
+					form.services_card_form.help_form__form(action="/mailer" data-mailer="" data-form-id="know_more_dv_mortgage_page_form")
+						input(type="hidden", name="form", value="Узнать больше про ипотеку (Страница ДВ ипотеки)")
+
+						.services_card_form__inputs
+							
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+								label.input_wrapper__label Ваше имя
+								.input_wrapper__tooltip(data-input-tooltip="")
+							.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+								input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+								label.input_wrapper__label Номер телефона
+								.input_wrapper__tooltip(data-input-tooltip="")
+							
+						button.services_card_form__btn.btn.btn--filled
+							span.btn__text Оставить заявку
+						
+						p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки #[br.desktop] персональных данных
+						

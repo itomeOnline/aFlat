@@ -12,11 +12,16 @@
 
         .image {
             object-fit: cover;
+            object-position: top;
 
             &--desk {
 
                 @media(max-width: 1124px) {
                     display: none;
+
+                    .help_form--mortgage & {
+                        display: initial;
+                    }
                 }
             }
 
@@ -46,6 +51,17 @@
 
         @media(max-width: 1124px) {
             flex-direction: column;
+
+            .help_form--mortgage & {
+                flex-direction: row;
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            .help_form--mortgage & {
+                flex-direction: column;
+            }
         }
     }
 
@@ -56,10 +72,32 @@
             margin-left: 0;
 
             margin-top: em(28);
+
+            .help_form--mortgage & {
+                width: calc((100% - em(20)) / 2);
+                margin-left: em(20);
+                margin-top: 0;
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            .help_form--mortgage & {
+                width: 100%;
+                margin-left: 0;
+                margin-top: em(28);
+            }
         }
 
         .services_card_form__inputs {
             grid-template-columns: 1fr 1fr;
+
+            @media(max-width: 1124px) {
+
+                .help_form--mortgage & {
+                    grid-template-columns: 100%;
+                }
+            }
 
             @media(max-width: 500px) {
                 grid-template-columns: 100%;

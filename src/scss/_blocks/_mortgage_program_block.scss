@@ -1,4 +1,28 @@
 .mortgage_program_block {
+
+    &.dv_mortgage__card {
+        display: grid;
+        grid-template-columns: auto em(452);
+
+        border-radius: 16px;
+        overflow: hidden;
+
+        margin-top: em(40);
+
+        @media(max-width: 1124px) {
+            margin-top: em(32);
+
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media(max-width: 500px) {
+            display: flex;
+            flex-direction: column-reverse;
+
+            width: 100%;
+            margin-top: em(28);
+        }
+    }
 	
     &__img {
         width: 100%;
@@ -12,8 +36,25 @@
             height: em(250);
         }
 
+        .dv_mortgage & {
+            height: em(300);
+            border-radius: 0;
+
+            @media(max-width: 1124px) {
+                height: em(382);
+            }
+
+            @media(max-width: 500px) {
+                height: em(250);
+            }
+        }
+
         .image {
             object-fit: cover;
+
+            &--position {
+                object-position: right;
+            }
         }
     }
 
@@ -35,6 +76,24 @@
 
         @media(max-width: 500px) {
             padding: em(24);
+        }
+
+        .dv_mortgage & {
+            margin-top: 0;
+            border-radius: 0;
+            box-shadow: none;
+            padding: em(28);
+
+            display: flex;
+            flex-direction: column;
+
+            @media(max-width: 1124px) {
+                padding: em(24) em(20) em(24) em(24); 
+            }
+
+            @media(max-width: 500px) {
+                padding: em(24);
+            }
         }
     }
 
@@ -72,6 +131,16 @@
         @media(max-width: 500px) {
             margin-top: .75rem;
         }
+
+        .dv_mortgage & {
+            margin-top: 0;
+
+            max-width: em(520);
+
+            @media(max-width: 1124px) {
+                max-width: 100%;
+            }
+        }
     }
 
     &__table {
@@ -95,6 +164,19 @@
 
             grid-template-columns: 1fr 1fr;
             gap: em(20) 1em;
+        }
+
+        .dv_mortgage & {
+            margin-top: auto;
+
+            @media(max-width: 1124px) {
+                grid-template-columns: 1fr 1fr;
+                gap: 1em;
+            }
+
+            @media(max-width: 500px) {
+                margin-top: em(28);
+            }
         }
     }
 

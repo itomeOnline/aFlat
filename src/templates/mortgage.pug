@@ -26,7 +26,7 @@ mixin mortgageBlock(img, title, text, crit1, crit2, crit3, crit4, link, hashtag)
 			.mortgage_program_block__buttons 
 				button.mortgage_program_block__btn.btn.btn--filled(data-linked-modal="")
 					span.btn__text Подать заявку
-				a.mortgage_program_block__btn.btn.btn--outlined(href=link, data-anchor="")
+				a.mortgage_program_block__btn.btn.btn--outlined(href=link)
 					span.btn__text Читать подробнее
 
 	
@@ -57,11 +57,11 @@ block content
 							h2.section_block__title Ипотека
 							p.section_block__text.section_block__text--600.section_block__text--black Поможем снизить ставку и оформить #[br.mobile] ипотеку #[br.tablet] конкретно под ваш случай
 						
-						a.mortgage_main__info_btn.btn.btn--filled(href="#", data-anchor="")
+						a.mortgage_main__info_btn.btn.btn--filled(href="#calcForm", data-anchor="calcForm")
 							span.btn__text Рассчитать ипотеку
 
 		
-		section.section.mortgage_calc.privacy
+		section#calcForm.section.mortgage_calc.privacy(data-scroll-id="calcForm")
 			.mortgage_calc__container.container 
 				h2.section_block__title Ипотечный калькулятор
 

@@ -139,6 +139,12 @@
 
         margin-right: .75rem;
 
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+
         @media(max-width: 1124px) {
             margin-right: 0;
         }

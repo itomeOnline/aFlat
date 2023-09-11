@@ -92,7 +92,7 @@ block content
 
 						p.apartment_new_info__title.apartment_new_info__title--price от 7 221 720 ₽
 
-						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="")
+						button.apartment_new_info__btn.btn.btn--filled(data-linked-modal="modal_booking")
 							span.btn__text Забронировать квартиру
 
 				.apartment_new_banner
@@ -104,7 +104,7 @@ block content
 					.apartment_new_banner__info 
 						p.apartment_new_info__title.apartment_new_info__title--white Записаться на встречу
 						p.apartment_new_banner__text Можем провести бесплатную экскурсию #[br.tablet] #[br.mobile] по любой квартире, #[br.desktop] в любой новостройке #[br.tablet] #[br.mobile] и в удобное для вас время.
-					button.apartment_new_banner__btn.btn.btn--white(data-linked-modal="")
+					button.apartment_new_banner__btn.btn.btn--white(data-linked-modal="modal_view", data-modal-form-id="modal_view_apartment_new", data-modal-set-inputs=`[{"key":"object","value":"Квартира в новостройке"}]`)
 						span.btn__text Записаться
 
 		section.section.general_form.mortgage_form

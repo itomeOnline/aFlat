@@ -87,6 +87,10 @@
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.584 12.604a1.604 1.604 0 1 0 0-3.208 1.604 1.604 0 0 0 0 3.208zm12.833 0a1.604 1.604 0 1 0 0-3.208 1.604 1.604 0 0 0 0 3.208zM12.604 11a1.604 1.604 0 1 1-3.207 0 1.604 1.604 0 0 1 3.207 0z"/>
 		</symbol>
 	
+		<symbol id="download" viewBox="0 0 16 16">
+			<path d="M4 14h8M8 2v9.333m0 0L11.333 8M8 11.333L4.667 8" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/>
+		</symbol>
+	
 		<symbol id="fire" viewBox="0 0 16 16">
 			<g fill-rule="evenodd" clip-rule="evenodd" clip-path="url(#a)"><path d="M13.86 10.34a5.897 5.897 0 0 1-5.891 5.648c-3.258 0-5.898-2.73-5.898-5.898 0-.424-.008-1.27.627-2.698.38-.855.618-1.392.753-1.882.074-.27.218-.699.627 0 .242.411.251 1.003.251 1.003s.9-.69 1.506-2.007c.89-1.932.18-3.087-.062-3.89-.084-.278-.137-.778.439-.565.587.216 2.138 1.302 2.949 2.447 1.157 1.633 1.568 3.2 1.568 3.2s.37-.46.502-.941c.149-.544.15-1.082.628-.502.453.551 1.127 1.587 1.506 2.572.688 1.789.495 3.514.495 3.514z"/><path d="M7.969 15.988A4.078 4.078 0 0 1 3.89 11.91c0-1.36.548-2.185 1.688-3.304.73-.716 1.413-1.596 1.703-2.195.057-.118.187-.733.689-.013.263.377.675 1.048.94 1.621.456.988.564 1.945.564 1.945s.447-.263.753-.94c.1-.22.299-1.046.856-.22.41.608.972 1.699.964 3.106a4.078 4.078 0 0 1-4.078 4.078z"/><path d="M8.031 11.533c.58 0 .58 1.075 1.318 2.51.49.956-.243 1.945-1.318 1.945-1.074 0-1.631-.87-1.631-1.945 0-1.074 1.05-2.51 1.631-2.51z"/></g><defs><linearGradient id="b" x1="7.977" y1="16" x2="7.977" y2=".012" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4C0D"/><stop offset="1" stop-color="#FC9502"/></linearGradient><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
 		</symbol>
@@ -129,6 +133,10 @@
 	
 		<symbol id="mobile_menu" viewBox="0 0 28 28">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M4.667 5.833a1.167 1.167 0 0 0 0 2.334h18.666a1.167 1.167 0 1 0 0-2.334H4.667zM3.5 14c0-.644.522-1.167 1.167-1.167h18.666a1.167 1.167 0 1 1 0 2.334H4.667A1.167 1.167 0 0 1 3.5 14zm0 7c0-.644.522-1.167 1.167-1.167h18.666a1.167 1.167 0 1 1 0 2.334H4.667A1.167 1.167 0 0 1 3.5 21z"/>
+		</symbol>
+	
+		<symbol id="modal_offers" viewBox="0 0 12 12">
+			<g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 1.5a1 1 0 0 1 .997.925L7.5 2.5v7H8V4.75a.25.25 0 0 1 .205-.246L8.25 4.5H9a1 1 0 0 1 .997.925L10 5.5v4h.5a.5.5 0 0 1 .058.997l-.058.003h-9a.5.5 0 0 1-.058-.997L1.5 9.5H2v-7a1 1 0 0 1 .925-.997L3 1.5h3.5zm-1 6H4v1h1.5v-1zm0-2H4v1h1.5v-1zm0-2H4v1h1.5v-1z"/></g><defs><clipPath id="a"><path d="M0 0h12v12H0z"/></clipPath></defs>
 		</symbol>
 	
 		<symbol id="offers_icon_1" viewBox="0 0 22 22">
@@ -261,7 +269,7 @@
               <svg class="btn__icon btn__icon--green btn__icon--left">
                 <use xlink:href="#icon_message"></use>
               </svg><span class="btn__text">Написать нам</span></a>
-            <button class="modal_menu__btn btn btn--white btn--icon_left" data-linked-modal="modal_phone">
+            <button class="modal_menu__btn btn btn--white btn--icon_left" data-linked-modal="modal_order_call" data-modal-form-id="modal_order_call_menu">
               <svg class="btn__icon btn__icon--green btn__icon--left">
                 <use xlink:href="#icon_phone"></use>
               </svg><span class="btn__text">Заказать звонок</span>
@@ -326,6 +334,268 @@
           </div>
         </div>
       </div>
+      <div class="modal_success modal_form modal" data-modal="modal_success">
+        <div class="modal_form__form">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Заявка успешно отправлена</h3>
+          <p class="section_block__text">Спасибо за Ваше обращение, наши менеджеры свяжутся с Вами.</p>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Хорошо</span></button>
+        </div>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_2.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_2.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_2.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
+      <div class="modal_order_call modal_form modal" data-modal="modal_order_call" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_order_call">
+          <input type="hidden" name="form" value="Заказать звонок">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Заказать звонок</h3>
+          <p class="section_block__text">Ответим на интересующие вас вопросы <br> и поможем сделать правильный выбор!</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="info" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_1.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
+      <div class="modal_calc_mort modal_form modal" data-modal="modal_calc_mort" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_calc_mort">
+          <input type="hidden" name="form" value="Рассчитать ипотеку">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Рассчитать ипотеку</h3>
+          <p class="section_block__text">Ответим на интересующие вас вопросы <br> и поможем сделать правильный выбор!</p>
+          <div class="modal_form__inputs">
+            <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank" data-dropdown-placeholder="Банк" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Банк1&quot;,&quot;value&quot;:&quot;Банк1&quot;},{&quot;key&quot;:&quot;Банк2&quot;,&quot;value&quot;:&quot;Банк2&quot;},{&quot;key&quot;:&quot;Банк3&quot;,&quot;value&quot;:&quot;Банк3&quot;},{&quot;key&quot;:&quot;Банк4&quot;,&quot;value&quot;:&quot;Банк4&quot;},{&quot;key&quot;:&quot;Банк5&quot;,&quot;value&quot;:&quot;Банк5&quot;},{&quot;key&quot;:&quot;Банк6&quot;,&quot;value&quot;:&quot;Банк6&quot;}]"></div>
+            <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank_programm" data-dropdown-placeholder="Программа" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Программа1&quot;,&quot;value&quot;:&quot;Программа1&quot;},{&quot;key&quot;:&quot;Программа2&quot;,&quot;value&quot;:&quot;Программа2&quot;},{&quot;key&quot;:&quot;Программа3&quot;,&quot;value&quot;:&quot;Программа3&quot;},{&quot;key&quot;:&quot;Программа4&quot;,&quot;value&quot;:&quot;Программа4&quot;},{&quot;key&quot;:&quot;Программа5&quot;,&quot;value&quot;:&quot;Программа5&quot;},{&quot;key&quot;:&quot;Программа6&quot;,&quot;value&quot;:&quot;Программа6&quot;}]"></div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="info" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_3.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_3.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
+      <div class="modal_view modal_form modal" data-modal="modal_view" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_view">
+          <input type="hidden" name="object" value="">
+          <input type="hidden" name="form" value="Запись на просмотр">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Запись на просмотр</h3>
+          <p class="section_block__text">Ответим на интересующие вас вопросы <br> и поможем сделать правильный выбор!</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="info" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_1.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
+      <div class="modal_booking modal_form modal" data-modal="modal_booking" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_booking_new_flat">
+          <input type="hidden" name="form" value="Забронировать">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Забронировать</h3>
+          <p class="section_block__text">Бесплатно забронируем для вас квартиру. <br> Просто оставьте свои контакты</p>
+          <div class="modal_form__inputs">
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="info" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_1.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_1.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
+      <div class="modal_presentation modal_form modal" data-modal="modal_presentation" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_presentation">
+          <input type="hidden" name="form" value="Скачать презентацию">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Скачать презентацию</h3>
+          <p class="section_block__text">Напишите номер, и мы отправим вам презентацию</p>
+          <div class="modal_form__inputs">
+            <div class="span2 input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Получить презентацию</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+      </div>
+      <div class="modal_offers modal modal_form" data-modal="modal_offers">
+        <button class="modal_close modal_form__close" data-modal-close="">
+          <svg class="icon">
+            <use xlink:href="#cross"></use>
+          </svg>
+        </button>
+        <h3 class="section_block__title section_block__title--small">Лучшие <br class="mobile"> предложения</h3>
+        <p class="section_block__text">Здесь собраны лучшие презентации по жилым комплексам. <br> Обновляется каждый месяц.</p>
+        <div class="modal_offers__wrap" data-simplebar>
+          <button class="modal_offers__line" data-linked-modal="modal_presentation">
+            <div class="modal_offers__left">
+              <div class="modal_offers__icon">
+                <svg class="icon">
+                  <use xlink:href="#modal_offers"></use>
+                </svg>
+              </div>
+              <h4 class="modal_offers__title">Топ 10 новостроек для военнослужащих</h4>
+            </div>
+            <div class="modal_offers__btn">
+              <svg class="icon">
+                <use xlink:href="#download"></use>
+              </svg>
+              <div class="btn_text">Скачать</div>
+            </div>
+          </button>
+          <button class="modal_offers__line" data-linked-modal="modal_presentation">
+            <div class="modal_offers__left">
+              <div class="modal_offers__icon">
+                <svg class="icon">
+                  <use xlink:href="#modal_offers"></use>
+                </svg>
+              </div>
+              <h4 class="modal_offers__title">5 лучших новостроек для молодых семей</h4>
+            </div>
+            <div class="modal_offers__btn">
+              <svg class="icon">
+                <use xlink:href="#download"></use>
+              </svg>
+              <div class="btn_text">Скачать</div>
+            </div>
+          </button>
+          <button class="modal_offers__line" data-linked-modal="modal_presentation">
+            <div class="modal_offers__left">
+              <div class="modal_offers__icon">
+                <svg class="icon">
+                  <use xlink:href="#modal_offers"></use>
+                </svg>
+              </div>
+              <h4 class="modal_offers__title">5 лучших новостроек для молодых семей</h4>
+            </div>
+            <div class="modal_offers__btn">
+              <svg class="icon">
+                <use xlink:href="#download"></use>
+              </svg>
+              <div class="btn_text">Скачать</div>
+            </div>
+          </button>
+          <button class="modal_offers__line" data-linked-modal="modal_presentation">
+            <div class="modal_offers__left">
+              <div class="modal_offers__icon">
+                <svg class="icon">
+                  <use xlink:href="#modal_offers"></use>
+                </svg>
+              </div>
+              <h4 class="modal_offers__title">Топ 10 новостроек для военнослужащих</h4>
+            </div>
+            <div class="modal_offers__btn">
+              <svg class="icon">
+                <use xlink:href="#download"></use>
+              </svg>
+              <div class="btn_text">Скачать</div>
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="content">
       <header class="header">
@@ -365,7 +635,7 @@
                   <svg class="icon">
                     <use xlink:href="#icon_wa"></use>
                   </svg><span>WhatsApp</span></a>
-                <button class="header__link" data-linked-modal="modal_phone">Заказать звонок</button>
+                <button class="header__link" data-linked-modal="modal_order_call" data-modal-form-id="modal_order_call_header">Заказать звонок</button>
               </div>
             </div>
             <div class="header__line header__line--2"><a class="header__logo" href="/"> 
@@ -520,7 +790,7 @@
                   </div>
                 </div>
                 <p class="apartment_new_info__title apartment_new_info__title--price">от 7 221 720 ₽</p>
-                <button class="apartment_new_info__btn btn btn--filled" data-linked-modal=""><span class="btn__text">Забронировать квартиру</span></button>
+                <button class="apartment_new_info__btn btn btn--filled" data-linked-modal="modal_booking"><span class="btn__text">Забронировать квартиру</span></button>
               </div>
             </div>
             <div class="apartment_new_banner"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378 337" fill="none">
@@ -532,7 +802,7 @@
                 <p class="apartment_new_info__title apartment_new_info__title--white">Записаться на встречу</p>
                 <p class="apartment_new_banner__text">Можем провести бесплатную экскурсию <br class="tablet"> <br class="mobile"> по любой квартире, <br class="desktop"> в любой новостройке <br class="tablet"> <br class="mobile"> и в удобное для вас время.</p>
               </div>
-              <button class="apartment_new_banner__btn btn btn--white" data-linked-modal=""><span class="btn__text">Записаться</span></button>
+              <button class="apartment_new_banner__btn btn btn--white" data-linked-modal="modal_view" data-modal-form-id="modal_view_apartment_new" data-modal-set-inputs="[{&quot;key&quot;:&quot;object&quot;,&quot;value&quot;:&quot;Квартира в новостройке&quot;}]"><span class="btn__text">Записаться</span></button>
             </div>
           </div>
         </section>
@@ -699,7 +969,7 @@
                   <svg class="icon">
                     <use xlink:href="#icon_message"></use>
                   </svg><span>Написать нам </span></a>
-                <button class="footer_top__link" data-linked-modal="modal_phone">
+                <button class="footer_top__link" data-linked-modal="modal_order_call" data-modal-form-id="modal_order_call_footer">
                   <svg class="icon">
                     <use xlink:href="#icon_phone"></use>
                   </svg><span>Заказать звонок</span>

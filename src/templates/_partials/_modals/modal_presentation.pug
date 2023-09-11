@@ -1,0 +1,24 @@
+.modal_presentation.modal_form.modal(data-modal="modal_presentation", action="/mailer", data-mailer="")
+	form.modal_form__form(data-form-id="modal_presentation")
+		//- input(type="hidden", name="calc", value="")
+		input(type="hidden", name="form", value="Скачать презентацию")
+		button.modal_close.modal_form__close(data-modal-close="")
+			+svg('cross', 'icon')
+		h3.section_block__title.section_block__title--small Скачать презентацию
+		p.section_block__text Напишите номер, и мы отправим вам презентацию
+		
+		.modal_form__inputs
+			.span2.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+			.span2.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Телефон
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+		button.modal_form__btn.btn.btn--filled
+			span.btn__text Получить презентацию
+
+		p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных

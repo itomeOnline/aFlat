@@ -1,0 +1,33 @@
+.modal_calc_mort.modal_form.modal(data-modal="modal_calc_mort", action="/mailer", data-mailer="")
+	form.modal_form__form(data-form-id="modal_calc_mort")
+		//- input(type="hidden", name="calc", value="")
+		input(type="hidden", name="form", value="Рассчитать ипотеку")
+		button.modal_close.modal_form__close(data-modal-close="")
+			+svg('cross', 'icon')
+		h3.section_block__title.section_block__title--small Рассчитать ипотеку
+		p.section_block__text Ответим на интересующие вас вопросы #[br] и поможем сделать правильный выбор!
+		
+		.modal_form__inputs
+			.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+			.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Программа", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Программа1","value":"Программа1"},{"key":"Программа2","value":"Программа2"},{"key":"Программа3","value":"Программа3"},{"key":"Программа4","value":"Программа4"},{"key":"Программа5","value":"Программа5"},{"key":"Программа6","value":"Программа6"}]')
+
+			.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+				label.input_wrapper__label Ваше имя
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+			.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+				input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+				label.input_wrapper__label Телефон
+				.input_wrapper__tooltip(data-input-tooltip="")
+
+			.span2.input_wrapper.input_wrapper--textarea(data-input-wrapper="")
+				textarea.input_wrapper__textarea(name="info", placeholder="Сообщение")
+
+		button.modal_form__btn.btn.btn--filled
+			span.btn__text Отправить заявку
+
+		p.services_card_form__privacy Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных
+
+	.modal_form__img 
+		+img(`${assetsPath}/img/moda_form_pic_3.jpg`, '', 'image')

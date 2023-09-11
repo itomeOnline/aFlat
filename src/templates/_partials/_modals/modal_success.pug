@@ -1,0 +1,13 @@
+.modal_success.modal_form.modal(data-modal="modal_success")
+	.modal_form__form
+
+		button.modal_close.modal_form__close(data-modal-close="")
+			+svg('cross', 'icon')
+		h3.section_block__title.section_block__title--small Заявка успешно отправлена
+		p.section_block__text Спасибо за Ваше обращение, наши менеджеры свяжутся с Вами.
+
+		button.modal_form__btn.btn.btn--filled
+			span.btn__text Хорошо
+
+	.modal_form__img 
+		+img(`${assetsPath}/img/moda_form_pic_2.jpg`, '', 'image')

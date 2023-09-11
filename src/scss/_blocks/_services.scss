@@ -1,5 +1,27 @@
 .services {
-    margin-top: em(250);
+    padding-top: em(80);
+    border-radius: 50px 50px 0 0;
+
+    margin-top: -50px;
+
+    position: relative;
+    z-index: 5;
+    background: #F4F5F2;
+
+    @media(max-width: 1124px) {
+        padding-top: em(40);
+        border-radius: 40px 40px 0 0;
+
+        margin-top: -40px;
+    }
+
+    @media(max-width: 500px) {
+        padding-top: em(28);
+
+        border-radius: 20px 20px 0 0;
+
+        margin-top: -20px;
+    }
 	
     &__content {
         margin-top: em(40);

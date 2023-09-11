@@ -28,6 +28,10 @@ html(lang="ru")
 	body
 		include ../../assets/icons.svg
 		.preloader
+			.preloader__wrap 
+				.preloader__logo
+					+imgSvgNolazy(`${assetsPath}/img/main_logo.svg`, '', 'image')
+				.preloader__load
 		include ../_partials/modals
 		.content
 			include ../_partials/header

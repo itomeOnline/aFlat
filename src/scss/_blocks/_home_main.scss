@@ -1,0 +1,125 @@
+.home_main {
+	position: relative;	
+
+    margin-top: em(28);
+
+    padding: em(28);
+
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.04);
+
+    @media(max-width: 1124px) {
+        padding: em(24);
+    }
+
+    @media(max-width: 500px) {
+        margin-top: em(20);
+
+        margin-bottom: em(40);
+    }
+
+    &__inner {
+        position: absolute;
+        top: em(28);
+        left: em(28);
+        right: em(28);
+        bottom: em(28);
+
+        opacity: 0;
+        pointer-events: none;
+
+        z-index: -1;
+
+        transition: opacity .3s;
+
+        @media(max-width: 1124px) {
+            top: em(24);
+            left: em(24);
+            right: em(24);
+            bottom: em(24);
+        }
+
+        &.is-active {
+            position: initial;
+            opacity: 1;
+            pointer-events: all;
+            transition: opacity .3s .2s;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+
+        margin-top: em(28);
+
+        @media(max-width: 500px) {
+            margin-top: em(20);
+        }
+    }
+
+    &__wrapper_inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity .3s;
+
+        &.is-active {
+            position: initial;
+            opacity: 1;
+            pointer-events: all;
+            transition: opacity .3s .2s;
+        }
+    }
+
+    &__tabs {
+        margin-top: 0;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: em(120) em(120);
+        gap: em(12);
+
+        position: absolute;
+        right: 0;
+        top: -4.5em;
+
+        @media(max-width: 1124px) {
+            grid-template-columns: em(152) em(152);
+
+            position: initial;
+            margin-top: em(28);
+
+            @media(max-width: 500px) {
+                grid-template-columns: 100%;
+
+                width: 100%;
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: em(16);
+
+        @media(max-width: 1124px) {
+            grid-template-columns: 1fr 1fr;
+            gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            gap: em(16);
+        }
+    }
+}

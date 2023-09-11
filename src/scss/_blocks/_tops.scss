@@ -1,4 +1,13 @@
 .tops {
+    padding-top: em(120);
+
+    @media(max-width: 1124px) {
+        padding-top: em(100);
+    }
+
+    @media(max-width: 500px) {
+        padding-top: em(80);
+    }
     
     &__top {
         display: flex;

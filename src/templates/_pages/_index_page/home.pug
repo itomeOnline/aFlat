@@ -1,0 +1,245 @@
+section.section.home
+	.home__bg
+		+img(`${assetsPath}/img/home_bg.png`, '', 'image')
+
+	.home__container.container
+
+		h1.section_block__title.section_block__title--white Лучшие квартиры #[br.tablet] Владивостока
+
+		.home__content(data-form-tabs="")
+
+			.home__tabs.faq__tabs
+				button.home__tabs_btn.faq__tabs_btn.is-active(data-form-tab="1") Купить
+				button.home__tabs_btn.faq__tabs_btn(data-form-tab="2") Снять
+			
+			.home_main
+				.home_main__inner.is-active(data-form-parent-container="1", data-form-tabs="")
+					.home_main__tabs.faq__tabs
+						button.home_main__tabs_btn.faq__tabs_btn.is-active(data-form-tab="1") Новостройки
+						button.home_main__tabs_btn.faq__tabs_btn(data-form-tab="2") Вторичка
+						button.home_main__tabs_btn.faq__tabs_btn(data-form-tab="3") Другое
+					
+					.home_main__wrapper
+						.home_main__wrapper_inner.is-active(data-form-container="1")
+							
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+								.catalog_filters__block
+									p.catalog_filters__caption Срок сдачи
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="deadline", data-dropdown-placeholder="Срок сдачи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"В этом году","value":"В этом году"},{"key":"В следующем году","value":"В следующем году"},{"key":"Не имеет значения","value":"Не имеет значения"},{"key":"Сдан","value":"Сдан"}]')
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_new")
+									span.btn__text В каталог
+
+						.home_main__wrapper_inner(data-form-container="2")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+								.catalog_filters__block
+									p.catalog_filters__caption Количество комнат
+									.catalog_filters__rooms 
+										button.catalog_filters__rooms_btn.is-active Студия
+										button.catalog_filters__rooms_btn 1
+										button.catalog_filters__rooms_btn 2
+										button.catalog_filters__rooms_btn 3
+										button.catalog_filters__rooms_btn 4+
+
+								.catalog_filters__block
+									p.catalog_filters__caption Стоимость, ₽
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+											label.input_wrapper__label До
+								
+								.catalog_filters__block
+									p.catalog_filters__caption Площадь, м²
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="squareFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="squareTo" autocomplete="off")
+											label.input_wrapper__label До
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_secondary")
+									span.btn__text В каталог
+
+						.home_main__wrapper_inner(data-form-container="3")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Тип недвижимости
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="propertyType", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Тип1","value":"Тип1"},{"key":"Тип2","value":"Тип2"},{"key":"Тип3","value":"Тип3"},{"key":"Тип4","value":"Тип4"},{"key":"Тип5","value":"Тип5"},{"key":"Тип6","value":"Тип6"}]') 
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_other")
+									span.btn__text В каталог
+				
+				.home_main__inner(data-form-parent-container="2", data-form-tabs="")
+					.home_main__tabs.faq__tabs
+						button.home_main__tabs_btn.faq__tabs_btn.is-active(data-form-tab="1") Квартира
+						button.home_main__tabs_btn.faq__tabs_btn(data-form-tab="2") Дом
+						button.home_main__tabs_btn.faq__tabs_btn(data-form-tab="3") Дача
+						button.home_main__tabs_btn.faq__tabs_btn(data-form-tab="4") Нежилое
+					
+					.home_main__wrapper
+						.home_main__wrapper_inner.is-active(data-form-container="1")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Срок сдачи
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="deadline", data-dropdown-placeholder="Срок сдачи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"В этом году","value":"В этом году"},{"key":"В следующем году","value":"В следующем году"},{"key":"Не имеет значения","value":"Не имеет значения"},{"key":"Сдан","value":"Сдан"}]')
+								.catalog_filters__block
+									p.catalog_filters__caption Количество комнат
+									.catalog_filters__rooms 
+										button.catalog_filters__rooms_btn.is-active Студия
+										button.catalog_filters__rooms_btn 1
+										button.catalog_filters__rooms_btn 2
+										button.catalog_filters__rooms_btn 3
+										button.catalog_filters__rooms_btn 4+
+
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+
+								.catalog_filters__block
+									p.catalog_filters__caption Стоимость, ₽
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+											label.input_wrapper__label До
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_rent")
+									span.btn__text В каталог
+							
+						.home_main__wrapper_inner(data-form-container="2")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Срок сдачи
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="deadline", data-dropdown-placeholder="Срок сдачи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"В этом году","value":"В этом году"},{"key":"В следующем году","value":"В следующем году"},{"key":"Не имеет значения","value":"Не имеет значения"},{"key":"Сдан","value":"Сдан"}]')
+								.catalog_filters__block
+									p.catalog_filters__caption Количество комнат
+									.catalog_filters__rooms 
+										button.catalog_filters__rooms_btn.is-active Студия
+										button.catalog_filters__rooms_btn 1
+										button.catalog_filters__rooms_btn 2
+										button.catalog_filters__rooms_btn 3
+										button.catalog_filters__rooms_btn 4+
+
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+
+								.catalog_filters__block
+									p.catalog_filters__caption Стоимость, ₽
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+											label.input_wrapper__label До
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_rent")
+									span.btn__text В каталог
+							
+						.home_main__wrapper_inner(data-form-container="3")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Срок сдачи
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="deadline", data-dropdown-placeholder="Срок сдачи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"В этом году","value":"В этом году"},{"key":"В следующем году","value":"В следующем году"},{"key":"Не имеет значения","value":"Не имеет значения"},{"key":"Сдан","value":"Сдан"}]')
+								.catalog_filters__block
+									p.catalog_filters__caption Количество комнат
+									.catalog_filters__rooms 
+										button.catalog_filters__rooms_btn.is-active Студия
+										button.catalog_filters__rooms_btn 1
+										button.catalog_filters__rooms_btn 2
+										button.catalog_filters__rooms_btn 3
+										button.catalog_filters__rooms_btn 4+
+
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+
+								.catalog_filters__block
+									p.catalog_filters__caption Стоимость, ₽
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+											label.input_wrapper__label До
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_rent")
+									span.btn__text В каталог
+							
+						.home_main__wrapper_inner(data-form-container="4")
+
+							.home_main__table
+								.catalog_filters__block
+									p.catalog_filters__caption Срок сдачи
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="deadline", data-dropdown-placeholder="Срок сдачи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"В этом году","value":"В этом году"},{"key":"В следующем году","value":"В следующем году"},{"key":"Не имеет значения","value":"Не имеет значения"},{"key":"Сдан","value":"Сдан"}]')
+								.catalog_filters__block
+									p.catalog_filters__caption Количество комнат
+									.catalog_filters__rooms 
+										button.catalog_filters__rooms_btn.is-active Студия
+										button.catalog_filters__rooms_btn 1
+										button.catalog_filters__rooms_btn 2
+										button.catalog_filters__rooms_btn 3
+										button.catalog_filters__rooms_btn 4+
+
+								.catalog_filters__block
+									p.catalog_filters__caption Район
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="place", data-dropdown-placeholder="Район", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Район1","value":"Район1"},{"key":"Район2","value":"Район2"},{"key":"Район3","value":"Район3"},{"key":"Район4","value":"Район4"},{"key":"Район5","value":"Район5"},{"key":"Район6","value":"Район6"}]') 
+
+								.catalog_filters__block
+									p.catalog_filters__caption Стоимость, ₽
+									.catalog_filters__inputs 
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceFrom" autocomplete="off")
+											label.input_wrapper__label От
+										.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+											input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
+											label.input_wrapper__label До
+
+							.home_main__buttons 
+								button.home_main__btn.btn.btn--small.btn--filled
+									span.btn__text Найти
+								a.home_main__btn.btn.btn--small.btn--outlined(href="/catalog_rent")
+									span.btn__text В каталог
+							
+
+
+						
+						
+						

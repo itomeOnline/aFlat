@@ -28,6 +28,7 @@ import contactsSlider from "./components/sliders/contactsSlider";
 import teamSlider from "./components/sliders/teamSlider";
 import apartmentNewSliders from "./components/sliders/apartmentNewSliders";
 import apartmentSecSlider from "./components/sliders/apartmentSecSlider";
+import tabsController from "./components/tabsController";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", _ => {
     headerDropdown();
     headerLocationDropdown();
     mapWidget();
+    tabsController();
 
     topsSlider();
     topsBenefitsSlider();

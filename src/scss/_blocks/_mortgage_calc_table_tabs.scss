@@ -1,0 +1,74 @@
+.mortgage_calc_table_tabs {
+	margin-top: auto;
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .5rem;
+
+    margin-bottom: em(12);
+
+    &--small {
+        grid-template-columns: repeat(3, 1fr);
+        gap: em(10) em(8);
+
+        width: em(190);
+
+        margin-bottom: 0;
+
+        @media(max-width: 500px) {
+            grid-template-columns: repeat(6,1fr);
+            width: 100%;
+
+            //overflow: scroll hidden;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        flex: none;
+
+        height: em(22);
+
+        width: 100%;
+
+        flex: none;
+
+        .block {
+            border-radius: 50px;
+            background: #F4F4F4;
+
+            padding: 4px 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: em(12);
+            line-height: .875rem;
+            color: #838383;
+            white-space: nowrap;
+
+            flex: none;
+
+            cursor: pointer;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+
+            width: 100%;
+
+            transition: color .2s, background .2s;
+        }
+
+        .radio {
+            
+            &:checked + .block {
+                background: $c-primary;
+                color: #fff;
+            }
+        }
+    }
+}

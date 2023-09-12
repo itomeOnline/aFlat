@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <title>AFLAT — Лучшие квартиры</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v1.1">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -25,6 +25,10 @@
 	
 		<symbol id="arrow_small" viewBox="0 0 16 16">
 			<path d="M6.56 4.137l-.966.966L8.49 8l-2.897 2.897.965.965L10.422 8 6.559 4.137z"/>
+		</symbol>
+	
+		<symbol id="check" viewBox="0 0 8 6">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M2.696 3.984L6.68 0l.996 1.02L2.696 6 0 3.304l1.02-1.02 1.676 1.7z"/>
 		</symbol>
 	
 		<symbol id="close" viewBox="0 0 28 28">
@@ -779,9 +783,7 @@
                 <div class="home_main__inner" data-form-parent-container="2" data-form-tabs="">
                   <div class="home_main__tabs faq__tabs">
                     <button class="home_main__tabs_btn faq__tabs_btn is-active" data-form-tab="1">Квартира</button>
-                    <button class="home_main__tabs_btn faq__tabs_btn" data-form-tab="2">Дом</button>
-                    <button class="home_main__tabs_btn faq__tabs_btn" data-form-tab="3">Дача</button>
-                    <button class="home_main__tabs_btn faq__tabs_btn" data-form-tab="4">Нежилое</button>
+                    <button class="home_main__tabs_btn faq__tabs_btn" data-form-tab="2">Другое</button>
                   </div>
                   <div class="home_main__wrapper">
                     <div class="home_main__wrapper_inner is-active" data-form-container="1">
@@ -825,111 +827,8 @@
                     <div class="home_main__wrapper_inner" data-form-container="2">
                       <div class="home_main__table">
                         <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Срок сдачи</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="deadline" data-dropdown-placeholder="Срок сдачи" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;В этом году&quot;,&quot;value&quot;:&quot;В этом году&quot;},{&quot;key&quot;:&quot;В следующем году&quot;,&quot;value&quot;:&quot;В следующем году&quot;},{&quot;key&quot;:&quot;Не имеет значения&quot;,&quot;value&quot;:&quot;Не имеет значения&quot;},{&quot;key&quot;:&quot;Сдан&quot;,&quot;value&quot;:&quot;Сдан&quot;}]"></div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Количество комнат</p>
-                          <div class="catalog_filters__rooms"> 
-                            <button class="catalog_filters__rooms_btn is-active">Студия</button>
-                            <button class="catalog_filters__rooms_btn">1</button>
-                            <button class="catalog_filters__rooms_btn">2</button>
-                            <button class="catalog_filters__rooms_btn">3</button>
-                            <button class="catalog_filters__rooms_btn">4+</button>
-                          </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Район</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="place" data-dropdown-placeholder="Район" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Район1&quot;,&quot;value&quot;:&quot;Район1&quot;},{&quot;key&quot;:&quot;Район2&quot;,&quot;value&quot;:&quot;Район2&quot;},{&quot;key&quot;:&quot;Район3&quot;,&quot;value&quot;:&quot;Район3&quot;},{&quot;key&quot;:&quot;Район4&quot;,&quot;value&quot;:&quot;Район4&quot;},{&quot;key&quot;:&quot;Район5&quot;,&quot;value&quot;:&quot;Район5&quot;},{&quot;key&quot;:&quot;Район6&quot;,&quot;value&quot;:&quot;Район6&quot;}]"> </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Стоимость, ₽</p>
-                          <div class="catalog_filters__inputs"> 
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceFrom" autocomplete="off">
-                              <label class="input_wrapper__label">От</label>
-                            </div>
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceTo" autocomplete="off">
-                              <label class="input_wrapper__label">До</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="home_main__buttons"> 
-                        <button class="home_main__btn btn btn--small btn--filled"><span class="btn__text">Найти</span></button><a class="home_main__btn btn btn--small btn--outlined" href="/catalog_rent"><span class="btn__text">В каталог</span></a>
-                      </div>
-                    </div>
-                    <div class="home_main__wrapper_inner" data-form-container="3">
-                      <div class="home_main__table">
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Срок сдачи</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="deadline" data-dropdown-placeholder="Срок сдачи" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;В этом году&quot;,&quot;value&quot;:&quot;В этом году&quot;},{&quot;key&quot;:&quot;В следующем году&quot;,&quot;value&quot;:&quot;В следующем году&quot;},{&quot;key&quot;:&quot;Не имеет значения&quot;,&quot;value&quot;:&quot;Не имеет значения&quot;},{&quot;key&quot;:&quot;Сдан&quot;,&quot;value&quot;:&quot;Сдан&quot;}]"></div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Количество комнат</p>
-                          <div class="catalog_filters__rooms"> 
-                            <button class="catalog_filters__rooms_btn is-active">Студия</button>
-                            <button class="catalog_filters__rooms_btn">1</button>
-                            <button class="catalog_filters__rooms_btn">2</button>
-                            <button class="catalog_filters__rooms_btn">3</button>
-                            <button class="catalog_filters__rooms_btn">4+</button>
-                          </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Район</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="place" data-dropdown-placeholder="Район" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Район1&quot;,&quot;value&quot;:&quot;Район1&quot;},{&quot;key&quot;:&quot;Район2&quot;,&quot;value&quot;:&quot;Район2&quot;},{&quot;key&quot;:&quot;Район3&quot;,&quot;value&quot;:&quot;Район3&quot;},{&quot;key&quot;:&quot;Район4&quot;,&quot;value&quot;:&quot;Район4&quot;},{&quot;key&quot;:&quot;Район5&quot;,&quot;value&quot;:&quot;Район5&quot;},{&quot;key&quot;:&quot;Район6&quot;,&quot;value&quot;:&quot;Район6&quot;}]"> </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Стоимость, ₽</p>
-                          <div class="catalog_filters__inputs"> 
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceFrom" autocomplete="off">
-                              <label class="input_wrapper__label">От</label>
-                            </div>
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceTo" autocomplete="off">
-                              <label class="input_wrapper__label">До</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="home_main__buttons"> 
-                        <button class="home_main__btn btn btn--small btn--filled"><span class="btn__text">Найти</span></button><a class="home_main__btn btn btn--small btn--outlined" href="/catalog_rent"><span class="btn__text">В каталог</span></a>
-                      </div>
-                    </div>
-                    <div class="home_main__wrapper_inner" data-form-container="4">
-                      <div class="home_main__table">
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Срок сдачи</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="deadline" data-dropdown-placeholder="Срок сдачи" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;В этом году&quot;,&quot;value&quot;:&quot;В этом году&quot;},{&quot;key&quot;:&quot;В следующем году&quot;,&quot;value&quot;:&quot;В следующем году&quot;},{&quot;key&quot;:&quot;Не имеет значения&quot;,&quot;value&quot;:&quot;Не имеет значения&quot;},{&quot;key&quot;:&quot;Сдан&quot;,&quot;value&quot;:&quot;Сдан&quot;}]"></div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Количество комнат</p>
-                          <div class="catalog_filters__rooms"> 
-                            <button class="catalog_filters__rooms_btn is-active">Студия</button>
-                            <button class="catalog_filters__rooms_btn">1</button>
-                            <button class="catalog_filters__rooms_btn">2</button>
-                            <button class="catalog_filters__rooms_btn">3</button>
-                            <button class="catalog_filters__rooms_btn">4+</button>
-                          </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Район</p>
-                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="place" data-dropdown-placeholder="Район" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Район1&quot;,&quot;value&quot;:&quot;Район1&quot;},{&quot;key&quot;:&quot;Район2&quot;,&quot;value&quot;:&quot;Район2&quot;},{&quot;key&quot;:&quot;Район3&quot;,&quot;value&quot;:&quot;Район3&quot;},{&quot;key&quot;:&quot;Район4&quot;,&quot;value&quot;:&quot;Район4&quot;},{&quot;key&quot;:&quot;Район5&quot;,&quot;value&quot;:&quot;Район5&quot;},{&quot;key&quot;:&quot;Район6&quot;,&quot;value&quot;:&quot;Район6&quot;}]"> </div>
-                        </div>
-                        <div class="catalog_filters__block">
-                          <p class="catalog_filters__caption">Стоимость, ₽</p>
-                          <div class="catalog_filters__inputs"> 
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceFrom" autocomplete="off">
-                              <label class="input_wrapper__label">От</label>
-                            </div>
-                            <div class="catalog_filters__input input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                              <input class="input_wrapper__input" type="text" name="priceTo" autocomplete="off">
-                              <label class="input_wrapper__label">До</label>
-                            </div>
-                          </div>
+                          <p class="catalog_filters__caption">Тип недвижимости</p>
+                          <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="propertyType" data-dropdown-placeholder="Тип недвижимости" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Дом&quot;,&quot;value&quot;:&quot;Дом&quot;},{&quot;key&quot;:&quot;Дача&quot;,&quot;value&quot;:&quot;Дача&quot;},{&quot;key&quot;:&quot;Нежилое&quot;,&quot;value&quot;:&quot;Нежилое&quot;}]"> </div>
                         </div>
                       </div>
                       <div class="home_main__buttons"> 

@@ -26,6 +26,11 @@ $height: 3.5em;
 		font-size: em(14);
 		line-height: 1.25rem;
 		padding: .75rem 1.5rem;
+
+		.mortgage_calc & {
+			height: em(54);
+			font-size: 1em;
+		}
 	}
 
 	&--small {

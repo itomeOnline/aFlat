@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <title>Ипотека — AFLAT</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v1.1">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -25,6 +25,10 @@
 	
 		<symbol id="arrow_small" viewBox="0 0 16 16">
 			<path d="M6.56 4.137l-.966.966L8.49 8l-2.897 2.897.965.965L10.422 8 6.559 4.137z"/>
+		</symbol>
+	
+		<symbol id="check" viewBox="0 0 8 6">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M2.696 3.984L6.68 0l.996 1.02L2.696 6 0 3.304l1.02-1.02 1.676 1.7z"/>
 		</symbol>
 	
 		<symbol id="close" viewBox="0 0 28 28">
@@ -713,7 +717,8 @@
             <h2 class="section_block__title">Ипотечный калькулятор</h2>
             <div class="mortgage_calc__content"> 
               <div class="mortgage_calc__main"> 
-                <div class="mortgage_calc_table" data-sector="calc">
+                <form class="mortgage_calc_table" data-sector="calc" action="/mailer" data-mailer="" data-form-id="mortgage_calculator">
+                  <input type="hidden" name="form" value="Получить расчёт ипотеки">
                   <div class="mortgage_calc_table__block mortgage_calc_table__block--top"> 
                     <div class="mortgage_calc_table__wrap"> 
                       <p class="mortgage_calc_table__caption">Стоимость квартиры, ₽ </p>
@@ -729,16 +734,143 @@
                       </div>
                     </div>
                   </div>
-                  <div class="mortgage_calc_table__block">
+                  <div class="mortgage_calc_table__block" data-input-block="">
                     <div class="mortgage_calc_table__wrap"> 
                       <p class="mortgage_calc_table__caption">Первоначальный взнос</p>
                       <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
-                        <input class="input_wrapper__input" type="text" name="firstPayment" autocomplete="off">
-                        <label class="input_wrapper__label">%</label>
+                        <input class="input_auto input_wrapper__input" type="text" value="0%" name="firstPayment" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap">
+                      <div class="mortgage_calc_table_tabs">
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="10%" hidden="" id="ten">
+                          <label class="block" for="ten">10%</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="15%" hidden="" id="fifteen">
+                          <label class="block" for="fifteen">15%</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="20%" hidden="" id="twenty">
+                          <label class="block" for="twenty">20%</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="30%" hidden="" id="thirty">
+                          <label class="block" for="thirty">30%</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="50%" hidden="" id="fifty">
+                          <label class="block" for="fifty">50%</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="firstPay" value="80%" hidden="" id="eighty">
+                          <label class="block" for="eighty">80%</label>
+                        </div>
+                      </div>
+                      <label class="mortgage_calc_table__checkbox">
+                        <input class="checkbox" type="radio" name="firstPay" value="0%" hidden="">
+                        <div class="box">
+                          <svg class="icon">
+                            <use xlink:href="#check"></use>
+                          </svg>
+                        </div>
+                        <p class="text">Без первоначального взноса</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mortgage_calc_table__block" data-input-block="">
+                    <div class="mortgage_calc_table__wrap"> 
+                      <p class="mortgage_calc_table__caption">Срок ипотеки, лет</p>
+                      <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                        <input class="input_auto input_wrapper__input" type="text" value="1" name="timeline" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap">
+                      <div class="mortgage_calc_table_tabs mortgage_calc_table_tabs--small">
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="1" hidden="" id="one_year">
+                          <label class="block" for="one_year">1 год</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="5" hidden="" id="five_years">
+                          <label class="block" for="five_years">5 лет</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="10" hidden="" id="ten_years">
+                          <label class="block" for="ten_years">10 лет</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="15" hidden="" id="fifteen_years">
+                          <label class="block" for="fifteen_years">15 лет</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="20" hidden="" id="twenty_years">
+                          <label class="block" for="twenty_years">20 лет</label>
+                        </div>
+                        <div class="mortgage_calc_table_tabs__btn">
+                          <input class="radio" type="radio" name="timeline" value="30" hidden="" id="thirty_years">
+                          <label class="block" for="thirty_years">30 лет</label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div class="mortgage_calc_table__block">
+                    <div class="mortgage_calc_table__wrap"> 
+                      <p class="mortgage_calc_table__caption">Банк</p>
+                      <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank" data-dropdown-placeholder="Выберите банк" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Банк1&quot;,&quot;value&quot;:&quot;Банк1&quot;},{&quot;key&quot;:&quot;Банк2&quot;,&quot;value&quot;:&quot;Банк2&quot;},{&quot;key&quot;:&quot;Банк3&quot;,&quot;value&quot;:&quot;Банк3&quot;},{&quot;key&quot;:&quot;Банк4&quot;,&quot;value&quot;:&quot;Банк4&quot;},{&quot;key&quot;:&quot;Банк5&quot;,&quot;value&quot;:&quot;Банк5&quot;},{&quot;key&quot;:&quot;Банк6&quot;,&quot;value&quot;:&quot;Банк6&quot;}]"></div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap"> 
+                      <p class="mortgage_calc_table__caption">Программа</p>
+                      <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank_programm" data-dropdown-placeholder="Выберите программу" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Программа1&quot;,&quot;value&quot;:&quot;Программа1&quot;},{&quot;key&quot;:&quot;Программа2&quot;,&quot;value&quot;:&quot;Программа2&quot;},{&quot;key&quot;:&quot;Программа3&quot;,&quot;value&quot;:&quot;Программа3&quot;},{&quot;key&quot;:&quot;Программа4&quot;,&quot;value&quot;:&quot;Программа4&quot;},{&quot;key&quot;:&quot;Программа5&quot;,&quot;value&quot;:&quot;Программа5&quot;},{&quot;key&quot;:&quot;Программа6&quot;,&quot;value&quot;:&quot;Программа6&quot;}]"></div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap"> 
+                      <p class="mortgage_calc_table__caption">Дополнительные условия</p>
+                      <div class="mortgage_calc_table__line">
+                        <label class="mortgage_calc_table__checkbox">
+                          <input class="checkbox" type="checkbox" name="salaryCard" value="false" hidden="">
+                          <div class="box">
+                            <svg class="icon">
+                              <use xlink:href="#check"></use>
+                            </svg>
+                          </div>
+                          <p class="text">Зарплатная карта</p>
+                        </label>
+                        <label class="mortgage_calc_table__checkbox">
+                          <input class="checkbox" type="checkbox" name="matCapital" value="false" hidden="">
+                          <div class="box">
+                            <svg class="icon">
+                              <use xlink:href="#check"></use>
+                            </svg>
+                          </div>
+                          <p class="text">Материнский капитал</p>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mortgage_calc_table__block">
+                    <div class="mortgage_calc_table__wrap">
+                      <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                        <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+                        <label class="input_wrapper__label">Ваше имя</label>
+                        <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                      </div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap">
+                      <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+                        <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+                        <label class="input_wrapper__label">Телефон</label>
+                        <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+                      </div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap">
+                      <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="formCommunication" data-dropdown-placeholder="Удобная форма связи" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Звонок&quot;,&quot;value&quot;:&quot;Звонок&quot;},{&quot;key&quot;:&quot;Telegram&quot;,&quot;value&quot;:&quot;Telegram&quot;},{&quot;key&quot;:&quot;WhatsApp&quot;,&quot;value&quot;:&quot;WhatsApp&quot;}]"></div>
+                    </div>
+                    <div class="mortgage_calc_table__wrap">
+                      <button class="mortgage_calc_table__main_btn btn btn--filled"> <span class="btn__text">Получить расчёт ипотеки</span></button>
+                    </div>
+                  </div>
+                </form>
                 <h2 class="section_block__title mortgage_calc__title">Программы по ипотеке</h2>
                 <div class="mortgage_calc__programs">
                   <div class="mortgage_program_block" data-sector="dv">

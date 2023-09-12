@@ -23,6 +23,10 @@ $bg-color-error: #FBE4E3;
 
 	@media(max-width: 1124px) {
 		height: em(44);
+
+		.mortgage_calc & {
+			height: em(54);
+		}
 	}
 
 	&--textarea {

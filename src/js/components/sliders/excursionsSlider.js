@@ -13,7 +13,7 @@ import 'swiper/swiper.min.css';
 
 function excursionsSlider () {
     const slider = new Swiper('.excursions__slider', {
-        modules: [ Navigation, Scrollbar, Mousewheel, Pagination],
+        modules: [ Navigation, Scrollbar, Mousewheel, Pagination, EffectFade],
         slidesPerView: 1,
         speed: 700,
         spaceBetween: 16,
@@ -21,6 +21,10 @@ function excursionsSlider () {
         mousewheelControl: true,
         mousewheel: {
           forceToAxis: true,
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
         },
         navigation: {
             nextEl: '.excursions__arrow--next',

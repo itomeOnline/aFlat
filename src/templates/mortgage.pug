@@ -68,7 +68,8 @@ block content
 				.mortgage_calc__content 
 					.mortgage_calc__main 
 
-						.mortgage_calc_table(data-sector="calc")
+						form.mortgage_calc_table(data-sector="calc", action="/mailer", data-mailer="", data-form-id="mortgage_calculator")
+							input(type="hidden", name="form", value="Получить расчёт ипотеки")
 							.mortgage_calc_table__block.mortgage_calc_table__block--top 
 								.mortgage_calc_table__wrap 
 									p.mortgage_calc_table__caption Стоимость квартиры, ₽ 
@@ -80,13 +81,107 @@ block content
 										input.input_wrapper__input(type="text" name="priceTo" autocomplete="off")
 										label.input_wrapper__label До
 
-							.mortgage_calc_table__block
+							.mortgage_calc_table__block(data-input-block="")
 								.mortgage_calc_table__wrap 
 									p.mortgage_calc_table__caption Первоначальный взнос
 									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
-										input.input_wrapper__input(type="text" name="firstPayment" autocomplete="off")
-										label.input_wrapper__label %
+										input.input_auto.input_wrapper__input(type="text" value="0%" name="firstPayment" autocomplete="off")
 
+								.mortgage_calc_table__wrap
+									.mortgage_calc_table_tabs
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="10%", hidden="", id="ten")
+											label.block(for="ten") 10%
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="15%", hidden="", id="fifteen")
+											label.block(for="fifteen") 15%
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="20%", hidden="", id="twenty")
+											label.block(for="twenty") 20%
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="30%", hidden="", id="thirty")
+											label.block(for="thirty") 30%
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="50%", hidden="", id="fifty")
+											label.block(for="fifty") 50%
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="firstPay", value="80%", hidden="", id="eighty")
+											label.block(for="eighty") 80%
+
+									label.mortgage_calc_table__checkbox
+										input.checkbox(type="radio", name="firstPay", value="0%", hidden="")
+										.box
+											+svg('check', 'icon')
+										p.text Без первоначального взноса
+
+							.mortgage_calc_table__block(data-input-block="")
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Срок ипотеки, лет
+									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_auto.input_wrapper__input(type="text" value="1" name="timeline" autocomplete="off")
+
+								.mortgage_calc_table__wrap
+									.mortgage_calc_table_tabs.mortgage_calc_table_tabs--small
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="1", hidden="", id="one_year")
+											label.block(for="one_year") 1 год
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="5", hidden="", id="five_years")
+											label.block(for="five_years") 5 лет
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="10", hidden="", id="ten_years")
+											label.block(for="ten_years") 10 лет
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="15", hidden="", id="fifteen_years")
+											label.block(for="fifteen_years") 15 лет
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="20", hidden="", id="twenty_years")
+											label.block(for="twenty_years") 20 лет
+										.mortgage_calc_table_tabs__btn
+											input.radio(type="radio", name="timeline", value="30", hidden="", id="thirty_years")
+											label.block(for="thirty_years") 30 лет
+
+							.mortgage_calc_table__block
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Банк
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Выберите банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Программа
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Выберите программу", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Программа1","value":"Программа1"},{"key":"Программа2","value":"Программа2"},{"key":"Программа3","value":"Программа3"},{"key":"Программа4","value":"Программа4"},{"key":"Программа5","value":"Программа5"},{"key":"Программа6","value":"Программа6"}]')
+								.mortgage_calc_table__wrap 
+									p.mortgage_calc_table__caption Дополнительные условия
+									.mortgage_calc_table__line
+										label.mortgage_calc_table__checkbox
+											input.checkbox(type="checkbox", name="salaryCard", value="false", hidden="")
+											.box
+												+svg('check', 'icon')
+											p.text Зарплатная карта
+										
+										label.mortgage_calc_table__checkbox
+											input.checkbox(type="checkbox", name="matCapital", value="false", hidden="")
+											.box
+												+svg('check', 'icon')
+											p.text Материнский капитал
+
+							.mortgage_calc_table__block
+								.mortgage_calc_table__wrap
+									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_wrapper__input(type="text" name="name" required autocomplete="off")
+										label.input_wrapper__label Ваше имя
+										.input_wrapper__tooltip(data-input-tooltip="")
+
+								.mortgage_calc_table__wrap
+									.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
+										input.input_wrapper__input(type="tel" name="phone" required autocomplete="off")
+										label.input_wrapper__label Телефон
+										.input_wrapper__tooltip(data-input-tooltip="")
+
+								.mortgage_calc_table__wrap
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="formCommunication", data-dropdown-placeholder="Удобная форма связи", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Звонок","value":"Звонок"},{"key":"Telegram","value":"Telegram"},{"key":"WhatsApp","value":"WhatsApp"}]')
+
+								.mortgage_calc_table__wrap
+									button.mortgage_calc_table__main_btn.btn.btn--filled 
+										span.btn__text Получить расчёт ипотеки
 						
 						h2.section_block__title.mortgage_calc__title Программы по ипотеке
 

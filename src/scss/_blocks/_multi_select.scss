@@ -8,6 +8,10 @@
 
 	@media(max-width: 1124px) {
 		height: em(44);
+
+		.mortgage_calc & {
+			height: em(54);
+		}
 	}
 
 	&.on-focus {
@@ -49,7 +53,8 @@
 
 			.mortgage_form &,
 			.help_form &,
-			.modal_form & {
+			.modal_form &,
+			.mortgage_calc & {
 				color: #838383;
 			}
 		}

@@ -29,6 +29,7 @@ import teamSlider from "./components/sliders/teamSlider";
 import apartmentNewSliders from "./components/sliders/apartmentNewSliders";
 import apartmentSecSlider from "./components/sliders/apartmentSecSlider";
 import tabsController from "./components/tabsController";
+import mortgageCalc from "./components/mortgageCalc";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -73,6 +74,10 @@ document.addEventListener("DOMContentLoaded", _ => {
     teamSlider();
     apartmentNewSliders();
     apartmentSecSlider();
+
+    if (document.querySelector('.mortgage_calc')) {
+        mortgageCalc();
+    }
 
 
     document.querySelectorAll('[data-dropdown]').forEach(el => {

@@ -21895,7 +21895,7 @@
 
   function excursionsSlider () {
       const slider = new Swiper('.excursions__slider', {
-          modules: [ Navigation, Scrollbar, Mousewheel, Pagination],
+          modules: [ Navigation, Scrollbar, Mousewheel, Pagination, EffectFade],
           slidesPerView: 1,
           speed: 700,
           spaceBetween: 16,
@@ -21903,6 +21903,10 @@
           mousewheelControl: true,
           mousewheel: {
             forceToAxis: true,
+          },
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true
           },
           navigation: {
               nextEl: '.excursions__arrow--next',
@@ -22436,6 +22440,29 @@
   	});
   }
 
+  function mortgageCalc () {
+      const mainBlocks = document.querySelectorAll('[data-input-block=""]');
+
+      mainBlocks.forEach(block => {
+          const buttons = block.querySelectorAll('.mortgage_calc_table_tabs__btn');
+          const input = block.querySelector('.input_auto');
+          const checkbox = block.querySelector('.mortgage_calc_table__checkbox');
+
+          buttons.forEach(btn => {
+              btn.addEventListener('click', _ => {
+                  input.value = btn.querySelector('.radio').value;
+              });
+          });
+
+          if (checkbox) {
+              checkbox.addEventListener('click', _ => {
+                  input.value = checkbox.querySelector('.checkbox').value;
+              });
+          }
+
+      });
+  }
+
   setTimeout(() => { 
       document.querySelector('body').classList.add('on-loaded');
   }, 1000);
@@ -22479,6 +22506,10 @@
       teamSlider();
       apartmentNewSliders();
       apartmentSecSlider();
+
+      if (document.querySelector('.mortgage_calc')) {
+          mortgageCalc();
+      }
 
 
       document.querySelectorAll('[data-dropdown]').forEach(el => {

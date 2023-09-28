@@ -409,7 +409,7 @@
           <p class="section_block__text">Ответим на интересующие вас вопросы <br> и поможем сделать правильный выбор!</p>
           <div class="modal_form__inputs">
             <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank" data-dropdown-placeholder="Банк" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Банк1&quot;,&quot;value&quot;:&quot;Банк1&quot;},{&quot;key&quot;:&quot;Банк2&quot;,&quot;value&quot;:&quot;Банк2&quot;},{&quot;key&quot;:&quot;Банк3&quot;,&quot;value&quot;:&quot;Банк3&quot;},{&quot;key&quot;:&quot;Банк4&quot;,&quot;value&quot;:&quot;Банк4&quot;},{&quot;key&quot;:&quot;Банк5&quot;,&quot;value&quot;:&quot;Банк5&quot;},{&quot;key&quot;:&quot;Банк6&quot;,&quot;value&quot;:&quot;Банк6&quot;}]"></div>
-            <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank_programm" data-dropdown-placeholder="Программа" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Любой&quot;,&quot;value&quot;:&quot;Любой&quot;},{&quot;key&quot;:&quot;Программа1&quot;,&quot;value&quot;:&quot;Программа1&quot;},{&quot;key&quot;:&quot;Программа2&quot;,&quot;value&quot;:&quot;Программа2&quot;},{&quot;key&quot;:&quot;Программа3&quot;,&quot;value&quot;:&quot;Программа3&quot;},{&quot;key&quot;:&quot;Программа4&quot;,&quot;value&quot;:&quot;Программа4&quot;},{&quot;key&quot;:&quot;Программа5&quot;,&quot;value&quot;:&quot;Программа5&quot;},{&quot;key&quot;:&quot;Программа6&quot;,&quot;value&quot;:&quot;Программа6&quot;}]"></div>
+            <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="bank_programm" data-dropdown-placeholder="Программа" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Дальневосточная&quot;,&quot;value&quot;:&quot;Дальневосточная&quot;},{&quot;key&quot;:&quot;Семейная&quot;,&quot;value&quot;:&quot;Семейная&quot;},{&quot;key&quot;:&quot;Военная&quot;,&quot;value&quot;:&quot;Военная&quot;},{&quot;key&quot;:&quot;Господдержка&quot;,&quot;value&quot;:&quot;Господдержка&quot;}]"></div>
             <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
               <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
               <label class="input_wrapper__label">Ваше имя</label>
@@ -606,6 +606,42 @@
           </button>
         </div>
       </div>
+      <div class="modal_mort_program modal_form modal" data-modal="modal_mort_program" action="/mailer" data-mailer="">
+        <form class="modal_form__form" data-form-id="modal_mort_program">
+          <input type="hidden" name="form" value="Об ипотечной программе">
+          <button class="modal_close modal_form__close" data-modal-close="">
+            <svg class="icon">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </button>
+          <h3 class="section_block__title section_block__title--small">Ипотека</h3>
+          <p class="section_block__text">Ответим на интересующие вас вопросы <br> и поможем сделать правильный выбор!</p>
+          <div class="modal_form__inputs">
+            <div class="span2 catalog_filters__select select" data-dropdown="" data-dropdown-name="bank_programm" data-dropdown-placeholder="Программа" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Дальневосточная&quot;,&quot;value&quot;:&quot;Дальневосточная&quot;},{&quot;key&quot;:&quot;Семейная&quot;,&quot;value&quot;:&quot;Семейная&quot;},{&quot;key&quot;:&quot;Военная&quot;,&quot;value&quot;:&quot;Военная&quot;},{&quot;key&quot;:&quot;Господдержка&quot;,&quot;value&quot;:&quot;Господдержка&quot;}]"></div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+              <label class="input_wrapper__label">Ваше имя</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+              <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+              <label class="input_wrapper__label">Телефон</label>
+              <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+            </div>
+            <div class="span2 input_wrapper input_wrapper--textarea" data-input-wrapper="">
+              <textarea class="input_wrapper__textarea" name="info" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить заявку</span></button>
+          <p class="services_card_form__privacy">Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+        </form>
+        <div class="modal_form__img"> 
+          <picture class="image">
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_3.webp" type="image/webp"/>
+            <source data-lazy="data-lazy" data-srcset="/assets/img/moda_form_pic_3.jpg" type="image/jpg"/><img class="image" data-lazy="data-lazy" data-src="/assets/img/moda_form_pic_3.jpg" alt=""/>
+          </picture>
+        </div>
+      </div>
     </div>
     <div class="content">
       <header class="header">
@@ -743,6 +779,14 @@
                       <button class="catalog_filters__tabs_btn">Монолитный</button>
                       <button class="catalog_filters__tabs_btn">Кирпично-монолитный</button>
                       <button class="catalog_filters__tabs_btn">Панельный</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Отделка</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">White box</button>
+                      <button class="catalog_filters__tabs_btn">C отделкой</button>
+                      <button class="catalog_filters__tabs_btn">Без отделки</button>
                     </div>
                   </div>
                 </div>

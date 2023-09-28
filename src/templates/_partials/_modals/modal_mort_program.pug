@@ -1,15 +1,14 @@
-.modal_calc_mort.modal_form.modal(data-modal="modal_calc_mort", action="/mailer", data-mailer="")
-	form.modal_form__form(data-form-id="modal_calc_mort")
+.modal_mort_program.modal_form.modal(data-modal="modal_mort_program", action="/mailer", data-mailer="")
+	form.modal_form__form(data-form-id="modal_mort_program")
 		//- input(type="hidden", name="calc", value="")
-		input(type="hidden", name="form", value="Рассчитать ипотеку")
+		input(type="hidden", name="form", value="Об ипотечной программе")
 		button.modal_close.modal_form__close(data-modal-close="")
 			+svg('cross', 'icon')
-		h3.section_block__title.section_block__title--small Рассчитать ипотеку
+		h3.section_block__title.section_block__title--small Ипотека
 		p.section_block__text Ответим на интересующие вас вопросы #[br] и поможем сделать правильный выбор!
 		
 		.modal_form__inputs
-			.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
-			.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Программа", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Дальневосточная","value":"Дальневосточная"},{"key":"Семейная","value":"Семейная"},{"key":"Военная","value":"Военная"},{"key":"Господдержка","value":"Господдержка"}]')
+			.span2.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Программа", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Дальневосточная","value":"Дальневосточная"},{"key":"Семейная","value":"Семейная"},{"key":"Военная","value":"Военная"},{"key":"Господдержка","value":"Господдержка"}]')
 
 			.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
 				input.input_wrapper__input(type="text" name="name" required autocomplete="off")

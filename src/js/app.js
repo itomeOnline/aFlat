@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", _ => {
 
     formSubmit();
     cookieTooltip();
-    ModalDispatcher.init();
 
     headerDropdown();
     headerLocationDropdown();
@@ -83,6 +82,8 @@ document.addEventListener("DOMContentLoaded", _ => {
     document.querySelectorAll('[data-dropdown]').forEach(el => {
         new Dropdown(el);
     })
+
+    ModalDispatcher.init();
 
     if (document.querySelector('[data-tab-wrapper]')) {
         tab(document.querySelector('[data-tab-wrapper]'));

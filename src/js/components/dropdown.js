@@ -66,9 +66,9 @@ export default class Dropdown {
     
         
         document.addEventListener('click', ({target}) => {
-            if (!target.closest('[data-dropdown]')) {
-                    this.handleInputBlur();
-            }
+            // if (!target.closest('[data-dropdown]')) {
+            //         this.handleInputBlur();
+            // }
         })
 
         this.ref.addEventListener('click', this.handleClick.bind(this));

@@ -24,7 +24,7 @@ mixin mortgageBlock(img, title, text, crit1, crit2, crit3, crit4, link, hashtag)
 					p.mortgage_program_block__table_caption Срок кредита, #[br] лет
 					p.mortgage_program_block__table_title= crit4
 			.mortgage_program_block__buttons 
-				button.mortgage_program_block__btn.btn.btn--filled(data-linked-modal="")
+				button.mortgage_program_block__btn.btn.btn--filled(data-linked-modal="modal_mort_program")
 					span.btn__text Подать заявку
 				a.mortgage_program_block__btn.btn.btn--outlined(href=link)
 					span.btn__text Читать подробнее
@@ -147,7 +147,7 @@ block content
 									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank", data-dropdown-placeholder="Выберите банк", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Банк1","value":"Банк1"},{"key":"Банк2","value":"Банк2"},{"key":"Банк3","value":"Банк3"},{"key":"Банк4","value":"Банк4"},{"key":"Банк5","value":"Банк5"},{"key":"Банк6","value":"Банк6"}]')
 								.mortgage_calc_table__wrap 
 									p.mortgage_calc_table__caption Программа
-									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Выберите программу", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Любой","value":"Любой"},{"key":"Программа1","value":"Программа1"},{"key":"Программа2","value":"Программа2"},{"key":"Программа3","value":"Программа3"},{"key":"Программа4","value":"Программа4"},{"key":"Программа5","value":"Программа5"},{"key":"Программа6","value":"Программа6"}]')
+									.catalog_filters__select.select(data-dropdown="", data-dropdown-name="bank_programm", data-dropdown-placeholder="Программа", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Дальневосточная","value":"Дальневосточная"},{"key":"Семейная","value":"Семейная"},{"key":"Военная","value":"Военная"},{"key":"Господдержка","value":"Господдержка"}]')
 								.mortgage_calc_table__wrap 
 									p.mortgage_calc_table__caption Дополнительные условия
 									.mortgage_calc_table__line

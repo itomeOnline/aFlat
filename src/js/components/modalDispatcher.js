@@ -214,7 +214,6 @@ let ModalDispatcher = (function () {
 
 	function bindEvents() {
 		document.addEventListener('click', function (event) {
-			console.log('test');
 			if (event.which === 1) {
 				let toggle = event.target.closest('[data-linked-modal]'),
 				modal = {};
@@ -230,6 +229,24 @@ let ModalDispatcher = (function () {
 					}
 					if (toggle.dataset.modalFormId) {
 						setFormId(modalsList[toggle.dataset.linkedModal], toggle.dataset.modalFormId)
+					}
+					
+					if (document.querySelector('.banks')) {
+						const selectInput = document.querySelector('[data-dropdown-name="bank"] input');
+						const title = toggle.dataset.bankTitle;
+						// const title = document.querySelector('.banks_card__title');
+						selectInput.value = toggle.dataset.bankTitle;
+						console.log(selectInput.value);
+
+						
+						// const banksCards = document.querySelectorAll('.banks_card');
+
+						// banksCards.forEach(card => {
+						// 	// const selectInput = document.querySelector('[data-dropdown-name="bank"] input');
+						// 	const title = card.querySelector('.banks_card__title');
+						// 	// selectInput.value = title.textContent;
+						// 	console.log(title);
+						// })
 					}
 				}
 

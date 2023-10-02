@@ -57,13 +57,100 @@ block content
 								.catalog_filters__input.input_wrapper.input_wrapper--outlined(data-input-wrapper="")
 									input.input_wrapper__input(type="text" name="squareTo" autocomplete="off")
 									label.input_wrapper__label До
+
+						.catalog_filters__block
+							p.catalog_filters__caption Тип недвижимости
+							.catalog_filters__select.select(data-dropdown="", data-dropdown-name="propertyType", data-dropdown-placeholder="Тип недвижимости", data-dropdown-readonly="true", data-dropdown-options='[{"key":"Дом","value":"Дом"},{"key":"Дача","value":"Дача"},{"key":"Нежилое","value":"Нежилое"}]') 
 						
 
-					.catalog_filters_dropdown
+					.catalog_filters_dropdown(data-dropdown-block="")
 						.catalog_filters_dropdown__top
-							button.catalog_filters_dropdown__btn.catalog_filters_dropdown__btn--reset
+							button.catalog_filters_dropdown__btn(data-dropdown-btn) 
+								span.text Еще фильтры
+								+svg('arrow_down', 'icon icon--right')
+							button.catalog_filters_dropdown__btn
 								+svg('cross', 'icon icon--left')
 								span.text Сбросить все фильтры
+
+						.catalog_filters_dropdown__content
+							.catalog_filters__block
+								p.catalog_filters__caption Формат
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Покупка
+									button.catalog_filters__tabs_btn Аренда
+									
+							.catalog_filters__block
+								p.catalog_filters__caption Материал дома
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Кирпичный
+									button.catalog_filters__tabs_btn Деревянный
+									button.catalog_filters__tabs_btn Монолитный
+									button.catalog_filters__tabs_btn Щитовой
+									button.catalog_filters__tabs_btn Каркасный
+									button.catalog_filters__tabs_btn Газобетонный блок
+									button.catalog_filters__tabs_btn Газосиликатный блок
+									button.catalog_filters__tabs_btn Пенобетонный блок
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Тип отопления
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Центральное газовое
+									button.catalog_filters__tabs_btn Угольное
+									button.catalog_filters__tabs_btn Печь
+									button.catalog_filters__tabs_btn Камин
+									button.catalog_filters__tabs_btn Электрическое
+									button.catalog_filters__tabs_btn Автономное газовое
+									button.catalog_filters__tabs_btn Дизельное
+									button.catalog_filters__tabs_btn Твердотопливный котел
+									button.catalog_filters__tabs_btn Без отопления
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Наличие комуникаций
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Электричество
+									button.catalog_filters__tabs_btn Газ
+									button.catalog_filters__tabs_btn Водоснабжение
+									button.catalog_filters__tabs_btn Канализация
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Дополнительные удобства
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Баня
+									button.catalog_filters__tabs_btn Гараж
+									button.catalog_filters__tabs_btn Охрана
+									button.catalog_filters__tabs_btn Бассейн
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Земля
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn ИЖС
+									button.catalog_filters__tabs_btn Садоводство
+									button.catalog_filters__tabs_btn ДНП
+									button.catalog_filters__tabs_btn Личное подсобное хозяйство
+									button.catalog_filters__tabs_btn Фермерское хозяйство
+									button.catalog_filters__tabs_btn Земля промназначения
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Этажность
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Одноэтажное
+									button.catalog_filters__tabs_btn Двухэтажное
+									button.catalog_filters__tabs_btn Трехэтажное
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Кол-во спален
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Одна
+									button.catalog_filters__tabs_btn Две
+									button.catalog_filters__tabs_btn Три
+									button.catalog_filters__tabs_btn Четыре +
+							
+							.catalog_filters__block
+								p.catalog_filters__caption Санузел
+								.catalog_filters__tabs
+									button.catalog_filters__tabs_btn Вне дома
+									button.catalog_filters__tabs_btn В доме									
+
 
 					p.catalog_filters__caption.catalog_filters__caption--count Найдено 12 объектов
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <title>Каталог другой недвижимости — AFLAT</title>
-    <link rel="stylesheet" href="/css/main.css?v1.1">
+    <link rel="stylesheet" href="/css/main.css?v1.3">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -758,14 +758,112 @@
                     </div>
                   </div>
                 </div>
+                <div class="catalog_filters__block">
+                  <p class="catalog_filters__caption">Тип недвижимости</p>
+                  <div class="catalog_filters__select select" data-dropdown="" data-dropdown-name="propertyType" data-dropdown-placeholder="Тип недвижимости" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Дом&quot;,&quot;value&quot;:&quot;Дом&quot;},{&quot;key&quot;:&quot;Дача&quot;,&quot;value&quot;:&quot;Дача&quot;},{&quot;key&quot;:&quot;Нежилое&quot;,&quot;value&quot;:&quot;Нежилое&quot;}]"> </div>
+                </div>
               </div>
-              <div class="catalog_filters_dropdown">
+              <div class="catalog_filters_dropdown" data-dropdown-block="">
                 <div class="catalog_filters_dropdown__top">
-                  <button class="catalog_filters_dropdown__btn catalog_filters_dropdown__btn--reset">
+                  <button class="catalog_filters_dropdown__btn" data-dropdown-btn> <span class="text">Еще фильтры</span>
+                    <svg class="icon icon--right">
+                      <use xlink:href="#arrow_down"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog_filters_dropdown__btn">
                     <svg class="icon icon--left">
                       <use xlink:href="#cross"></use>
                     </svg><span class="text">Сбросить все фильтры</span>
                   </button>
+                </div>
+                <div class="catalog_filters_dropdown__content">
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Формат</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Покупка</button>
+                      <button class="catalog_filters__tabs_btn">Аренда</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Материал дома</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Кирпичный</button>
+                      <button class="catalog_filters__tabs_btn">Деревянный</button>
+                      <button class="catalog_filters__tabs_btn">Монолитный</button>
+                      <button class="catalog_filters__tabs_btn">Щитовой</button>
+                      <button class="catalog_filters__tabs_btn">Каркасный</button>
+                      <button class="catalog_filters__tabs_btn">Газобетонный блок</button>
+                      <button class="catalog_filters__tabs_btn">Газосиликатный блок</button>
+                      <button class="catalog_filters__tabs_btn">Пенобетонный блок</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Тип отопления</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Центральное газовое</button>
+                      <button class="catalog_filters__tabs_btn">Угольное</button>
+                      <button class="catalog_filters__tabs_btn">Печь</button>
+                      <button class="catalog_filters__tabs_btn">Камин</button>
+                      <button class="catalog_filters__tabs_btn">Электрическое</button>
+                      <button class="catalog_filters__tabs_btn">Автономное газовое</button>
+                      <button class="catalog_filters__tabs_btn">Дизельное</button>
+                      <button class="catalog_filters__tabs_btn">Твердотопливный котел</button>
+                      <button class="catalog_filters__tabs_btn">Без отопления</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Наличие комуникаций</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Электричество</button>
+                      <button class="catalog_filters__tabs_btn">Газ</button>
+                      <button class="catalog_filters__tabs_btn">Водоснабжение</button>
+                      <button class="catalog_filters__tabs_btn">Канализация</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Дополнительные удобства</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Баня</button>
+                      <button class="catalog_filters__tabs_btn">Гараж</button>
+                      <button class="catalog_filters__tabs_btn">Охрана</button>
+                      <button class="catalog_filters__tabs_btn">Бассейн</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Земля</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">ИЖС</button>
+                      <button class="catalog_filters__tabs_btn">Садоводство</button>
+                      <button class="catalog_filters__tabs_btn">ДНП</button>
+                      <button class="catalog_filters__tabs_btn">Личное подсобное хозяйство</button>
+                      <button class="catalog_filters__tabs_btn">Фермерское хозяйство</button>
+                      <button class="catalog_filters__tabs_btn">Земля промназначения</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Этажность</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Одноэтажное</button>
+                      <button class="catalog_filters__tabs_btn">Двухэтажное</button>
+                      <button class="catalog_filters__tabs_btn">Трехэтажное</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Кол-во спален</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Одна</button>
+                      <button class="catalog_filters__tabs_btn">Две</button>
+                      <button class="catalog_filters__tabs_btn">Три</button>
+                      <button class="catalog_filters__tabs_btn">Четыре +</button>
+                    </div>
+                  </div>
+                  <div class="catalog_filters__block">
+                    <p class="catalog_filters__caption">Санузел</p>
+                    <div class="catalog_filters__tabs">
+                      <button class="catalog_filters__tabs_btn">Вне дома</button>
+                      <button class="catalog_filters__tabs_btn">В доме									</button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <p class="catalog_filters__caption catalog_filters__caption--count">Найдено 12 объектов</p>
